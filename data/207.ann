@@ -1,0 +1,35 @@
+T1	unit 19 22	cup
+T2	quantity 0 1	1
+T3	quantity 15 18	1/4
+T4	quantity 33 34	5
+T5	quantity 70 71	1
+T6	quantity 98 99	1
+T7	unit 2 7	stick
+T8	food_product_with_unit 8 14	butter
+T9	food_product_with_unit 23 32	olive oil
+R1	refers Arg1:T8 Arg2:T7	
+R2	refers Arg1:T7 Arg2:T2	
+R3	refers Arg1:T1 Arg2:T3	
+R4	refers Arg1:T9 Arg2:T1	
+T10	physical_quality 35 41	medium
+T11	food_product_without_unit_countable 42 50	potatoes
+T12	process 52 58	peeled
+T13	process 63 68	diced
+T14	unit 72 79	package
+T15	food_product_with_unit 80 88	hot dogs
+T16	process 90 96	sliced
+T17	food_product_without_unit_countable 100 105	onion
+T18	physical_quality 107 113	medium
+T19	process 115 120	diced
+T20	food_product_without_unit_uncountable 122 126	salt
+T21	food_product_without_unit_uncountable 127 133	pepper
+R5	refers Arg1:T17 Arg2:T18	
+R6	refers Arg1:T17 Arg2:T19	
+R7	refers Arg1:T17 Arg2:T6	
+R8	refers Arg1:T14 Arg2:T5	
+R9	refers Arg1:T11 Arg2:T10	
+R10	refers Arg1:T11 Arg2:T4	
+R11	refers Arg1:T11 Arg2:T12	
+R12	refers Arg1:T11 Arg2:T13	
+R13	refers Arg1:T15 Arg2:T14	
+R14	refers Arg1:T15 Arg2:T16	

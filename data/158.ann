@@ -1,0 +1,69 @@
+T1	unit 61 66	ounce
+T2	unit 184 189	ounce
+T3	unit 213 218	ounce
+T4	unit 274 279	ounce
+T5	unit 333 338	ounce
+T6	quantity 0 2	24
+T7	quantity 55 56	1
+T8	quantity 58 60	16
+T9	quantity 96 98	72
+T10	quantity 129 130	1
+T11	quantity 178 179	1
+T12	quantity 181 183	11
+T13	quantity 206 207	1
+T14	quantity 209 212	2/3
+T15	quantity 267 268	1
+T16	quantity 270 273	2/3
+T17	quantity 328 329	1
+T18	quantity 331 332	5
+T19	unit 191 194	bag
+T20	food_product_with_unit 195 205	candy corn
+R1	refers Arg1:T20 Arg2:T19	
+R2	refers Arg1:T19 Arg2:T11	
+R3	refers Arg1:T20 Arg2:T2	
+R4	refers Arg1:T2 Arg2:T12	
+T21	unit 220 227	package
+T22	unit 281 288	package
+T23	unit 340 343	box
+T24	food_product_without_unit_countable 3 11	cupcakes
+T25	physical_quality 13 53	baked from your favorite mix, any flavor
+R5	refers Arg1:T24 Arg2:T25	
+T26	unit 68 71	can
+T27	food_product_with_unit 72 95	milk chocolate frosting
+R6	refers Arg1:T27 Arg2:T26	
+R7	refers Arg1:T26 Arg2:T7	
+R8	refers Arg1:T1 Arg2:T8	
+R9	refers Arg1:T27 Arg2:T1	
+T28	physical_quality 99 103	oval
+T29	food_product_without_unit_countable 104 122	shortbread cookies
+R10	refers Arg1:T29 Arg2:T28	
+R11	refers Arg1:T29 Arg2:T9	
+T30	unit 131 134	box
+T31	trade_name 138 153	Keebler Sandies
+T32	example 154 176	Right bites shortbread
+R12	refers Arg1:T32 Arg2:T31	
+R13	refers Arg1:T32 Arg2:T30	
+R14	refers Arg1:T30 Arg2:T10	
+R15	refers Arg1:T29 Arg2:T32	
+T33	food_product_with_unit 228 239;246 251	decorator's icing
+R16	refers Arg1:T33 Arg2:T21	
+R17	refers Arg1:T21 Arg2:T13	
+R18	refers Arg1:T33 Arg2:T3	
+R19	refers Arg1:T3 Arg2:T14	
+T34	food_product_with_unit 289 312	decorator's white icing
+R20	refers Arg1:T34 Arg2:T22	
+R21	refers Arg1:T22 Arg2:T15	
+R22	refers Arg1:T34 Arg2:T4	
+R23	refers Arg1:T4 Arg2:T16	
+T35	food_product_with_unit 347 364	red fruit leather
+R24	refers Arg1:T35 Arg2:T23	
+R25	refers Arg1:T23 Arg2:T17	
+R26	refers Arg1:T5 Arg2:T18	
+R27	refers Arg1:T35 Arg2:T5	
+T36	trade_name 371 388	Fruit by the Foot
+T37	example 371 388	Fruit by the Foot
+R29	refers Arg1:T35 Arg2:T37	
+R28	refers Arg1:T24 Arg2:T6	
+T38	color 240 245	black
+R30	refers Arg1:T33 Arg2:T38	
+R31	refers Arg1:T37 Arg2:T36	

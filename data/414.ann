@@ -1,0 +1,43 @@
+T1	unit 2 6	cups
+T2	unit 47 55	teaspoon
+T3	unit 98 101	cup
+T4	unit 130 138	teaspoon
+T5	unit 148 156	teaspoon
+T6	unit 172 183	tablespoons
+T7	quantity 0 1	2
+T9	quantity 43 46	1⁄2
+T10	quantity 70 71	2
+T11	quantity 94 97	1⁄4
+T12	quantity 126 129	1⁄4
+T13	quantity 144 147	1⁄4
+T14	quantity 170 171	3
+T15	unit 79 85	cloves
+T16	food_product_with_unit 72 78	garlic
+T17	process 87 93	minced
+T18	process 119 125	grated
+T19	food_product_with_unit 139 143	salt
+T20	food_product_with_unit 102 117	parmesan cheese
+R1	refers Arg1:T20 Arg2:T18	
+R2	refers Arg1:T20 Arg2:T3	
+R3	refers Arg1:T3 Arg2:T11	
+R4	refers Arg1:T4 Arg2:T12	
+R5	refers Arg1:T19 Arg2:T4	
+T21	color 157 162	black
+T22	food_product_with_unit 163 169	pepper
+R6	refers Arg1:T22 Arg2:T21	
+R7	refers Arg1:T22 Arg2:T5	
+R8	refers Arg1:T5 Arg2:T13	
+T23	food_product_with_unit 184 193	olive oil
+R9	refers Arg1:T23 Arg2:T6	
+R10	refers Arg1:T6 Arg2:T14	
+R11	refers Arg1:T16 Arg2:T15	
+R12	refers Arg1:T16 Arg2:T17	
+R13	refers Arg1:T15 Arg2:T10	
+R14	refers Arg1:T2 Arg2:T9	
+T24	food_product_with_unit 56 69	garlic powder
+R15	refers Arg1:T24 Arg2:T2	
+T25	food_product_with_unit 7 19	French bread
+R16	refers Arg1:T25 Arg2:T1	
+R17	refers Arg1:T1 Arg2:T7	
+T26	process 21 42	cut into 1-inch cubes
+R18	refers Arg1:T25 Arg2:T26	

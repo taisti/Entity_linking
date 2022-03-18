@@ -1,0 +1,43 @@
+T1	unit 2 8	ounces
+T2	unit 119 124	pound
+T3	unit 205 208	cup
+T4	unit 254 257	cup
+T5	quantity 0 1	8
+T6	quantity 117 118	1
+T7	quantity 203 204	1
+T8	quantity 252 253	1
+T10	process 326 332	sliced
+T11	color 333 338	green
+T12	food_product_with_unit 339 345	onions
+A1	Optional T12
+R1	refers Arg1:T12 Arg2:T11	
+R2	refers Arg1:T12 Arg2:T10	
+T13	process 258 264	grated
+T14	food_product_with_unit 209 214	salsa
+T15	diet 125 135	extra lean
+T16	process 136 142	ground
+T17	food_product_with_unit 143 147	beef
+T19	possible_substitute 169 182	ground turkey
+T20	possible_substitute 169 175;186 193	ground chicken
+R3	substitutable_with Arg1:T17 Arg2:T19	
+R4	substitutable_with Arg1:T17 Arg2:T20	
+R5	refers Arg1:T17 Arg2:T16	
+R6	refers Arg1:T17 Arg2:T15	
+R7	refers Arg1:T17 Arg2:T2	
+R8	refers Arg1:T2 Arg2:T6	
+R9	refers Arg1:T1 Arg2:T5	
+R10	refers Arg1:T4 Arg2:T8	
+R11	refers Arg1:T3 Arg2:T7	
+R12	refers Arg1:T14 Arg2:T3	
+T18	food_product_with_unit 9 14	dough
+R13	refers Arg1:T18 Arg2:T1	
+T21	food_product_with_unit 265 279	cheddar cheese
+R14	refers Arg1:T21 Arg2:T13	
+R15	refers Arg1:T21 Arg2:T4	
+T22	possible_substitute 236 250	barbecue sauce
+R16	substitutable_with Arg1:T14 Arg2:T22	
+T23	example 16 39	Pillsbury crescent roll
+T24	trade_name 16 25	Pillsbury
+R17	refers Arg1:T18 Arg2:T23	
+T25	example 288 297	2% cheese
+R18	refers Arg1:T21 Arg2:T25	

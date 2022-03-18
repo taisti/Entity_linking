@@ -1,0 +1,15 @@
+T3	physical_quality 166 174	powdered
+T4	food_product_with_unit 175 180	sugar
+R1	refers Arg1:T4 Arg2:T3	
+T1	food_product_without_unit_uncountable 51 65	coconut flakes
+T2	taste 41 50	sweetened
+T5	food_product_without_unit_uncountable 35 39;9 15	bark almond
+T6	taste 17 33	Vanilla flavored
+R2	refers Arg1:T5 Arg2:T6	
+T7	food_product_without_unit_uncountable 0 8	twinkies
+R3	refers Arg1:T1 Arg2:T2	
+T8	food_product_with_unit 145 150	icing
+T9	unit 140 144	cans
+T10	quantity 138 139	2
+R4	refers Arg1:T9 Arg2:T10	
+R5	refers Arg1:T8 Arg2:T9	

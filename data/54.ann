@@ -1,0 +1,39 @@
+T1	food_product_without_unit_uncountable 188 199	raspberries
+T2	purpose 201 212	for serving
+T3	food_product_without_unit_uncountable 176 187	kosher salt
+T4	unit 151 159	teaspoon
+T5	quantity 149 150	1
+T6	food_product_with_unit 160 175	vanilla extract
+R1	refers Arg1:T6 Arg2:T4	
+R2	refers Arg1:T4 Arg2:T5	
+R3	refers Arg1:T1 Arg2:T2	
+T7	food_product_without_unit_countable 144 148	eggs
+T8	physical_quality 138 143	large
+R4	refers Arg1:T7 Arg2:T8	
+T9	quantity 136 137	3
+R5	refers Arg1:T7 Arg2:T9	
+T10	unit 108 119	tablespoons
+T11	quantity 106 107	6
+T12	quantity 36 41	1 1⁄2
+T13	unit 42 46	cups
+R8	refers Arg1:T13 Arg2:T12	
+T16	process 77 92	lightly whipped
+T17	purpose 94 105	for serving
+T18	food_product_without_unit_uncountable 53 58	cream
+T19	unit 2 8	ounces
+T20	quantity 0 1	9
+T21	food_product_with_unit 20 35	chocolate chips
+T22	taste 9 19	semi-sweet
+R12	refers Arg1:T21 Arg2:T22	
+R13	refers Arg1:T21 Arg2:T19	
+R14	refers Arg1:T19 Arg2:T20	
+T23	food_product_with_unit 129 135	butter
+T24	taste 120 128	unsalted
+R15	refers Arg1:T23 Arg2:T24	
+R16	refers Arg1:T23 Arg2:T10	
+R17	refers Arg1:T10 Arg2:T11	
+T14	food_product_with_unit 47 58	heavy cream
+R6	and Arg1:T14 Arg2:T18	
+R7	refers Arg1:T18 Arg2:T16	
+R9	refers Arg1:T18 Arg2:T17	
+R10	refers Arg1:T14 Arg2:T13	

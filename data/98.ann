@@ -1,0 +1,31 @@
+T1	food_product_with_unit 141 147	butter
+T2	unit 70 73	cup
+T3	unit 137 140	cup
+T4	quantity 127 136	1⁄4 - 1⁄2
+T5	quantity 62 69	1⁄2 - 1
+T6	quantity 43 44	1
+T7	quantity 36 37	2
+T8	quantity 0 1	2
+T9	food_product_without_unit_countable 2 9	chicken
+T10	part 10 17	breasts
+R1	refers Arg1:T9 Arg2:T10	
+R2	refers Arg1:T9 Arg2:T8	
+T11	process 19 35	thinly flattened
+R3	refers Arg1:T9 Arg2:T11	
+T12	food_product_without_unit_countable 38 42	eggs
+R4	refers Arg1:T12 Arg2:T7	
+T13	unit 45 55	tablespoon
+R5	refers Arg1:T13 Arg2:T6	
+T14	food_product_with_unit 56 61	water
+R6	refers Arg1:T14 Arg2:T13	
+T15	food_product_with_unit 74 95	seasoned bread crumbs
+R7	refers Arg1:T15 Arg2:T2	
+R8	refers Arg1:T2 Arg2:T5	
+T16	quantity 99 104	1/2-1
+T17	unit 105 108	cup
+T18	food_product_with_unit 109 126	panko breadcrumbs
+R9	refers Arg1:T18 Arg2:T17	
+R10	refers Arg1:T17 Arg2:T16	
+R11	or Arg1:T15 Arg2:T18	
+R12	refers Arg1:T1 Arg2:T3	
+R13	refers Arg1:T3 Arg2:T4	

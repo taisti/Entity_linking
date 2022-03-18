@@ -1,0 +1,8 @@
+T1	unit 14 24	tablespoon
+T2	quantity 0 1	1
+T3	quantity 10 13	1⁄2
+T4	food_product_without_unit_countable 2 9	avocado
+R1	refers Arg1:T4 Arg2:T2	
+T5	food_product_with_unit 25 36	lemon juice
+R2	refers Arg1:T5 Arg2:T1	
+R3	refers Arg1:T1 Arg2:T3	

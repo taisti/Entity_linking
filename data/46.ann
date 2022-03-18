@@ -1,0 +1,20 @@
+T1	purpose 97 108	for garnish
+T2	unit 79 87	Pinch of
+T3	process 88 95	chopped
+T4	food_product_with_unit 71 77	chives
+R1	refers Arg1:T4 Arg2:T2	
+R2	refers Arg1:T4 Arg2:T3	
+R3	refers Arg1:T4 Arg2:T1	
+A1	Optional T4
+T5	unit 43 53	tablespoon
+T6	food_product_with_unit 54 70	clarified butter
+T7	quantity 41 42	1
+R4	refers Arg1:T6 Arg2:T5	
+R5	refers Arg1:T5 Arg2:T7	
+T8	food_product_without_unit_uncountable 34 40	pepper
+T9	food_product_without_unit_uncountable 29 33	salt
+T10	food_product_without_unit_countable 2 6	eggs
+T11	physical_quality 11 27	room temperature
+R6	refers Arg1:T10 Arg2:T11	
+T12	quantity 0 1	2
+R7	refers Arg1:T10 Arg2:T12	

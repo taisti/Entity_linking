@@ -1,0 +1,13 @@
+T1	quantity 0 1;23 33	1 per person
+T2	food_product_without_unit_uncountable 40 46	pepper
+T3	food_product_without_unit_uncountable 35 39	salt
+T4	physical_quality 2 8	medium
+T5	color 9 14	green
+T6	food_product_without_unit_countable 15 21	tomato
+R1	refers Arg1:T6 Arg2:T5	
+R2	refers Arg1:T6 Arg2:T4	
+R3	refers Arg1:T6 Arg2:T1	
+T7	color 47 52	white
+T8	food_product_without_unit_uncountable 62 77	bacon drippings
+T9	food_product_without_unit_uncountable 53 61	cornmeal
+R4	refers Arg1:T9 Arg2:T7	

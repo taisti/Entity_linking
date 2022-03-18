@@ -1,0 +1,24 @@
+T1	unit 6 12	pounds
+T2	unit 60 69	teaspoons
+T3	quantity 0 5	2 1/4
+T4	quantity 26 27	1
+T5	quantity 54 59	1 1/2
+T6	quantity 84 85	1
+T7	food_product_with_unit 70 83	garlic powder
+T8	unit 86 92	bottle
+T9	food_product_with_unit 93 97	beer
+T10	example 121 144	Otter Creek Oktoberfest
+R1	refers Arg1:T9 Arg2:T10	
+T11	trade_name 121 132	Otter Creek
+R2	refers Arg1:T9 Arg2:T8	
+R3	refers Arg1:T8 Arg2:T6	
+R4	refers Arg1:T2 Arg2:T5	
+R5	refers Arg1:T7 Arg2:T2	
+T12	unit 28 34	packet
+T13	food_product_with_unit 35 53	dry onion soup mix
+R6	refers Arg1:T13 Arg2:T12	
+R7	refers Arg1:T12 Arg2:T4	
+T15	food_product_with_unit 13 24	london broi
+R8	refers Arg1:T15 Arg2:T1	
+R9	refers Arg1:T1 Arg2:T3	
+R10	refers Arg1:T10 Arg2:T11	

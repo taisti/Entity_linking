@@ -1,0 +1,23 @@
+T1	unit 21 24	cup
+T2	unit 47 55	teaspoon
+T3	quantity 0 1	2
+T4	quantity 19 20	1
+T5	quantity 43 46	1/2
+T6	quantity 70 71	2
+T7	physical_quality 72 77	large
+T8	food_product_without_unit_countable 78 82	eggs
+T9	food_product_with_unit 56 69	baking powder
+T10	food_product_without_unit_countable 2 10	zucchini
+T11	physical_quality 12 17	large
+T12	food_product_without_unit_uncountable 95 101	pepper
+T13	food_product_without_unit_uncountable 102 111	olive oil
+T14	food_product_without_unit_uncountable 83 94	kosher salt
+R1	refers Arg1:T1 Arg2:T4	
+R2	refers Arg1:T10 Arg2:T3	
+R3	refers Arg1:T10 Arg2:T11	
+R4	refers Arg1:T9 Arg2:T2	
+R5	refers Arg1:T2 Arg2:T5	
+R6	refers Arg1:T8 Arg2:T7	
+R7	refers Arg1:T8 Arg2:T6	
+T15	food_product_with_unit 25 42	whole wheat flour
+R8	refers Arg1:T15 Arg2:T1	

@@ -1,0 +1,34 @@
+T1	unit 2 7	pound
+T2	unit 28 38	tablespoon
+T3	unit 93 96	cup
+T4	unit 144 147	cup
+T5	unit 161 164	cup
+T6	quantity 0 1	1
+T7	quantity 26 27	1
+T8	quantity 66 67	1
+T9	quantity 89 92	1/2
+T10	quantity 140 143	1/2
+T11	quantity 157 160	1/2
+T12	food_product_without_unit_countable 68 73	onion
+T13	physical_quality 8 13	dried
+T14	food_product_with_unit 14 25	pinto beans
+R1	refers Arg1:T14 Arg2:T13	
+R2	refers Arg1:T14 Arg2:T1	
+R3	refers Arg1:T1 Arg2:T6	
+T15	food_product_with_unit 39 43	salt
+R4	refers Arg1:T15 Arg2:T2	
+R5	refers Arg1:T2 Arg2:T7	
+T16	food_product_with_unit 97 111	barbecue sauce
+R6	refers Arg1:T16 Arg2:T3	
+R7	refers Arg1:T3 Arg2:T9	
+T17	food_product_with_unit 148 156	molasses
+R8	refers Arg1:T17 Arg2:T4	
+R9	refers Arg1:T4 Arg2:T10	
+T18	physical_quality 75 80	large
+T19	process 82 87	diced
+R10	refers Arg1:T12 Arg2:T18	
+R11	refers Arg1:T12 Arg2:T19	
+R12	refers Arg1:T12 Arg2:T8	
+T20	food_product_with_unit 165 172	ketchup
+R13	refers Arg1:T20 Arg2:T5	
+R14	refers Arg1:T5 Arg2:T11	

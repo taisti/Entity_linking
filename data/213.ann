@@ -1,0 +1,21 @@
+T1	unit 2 5	cup
+T2	unit 17 20	cup
+T3	unit 36 42	ounces
+T4	quantity 0 1	1
+T5	quantity 13 16	3/4
+T6	quantity 33 35	12
+T7	food_product_with_unit 27 32	sugar
+T8	color 21 26	brown
+T9	food_product_with_unit 6 12	butter
+R1	refers Arg1:T9 Arg2:T1	
+R2	refers Arg1:T1 Arg2:T4	
+R3	refers Arg1:T7 Arg2:T2	
+R4	refers Arg1:T2 Arg2:T5	
+R5	refers Arg1:T3 Arg2:T6	
+T10	food_product_with_unit 43 58	chocolate chips
+R6	refers Arg1:T10 Arg2:T3	
+T11	food_product_whole 59 64	candy
+T12	food_product_without_unit_uncountable 65 69	m&ms
+T13	food_product_without_unit_uncountable 70 74	eggs
+T14	food_product_without_unit_uncountable 75 84	sprinkles
+R7	refers Arg1:T7 Arg2:T8	

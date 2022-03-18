@@ -1,0 +1,39 @@
+T1	unit 156 159	cup
+T2	food_product_without_unit_countable 138 142	eggs
+T3	process 144 150	beaten
+T4	food_product_with_unit 160 174	cheddar cheese
+T5	quantity 152 155	1/4
+R1	refers Arg1:T1 Arg2:T5	
+R2	refers Arg1:T4 Arg2:T1	
+A1	Optional T4
+T6	quantity 136 137	2
+R3	refers Arg1:T2 Arg2:T6	
+R4	refers Arg1:T2 Arg2:T3	
+T7	unit 104 114	tablespoon
+T8	process 115 128	finely choppe
+T9	food_product_with_unit 130 135	onion
+R5	refers Arg1:T9 Arg2:T8	
+R6	refers Arg1:T9 Arg2:T7	
+T10	quantity 102 103	1
+R7	refers Arg1:T7 Arg2:T10	
+T11	quantity 60 61	1
+T12	quantity 19 20	2
+T13	quantity 0 1	2
+T14	unit 2 11	teaspoons
+T15	unit 21 32	tablespoons
+T16	unit 62 72	tablespoon
+T17	food_product_with_unit 81 92	bell pepper
+T18	process 73 80;94 100	chopped finely
+R8	refers Arg1:T17 Arg2:T18	
+R9	refers Arg1:T17 Arg2:T16	
+R10	refers Arg1:T16 Arg2:T11	
+R11	refers Arg1:T15 Arg2:T12	
+R12	refers Arg1:T14 Arg2:T13	
+T19	food_product_with_unit 12 18	butter
+R13	refers Arg1:T19 Arg2:T14	
+T20	food_product_with_unit 46 49	ham
+R14	refers Arg1:T20 Arg2:T15	
+T21	process 33 45	fully cooked
+T22	process 51 58	chopped
+R15	refers Arg1:T20 Arg2:T21	
+R16	refers Arg1:T20 Arg2:T22	

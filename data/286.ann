@@ -1,0 +1,31 @@
+T1	unit 2 6	cups
+T2	unit 82 85	cup
+T3	unit 104 107	cup
+T4	quantity 0 1	2
+T5	quantity 25 26	2
+T6	quantity 42 43	3
+T7	quantity 102 103	¼
+T8	diet 86 96	dairy-free
+T9	food_product_with_unit 97 101	milk
+R1	refers Arg1:T9 Arg2:T8	
+R2	refers Arg1:T9 Arg2:T2	
+T10	quantity 80 81	⅔
+R3	refers Arg1:T2 Arg2:T10	
+R4	refers Arg1:T3 Arg2:T7	
+T11	food_product_with_unit 108 116	ice cube
+R5	refers Arg1:T11 Arg2:T3	
+T12	unit 44 50	scoops
+T13	diet 51 61	dairy-free
+T14	food_product_with_unit 62 79	vanilla ice cream
+R6	refers Arg1:T14 Arg2:T13	
+R7	refers Arg1:T14 Arg2:T12	
+R8	refers Arg1:T12 Arg2:T6	
+T15	physical_quality 27 33	frozen
+T16	food_product_without_unit_countable 34 41	bananas
+R9	refers Arg1:T16 Arg2:T15	
+R10	refers Arg1:T16 Arg2:T5	
+T17	physical_quality 7 13	frozen
+T18	food_product_with_unit 14 24	strawberry
+R11	refers Arg1:T18 Arg2:T17	
+R12	refers Arg1:T18 Arg2:T1	
+R13	refers Arg1:T1 Arg2:T4	

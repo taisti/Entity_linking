@@ -1,0 +1,38 @@
+T1	unit 2 8	ounces
+T2	unit 33 37	cups
+T3	unit 94 100	ounces
+T4	unit 118 124	ounces
+T5	unit 141 147	ounces
+T6	unit 161 167	ounces
+T7	quantity 0 1	6
+T8	quantity 31 32	4
+T9	quantity 91 93	14
+T10	quantity 116 117	8
+T11	quantity 138 140	12
+T12	quantity 158 160	18
+T13	trade_name 148 157	Cool Whip
+T14	food_product_with_unit 148 157	Cool Whip
+R1	refers Arg1:T14 Arg2:T5	
+R2	refers Arg1:T5 Arg2:T11	
+T15	trade_name 168 172	Oreo
+T16	food_product_with_unit 173 180	cookies
+R3	refers Arg1:T16 Arg2:T15	
+R4	refers Arg1:T16 Arg2:T6	
+R5	refers Arg1:T6 Arg2:T12	
+R6	refers Arg1:T4 Arg2:T10	
+R7	refers Arg1:T3 Arg2:T9	
+R8	refers Arg1:T2 Arg2:T8	
+R9	refers Arg1:T1 Arg2:T7	
+T17	food_product_with_unit 9 30	chocolate pudding mix
+R10	refers Arg1:T17 Arg2:T1	
+T18	food_product_with_unit 38 42	milk
+T19	purpose 44 66	to prepare pudding mix
+R11	refers Arg1:T18 Arg2:T19	
+T20	food_product_with_unit 111 115	milk
+T21	physical_quality 101 110	condensed
+R12	refers Arg1:T20 Arg2:T21	
+R13	refers Arg1:T20 Arg2:T3	
+T22	food_product_with_unit 125 137	cream cheese
+R14	refers Arg1:T22 Arg2:T4	
+R15	refers Arg1:T14 Arg2:T13	
+R16	refers Arg1:T18 Arg2:T2	

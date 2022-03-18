@@ -1,0 +1,43 @@
+T1	unit 2 5	cup
+T2	unit 59 62	cup
+T3	unit 90 101	tablespoons
+T4	unit 129 137	teaspoon
+T5	unit 156 164	teaspoon
+T6	quantity 0 1	1
+T7	quantity 33 34	2
+T8	quantity 55 58	1/4
+T9	quantity 88 89	2
+T10	quantity 125 128	1/4
+T11	quantity 152 155	1/4
+T12	quantity 184 185	3
+T13	food_product_with_unit 6 14	broccoli
+T14	process 16 22	Cooked
+T15	process 24 31	chopped
+R1	refers Arg1:T13 Arg2:T14	
+R2	refers Arg1:T13 Arg2:T15	
+R3	refers Arg1:T13 Arg2:T1	
+R4	refers Arg1:T1 Arg2:T6	
+T16	food_product_without_unit_countable 35 45	egg whites
+R5	refers Arg1:T16 Arg2:T7	
+T17	process 47 53	beaten
+R6	refers Arg1:T16 Arg2:T17	
+T18	food_product_with_unit 63 78	Parmesan cheese
+R7	refers Arg1:T18 Arg2:T2	
+R8	refers Arg1:T2 Arg2:T8	
+T19	process 80 86	grated
+R9	refers Arg1:T18 Arg2:T19	
+T20	food_product_with_unit 102 113;115 123	pancake mix fat free
+R10	refers Arg1:T20 Arg2:T3	
+R11	refers Arg1:T3 Arg2:T9	
+T21	food_product_with_unit 138 151	garlic powder
+R12	refers Arg1:T21 Arg2:T4	
+R13	refers Arg1:T4 Arg2:T10	
+T22	food_product_with_unit 165 183	italian seasonings
+R14	refers Arg1:T22 Arg2:T5	
+R15	refers Arg1:T5 Arg2:T11	
+T23	unit 186 192	twists
+T24	food_product_with_unit 199 205	pepper
+R16	refers Arg1:T24 Arg2:T23	
+R17	refers Arg1:T23 Arg2:T12	
+T25	color 193 198	black
+R18	refers Arg1:T24 Arg2:T25	

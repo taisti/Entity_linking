@@ -1,0 +1,45 @@
+T1	food_product_with_unit 160 165	water
+T2	unit 148 159	tablespoons
+T3	quantity 146 147	2
+T4	food_product_with_unit 134 145	lemon juice
+T5	unit 123 133	tablespoon
+T6	quantity 121 122	1
+T7	food_product_with_unit 109 120	basil pesto
+T8	unit 105 108	cup
+T9	quantity 103 104	½
+R1	refers Arg1:T4 Arg2:T5	
+R2	refers Arg1:T1 Arg2:T2	
+R5	refers Arg1:T7 Arg2:T8	
+T10	food_product_with_unit 97 102	cumin
+T11	process 90 96	ground
+T12	unit 81 89	teaspoon
+T13	quantity 79 80	½
+R7	refers Arg1:T10 Arg2:T11	
+R8	refers Arg1:T10 Arg2:T12	
+T14	food_product_with_unit 72 78	garlic
+T15	unit 66 71	clove
+T16	quantity 64 65	1
+R10	refers Arg1:T14 Arg2:T15	
+T17	food_product_with_unit 59 63	salt
+T18	unit 50 58	teaspoon
+T19	quantity 48 49	¼
+R12	refers Arg1:T17 Arg2:T18	
+T20	quantity 0 2	15
+T21	unit 3 5	oz
+T22	food_product_with_unit 6 20	garbanzo beans
+T23	quantity 22 23	1
+T24	unit 24 27	can
+T25	process 29 36	drained
+T26	process 41 47	rinsed
+R16	refers Arg1:T22 Arg2:T25	
+R17	refers Arg1:T22 Arg2:T26	
+R18	refers Arg1:T22 Arg2:T21	
+R3	refers Arg1:T21 Arg2:T20	
+R4	refers Arg1:T18 Arg2:T19	
+R6	refers Arg1:T15 Arg2:T16	
+R9	refers Arg1:T12 Arg2:T13	
+R11	refers Arg1:T8 Arg2:T9	
+R13	refers Arg1:T5 Arg2:T6	
+R19	refers Arg1:T2 Arg2:T3	
+R15	refers Arg1:T24 Arg2:T23	
+R14	refers Arg1:T22 Arg2:T24	

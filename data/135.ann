@@ -1,0 +1,48 @@
+T1	unit 6 11	ounce
+T2	unit 43 48	ounce
+T3	unit 82 87	ounce
+T4	unit 128 133	ounce
+T5	unit 162 165	cup
+T6	unit 181 184	cup
+T7	quantity 0 1	1
+T8	quantity 3 5	21
+T9	quantity 40 42	21
+T10	quantity 76 77	1
+T11	quantity 79 81	15
+T12	quantity 122 123	1
+T13	quantity 125 127	18
+T14	quantity 160 161	1
+T15	quantity 179 180	1
+T16	food_product_with_unit 185 194	margarine
+R1	refers Arg1:T16 Arg2:T6	
+R2	refers Arg1:T6 Arg2:T15	
+T17	process 166 173	chopped
+T18	food_product_with_unit 174 178	nuts
+R3	refers Arg1:T18 Arg2:T17	
+R4	refers Arg1:T18 Arg2:T5	
+R5	refers Arg1:T5 Arg2:T14	
+T19	unit 89 92	can
+T20	process 112 121	undrained
+T21	physical_quality 156 159	dry
+T22	unit 135 138	box
+T23	food_product_with_unit 139 154	yellow cake mix
+T24	food_product_with_unit 101 110	pineapple
+T25	physical_quality 93 100	crushed
+R6	refers Arg1:T24 Arg2:T25	
+R7	refers Arg1:T23 Arg2:T22	
+R8	refers Arg1:T23 Arg2:T21	
+R9	refers Arg1:T22 Arg2:T12	
+R10	refers Arg1:T23 Arg2:T4	
+R11	refers Arg1:T4 Arg2:T13	
+R12	refers Arg1:T1 Arg2:T8	
+T26	unit 13 16	can
+T27	food_product_with_unit 17 35	cherry pie filling
+R13	refers Arg1:T27 Arg2:T26	
+R14	refers Arg1:T26 Arg2:T7	
+T28	unit 50 53	can
+T29	food_product_with_unit 54 75	blueberry pie filling
+R15	refers Arg1:T29 Arg2:T28	
+R16	refers Arg1:T2 Arg2:T9	
+R17	refers Arg1:T28 Arg2:T7	
+R18	or Arg1:T27 Arg2:T29	
+R19	refers Arg1:T24 Arg2:T20	

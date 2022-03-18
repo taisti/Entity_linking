@@ -1,0 +1,43 @@
+T1	unit 46 49	cup
+T2	unit 64 72	teaspoon
+T3	unit 91 94	cup
+T4	unit 111 114	cup
+T5	unit 140 148	teaspoon
+T6	unit 158 166	teaspoon
+T7	quantity 0 1	4
+T8	quantity 42 45	2⁄3
+T9	quantity 60 63	1⁄2
+T10	quantity 87 90	1⁄4
+T11	quantity 107 110	1⁄4
+T12	quantity 138 139	1
+T13	quantity 154 157	1⁄4
+T14	part 28 41	breast halves
+T15	food_product_with_unit 20 27	chicken
+T16	physical_quality 11 19	skinless
+T17	physical_quality 2 10	boneless
+R1	refers Arg1:T15 Arg2:T14	
+R2	refers Arg1:T15 Arg2:T16	
+R3	refers Arg1:T15 Arg2:T17	
+R4	refers Arg1:T15 Arg2:T7	
+T18	food_product_with_unit 50 59	olive oil
+R5	refers Arg1:T18 Arg2:T1	
+R6	refers Arg1:T1 Arg2:T8	
+R7	refers Arg1:T2 Arg2:T9	
+T19	food_product_with_unit 73 86	garlic powder
+R8	refers Arg1:T19 Arg2:T2	
+T20	food_product_with_unit 95 106	lemon juice
+R9	refers Arg1:T20 Arg2:T3	
+R10	refers Arg1:T3 Arg2:T10	
+T21	process 115 121	grated
+T22	food_product_with_unit 122 137	parmesan cheese
+R11	refers Arg1:T22 Arg2:T21	
+R12	refers Arg1:T22 Arg2:T4	
+R13	refers Arg1:T4 Arg2:T11	
+R14	refers Arg1:T5 Arg2:T12	
+T23	food_product_with_unit 149 153	salt
+R15	refers Arg1:T23 Arg2:T5	
+T24	food_product_with_unit 173 179	pepper
+T25	color 167 172	black
+R16	refers Arg1:T24 Arg2:T25	
+R17	refers Arg1:T24 Arg2:T6	
+R18	refers Arg1:T6 Arg2:T13	

@@ -1,0 +1,24 @@
+T1	unit 10 13	lbs
+T2	unit 68 71	cup
+T3	unit 80 90	tablespoon
+T4	quantity 0 9	2 - 2 1⁄2
+T6	quantity 30 31	1
+T7	quantity 66 67	1
+T8	quantity 78 79	1
+T9	physical_quality 32 37	large
+T10	color 38 43	green
+T11	food_product_with_unit 44 50	pepper
+T12	process 52 65	cut in strips
+R1	refers Arg1:T11 Arg2:T12	
+R2	refers Arg1:T11 Arg2:T10	
+R3	refers Arg1:T11 Arg2:T9	
+R4	refers Arg1:T11 Arg2:T6	
+R5	refers Arg1:T2 Arg2:T7	
+T13	food_product_with_unit 72 77	water
+R6	refers Arg1:T13 Arg2:T2	
+T14	food_product_with_unit 91 100	olive oil
+R7	refers Arg1:T14 Arg2:T3	
+R8	refers Arg1:T3 Arg2:T8	
+T15	food_product_with_unit 14 29	turkey kielbasa
+R9	refers Arg1:T15 Arg2:T1	
+R10	refers Arg1:T1 Arg2:T4	

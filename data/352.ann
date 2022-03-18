@@ -1,0 +1,12 @@
+T1	unit 2 8	ounces
+T2	unit 39 44	ounce
+T4	quantity 0 1	2
+T5	quantity 37 38	1
+T7	food_product_with_unit 45 61	cream of coconut
+T8	taste 9 20	unsweetened
+T9	food_product_with_unit 21 36	pineapple juice
+R1	refers Arg1:T9 Arg2:T8	
+R2	refers Arg1:T9 Arg2:T1	
+R3	refers Arg1:T1 Arg2:T4	
+R4	refers Arg1:T2 Arg2:T5	
+R5	refers Arg1:T7 Arg2:T2	

@@ -1,0 +1,44 @@
+T1	unit 6 12	ounces
+T2	unit 99 109	tablespoon
+T3	unit 252 260	teaspoon
+T5	food_product_without_unit_uncountable 277 280	ice
+T6	food_product_with_unit 261 276	vanilla extract
+T7	quantity 248 251	1⁄2
+R1	refers Arg1:T3 Arg2:T7	
+R2	refers Arg1:T6 Arg2:T3	
+T8	quantity 150 151;201 208	1 or more
+T9	quantity 153 154;201 208	1 or more
+T10	unit 155 156	g
+T11	food_product_with_unit 110 114	milk
+T12	quantity 94 98	1 -2
+T13	quantity 0 5	8 -10
+T14	food_product_with_unit 27 33	coffee
+T15	physical_quality 13 26	double-strong
+T16	physical_quality 35 39	cold
+R3	refers Arg1:T14 Arg2:T16	
+R4	refers Arg1:T11 Arg2:T2	
+R5	refers Arg1:T2 Arg2:T12	
+T17	quantity 118 122	1 -2
+T18	unit 123 133	tablespoon
+R6	refers Arg1:T18 Arg2:T17	
+T19	food_product_with_unit 134 139	cream
+R7	refers Arg1:T19 Arg2:T18	
+R8	or Arg1:T11 Arg2:T19	
+T20	purpose 141 149	to taste
+R9	refers Arg1:T19 Arg2:T20	
+R10	refers Arg1:T11 Arg2:T20	
+T21	example 50 58;77 92	half-caf half dark roast
+R11	refers Arg1:T14 Arg2:T21	
+T22	example 62 72;77 92	half decaf half dark roast
+R12	refers Arg1:T14 Arg2:T22	
+T23	purpose 191 199	to taste
+T24	trade_name 165 172	Splenda
+T25	food_product_with_unit 173 189	sugar substitute
+R13	refers Arg1:T25 Arg2:T24	
+R15	refers Arg1:T25 Arg2:T10	
+R18	refers Arg1:T25 Arg2:T23	
+T4	unit 158 164	packet
+R14	refers Arg1:T4 Arg2:T8	
+R17	refers Arg1:T14 Arg2:T15	
+R19	refers Arg1:T14 Arg2:T1	
+R20	refers Arg1:T1 Arg2:T13	

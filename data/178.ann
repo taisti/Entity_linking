@@ -1,0 +1,39 @@
+T1	unit 4 7	cup
+T2	unit 22 25	cup
+T3	unit 34 45	tablespoons
+T4	unit 56 66	tablespoon
+T5	unit 109 112	cup
+T6	unit 129 132	lbs
+T7	quantity 0 3	1⁄2
+T8	quantity 18 21	1⁄2
+T9	quantity 32 33	2
+T10	quantity 54 55	1
+T11	quantity 80 81	2
+T12	quantity 105 108	1⁄2
+T13	quantity 123 128	1 1⁄2
+T14	food_product_with_unit 73 79	ginger
+T15	physical_quality 67 72	fresh
+T16	food_product_with_unit 89 95	garlic
+T17	process 97 104	crushed
+T18	unit 82 88	cloves
+R1	refers Arg1:T18 Arg2:T11	
+R2	refers Arg1:T16 Arg2:T18	
+R3	refers Arg1:T16 Arg2:T17	
+T19	food_product_with_unit 113 122	olive oil
+R4	refers Arg1:T19 Arg2:T5	
+R5	refers Arg1:T5 Arg2:T12	
+T20	food_product_with_unit 8 17	soy sauce
+R6	refers Arg1:T20 Arg2:T1	
+R7	refers Arg1:T1 Arg2:T7	
+T21	food_product_with_unit 26 31	honey
+R8	refers Arg1:T21 Arg2:T2	
+R9	refers Arg1:T2 Arg2:T8	
+T22	food_product_with_unit 46 53	vinegar
+R10	refers Arg1:T22 Arg2:T3	
+R11	refers Arg1:T3 Arg2:T9	
+R12	refers Arg1:T14 Arg2:T15	
+R13	refers Arg1:T14 Arg2:T4	
+R14	refers Arg1:T4 Arg2:T10	
+T23	food_product_with_unit 133 145	flank steaks
+R15	refers Arg1:T23 Arg2:T6	
+R16	refers Arg1:T6 Arg2:T13	

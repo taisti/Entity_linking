@@ -1,0 +1,35 @@
+T1	unit 2 14	fluid ounces
+T2	unit 27 38	fluid ounce
+T3	unit 50 61	fluid ounce
+T4	unit 79 90	fluid ounce
+T5	unit 102 113	fluid ounce
+T6	quantity 0 1	2
+T7	quantity 25 26	1
+T8	quantity 48 49	1
+T9	quantity 77 78	1
+T10	quantity 100 101	1
+T11	quantity 131 132	2
+T12	unit 133 139	dashes
+T13	food_product_without_unit_uncountable 159 174	pineapple juice
+T14	food_product_with_unit 114 130	cream of coconut
+T15	food_product_with_unit 140 149	grenadine
+R1	refers Arg1:T15 Arg2:T12	
+R2	refers Arg1:T12 Arg2:T11	
+R3	refers Arg1:T14 Arg2:T5	
+R4	refers Arg1:T5 Arg2:T10	
+R5	refers Arg1:T4 Arg2:T9	
+T16	food_product_with_unit 91 99	sour mix
+R6	refers Arg1:T16 Arg2:T4	
+T17	food_product_with_unit 62 76	orange liqueur
+R7	refers Arg1:T17 Arg2:T3	
+R8	refers Arg1:T3 Arg2:T8	
+T18	food_product_with_unit 44 47	rum
+T19	color 39 43	dark
+R9	refers Arg1:T18 Arg2:T19	
+R10	refers Arg1:T18 Arg2:T2	
+R11	refers Arg1:T2 Arg2:T7	
+R12	refers Arg1:T1 Arg2:T6	
+T20	food_product_with_unit 21 24	rum
+T21	color 15 20	light
+R13	refers Arg1:T20 Arg2:T21	
+R14	refers Arg1:T20 Arg2:T1	

@@ -1,0 +1,47 @@
+T1	unit 6 10	cups
+T2	unit 33 36	cup
+T3	unit 51 60	teaspoons
+T4	unit 79 87	teaspoon
+T5	unit 95 106	tablespoons
+T6	unit 147 150	cup
+T7	unit 189 200	tablespoons
+T8	quantity 0 5	1 3/4
+T9	quantity 29 32	1/3
+T10	quantity 49 50	2
+T11	quantity 75 78	1/2
+T12	quantity 93 94	5
+T13	quantity 143 146	1/2
+T14	quantity 187 188	3
+T15	food_product_with_unit 201 213	orange juice
+T16	physical_quality 151 160	miniature
+T17	food_product_with_unit 116 122	butter
+T18	taste 107 115	unsalted
+T19	process 124 131	chilled
+T20	process 136 141	cubed
+T21	taste 161 170	semisweet
+T22	food_product_with_unit 43 48	sugar
+R1	refers Arg1:T22 Arg2:T2	
+R2	refers Arg1:T2 Arg2:T9	
+T23	food_product_with_unit 61 74	baking powder
+R3	refers Arg1:T23 Arg2:T3	
+R4	refers Arg1:T3 Arg2:T10	
+T24	food_product_with_unit 88 92	salt
+R5	refers Arg1:T24 Arg2:T4	
+R6	refers Arg1:T4 Arg2:T11	
+R7	refers Arg1:T5 Arg2:T12	
+R8	refers Arg1:T17 Arg2:T5	
+R9	refers Arg1:T17 Arg2:T19	
+R10	refers Arg1:T17 Arg2:T20	
+T25	food_product_with_unit 171 186	chocolate chips
+R11	refers Arg1:T25 Arg2:T21	
+R12	refers Arg1:T25 Arg2:T16	
+R13	refers Arg1:T25 Arg2:T6	
+R14	refers Arg1:T6 Arg2:T13	
+R15	refers Arg1:T7 Arg2:T14	
+R16	refers Arg1:T15 Arg2:T7	
+T26	food_product_with_unit 11 28	all purpose flour
+R17	refers Arg1:T26 Arg2:T1	
+R18	refers Arg1:T1 Arg2:T8	
+T27	color 37 42	white
+R19	refers Arg1:T22 Arg2:T27	
+R20	refers Arg1:T17 Arg2:T18	

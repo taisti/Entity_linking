@@ -1,0 +1,5 @@
+T1	unit 2 4	oz
+T2	quantity 0 1	7
+T4	food_product_with_unit 34 44;5 24	with icing cinnamon roll dough
+R1	refers Arg1:T4 Arg2:T1	
+R2	refers Arg1:T1 Arg2:T2	

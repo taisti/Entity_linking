@@ -1,0 +1,10 @@
+T1	unit 5 7	oz
+T2	quantity 0 4	16 ½
+T4	quantity 29 30	8
+T5	food_product_with_unit 8 20	cookie dough
+R1	refers Arg1:T5 Arg2:T1	
+R2	refers Arg1:T1 Arg2:T2	
+T3	physical_quality 31 45	double-stuffed
+T6	food_product_without_unit_countable 46 73	chocolate cookie sandwiches
+R3	refers Arg1:T6 Arg2:T3	
+R4	refers Arg1:T6 Arg2:T4	

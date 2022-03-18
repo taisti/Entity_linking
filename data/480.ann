@@ -1,0 +1,25 @@
+T1	unit 13 17	cups
+T2	unit 27 30	cup
+T3	unit 45 51	ounces
+T4	unit 64 67	cup
+T5	quantity 0 1	3
+T6	quantity 7 12	1 1⁄2
+T7	quantity 23 26	1⁄2
+T8	quantity 42 44	12
+T9	quantity 60 63	1⁄2
+T10	food_product_with_unit 52 59	sausage
+R1	refers Arg1:T10 Arg2:T3	
+R2	refers Arg1:T3 Arg2:T8	
+T11	food_product_with_unit 68 82	cheddar cheese
+R3	refers Arg1:T11 Arg2:T4	
+R4	refers Arg1:T4 Arg2:T9	
+T12	process 84 92	shredded
+R5	refers Arg1:T11 Arg2:T12	
+T13	food_product_with_unit 31 41	baking mix
+R6	refers Arg1:T13 Arg2:T2	
+R7	refers Arg1:T2 Arg2:T7	
+T14	food_product_with_unit 18 22	milk
+R8	refers Arg1:T14 Arg2:T1	
+R9	refers Arg1:T1 Arg2:T6	
+T15	food_product_without_unit_countable 2 6	eggs
+R10	refers Arg1:T15 Arg2:T5	

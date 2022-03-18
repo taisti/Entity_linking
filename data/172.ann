@@ -1,0 +1,58 @@
+T1	unit 2 13	tablespoons
+T2	unit 42 46	cups
+T3	unit 78 84	ounces
+T4	unit 88 92	cups
+T5	unit 148 154	pounds
+T6	unit 158 161	cup
+T7	unit 191 197	ounces
+T8	unit 203 211	teaspoon
+T9	unit 228 236	teaspoon
+T10	quantity 0 1	3
+T11	quantity 40 41	3
+T12	quantity 75 77	10
+T13	quantity 86 87	4
+T14	quantity 142 147	1-1/4
+T16	quantity 156 157	1
+T17	quantity 189 190	4
+T18	quantity 199 202	1/2
+T19	quantity 224 227	1/8
+T20	process 110 116	peeled
+T21	process 121 134	thinly sliced
+T22	food_product_with_unit 162 177	Dubliner cheese
+T23	process 179 187	shredded
+R1	refers Arg1:T22 Arg2:T23	
+R2	refers Arg1:T22 Arg2:T6	
+R3	refers Arg1:T6 Arg2:T16	
+R4	refers Arg1:T22 Arg2:T7	
+R5	refers Arg1:T7 Arg2:T17	
+T24	food_product_with_unit 212 223	kosher salt
+R6	refers Arg1:T24 Arg2:T8	
+R7	refers Arg1:T8 Arg2:T18	
+T25	process 237 251	freshly ground
+T26	color 252 257	black
+T27	food_product_with_unit 258 264	pepper
+R8	refers Arg1:T27 Arg2:T26	
+R9	refers Arg1:T27 Arg2:T25	
+R10	refers Arg1:T27 Arg2:T9	
+R11	refers Arg1:T9 Arg2:T19	
+T28	food_product_with_unit 47 52	onion
+T29	process 54 67	thinly sliced
+R12	refers Arg1:T28 Arg2:T29	
+R13	refers Arg1:T28 Arg2:T3	
+R14	refers Arg1:T3 Arg2:T12	
+R15	refers Arg1:T2 Arg2:T11	
+R16	refers Arg1:T28 Arg2:T2	
+T30	taste 14 22	unsalted
+T31	food_product_with_unit 23 29	butter
+T32	process 31 38	divided
+R17	refers Arg1:T31 Arg2:T32	
+R18	refers Arg1:T31 Arg2:T30	
+R19	refers Arg1:T31 Arg2:T1	
+R20	refers Arg1:T1 Arg2:T10	
+R21	refers Arg1:T4 Arg2:T13	
+T33	food_product_with_unit 93 108	russet potatoes
+R22	refers Arg1:T33 Arg2:T4	
+R23	refers Arg1:T33 Arg2:T20	
+R24	refers Arg1:T33 Arg2:T21	
+R25	refers Arg1:T33 Arg2:T5	
+R26	refers Arg1:T5 Arg2:T14	

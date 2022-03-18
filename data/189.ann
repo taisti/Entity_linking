@@ -1,0 +1,31 @@
+T1	unit 28 36	teaspoon
+T2	unit 77 88	tablespoons
+T3	unit 101 112	tablespoons
+T4	quantity 0 1	4
+T5	quantity 24 27	1⁄2
+T6	quantity 50 51	4
+T7	quantity 71 76	1 1⁄2
+T8	quantity 99 100	2
+T9	food_product_with_unit 37 49	lemon pepper
+R1	refers Arg1:T9 Arg2:T1	
+R2	refers Arg1:T1 Arg2:T5	
+T10	physical_quality 2 10	skinless
+T12	part 16 23	breasts
+T13	physical_quality 52 57	whole
+T14	unit 65 70	heads
+T15	food_product_with_unit 58 64	garlic
+R5	refers Arg1:T15 Arg2:T14	
+R6	refers Arg1:T14 Arg2:T6	
+R7	refers Arg1:T15 Arg2:T13	
+T16	food_product_with_unit 89 98	olive oil
+R8	refers Arg1:T2 Arg2:T7	
+R9	refers Arg1:T16 Arg2:T2	
+T17	food_product_with_unit 119 130	lemon juice
+R10	refers Arg1:T17 Arg2:T3	
+R11	refers Arg1:T3 Arg2:T8	
+T18	physical_quality 113 118	fresh
+R12	refers Arg1:T17 Arg2:T18	
+T11	food_product_without_unit_countable 11 15	duck
+R3	refers Arg1:T11 Arg2:T12	
+R4	refers Arg1:T11 Arg2:T10	
+R13	refers Arg1:T11 Arg2:T4	

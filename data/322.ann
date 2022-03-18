@@ -1,0 +1,7 @@
+T1	quantity 0 1	2
+T2	food_product_without_unit_uncountable 43 48	jelly
+T3	food_product_without_unit_uncountable 33 42	preserves
+T4	food_product_without_unit_uncountable 29 32	jam
+T5	food_product_without_unit_uncountable 8 28	creamy peanut butter
+T6	food_product_without_unit_countable 2 7	bread
+R1	refers Arg1:T6 Arg2:T1	

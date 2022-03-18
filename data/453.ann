@@ -1,0 +1,36 @@
+T1	unit 6 11	ounce
+T2	unit 40 45	ounce
+T3	unit 148 153	ounce
+T4	quantity 0 1	1
+T5	quantity 3 5	16
+T6	quantity 34 35	1
+T7	quantity 37 39	16
+T8	quantity 143 144	1
+T9	quantity 146 147	5
+R1	refers Arg1:T3 Arg2:T9	
+R2	refers Arg1:T2 Arg2:T7	
+R3	refers Arg1:T1 Arg2:T5	
+T10	unit 13 20	package
+T11	unit 47 53	bottle
+T12	unit 155 158	can
+T13	food_product_with_unit 21 33	rotini pasta
+R4	refers Arg1:T13 Arg2:T10	
+R5	refers Arg1:T13 Arg2:T1	
+R6	refers Arg1:T10 Arg2:T4	
+R7	refers Arg1:T11 Arg2:T6	
+T14	physical_quality 54 60	creamy
+T15	food_product_with_unit 61 89	Italian-style salad dressing
+R8	refers Arg1:T15 Arg2:T14	
+R9	refers Arg1:T15 Arg2:T11	
+T16	trade_name 99 141	Ken's Steak House® Creamy Italian Dressing
+R10	refers Arg1:T15 Arg2:T17	
+T17	example 99 141	Ken's Steak House® Creamy Italian Dressing
+T18	food_product_with_unit 159 163	tuna
+T19	process 165 172	drained
+T20	process 177 183	flaked
+R11	refers Arg1:T18 Arg2:T19	
+R12	refers Arg1:T18 Arg2:T20	
+R13	refers Arg1:T18 Arg2:T12	
+R14	refers Arg1:T18 Arg2:T3	
+R15	refers Arg1:T12 Arg2:T8	
+R16	refers Arg1:T17 Arg2:T16	

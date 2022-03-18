@@ -1,0 +1,34 @@
+T1	unit 57 68	tablespoons
+T2	unit 84 87	cup
+T3	unit 100 103	cup
+T4	unit 122 125	cup
+T5	quantity 0 1	2
+T6	quantity 17 18	3
+T7	quantity 55 56	2
+T8	quantity 82 83	¼
+T9	quantity 120 121	¼
+T10	food_product_with_unit 69 81	cocoa powder
+T11	food_product_with_unit 88 97	mint leaf
+T12	food_product_with_unit 115 119	milk
+T13	quantity 98 99	⅔
+R1	refers Arg1:T3 Arg2:T13	
+R2	refers Arg1:T12 Arg2:T3	
+T14	physical_quality 2 8	frozen
+T15	food_product_without_unit_countable 9 16	bananas
+R3	refers Arg1:T15 Arg2:T14	
+R4	refers Arg1:T15 Arg2:T5	
+T16	unit 19 25	scoops
+T17	food_product_with_unit 37 54	vanilla ice cream
+R5	refers Arg1:T17 Arg2:T16	
+R6	refers Arg1:T16 Arg2:T6	
+R7	refers Arg1:T1 Arg2:T7	
+R8	refers Arg1:T10 Arg2:T1	
+R9	refers Arg1:T2 Arg2:T8	
+R10	refers Arg1:T11 Arg2:T2	
+T18	food_product_with_unit 126 134	ice cube
+R11	refers Arg1:T18 Arg2:T4	
+R12	refers Arg1:T4 Arg2:T9	
+T19	diet 26 36	dairy-free
+R13	refers Arg1:T17 Arg2:T19	
+T20	diet 104 114	dairy-free
+R14	refers Arg1:T12 Arg2:T20	

@@ -1,0 +1,19 @@
+T1	food_product_without_unit_uncountable 98 102	salt
+T2	trade_name 103 106	Pam
+T3	food_product_without_unit_uncountable 107 120	cooking spray
+R1	refers Arg1:T3 Arg2:T2	
+T4	unit 27 37	tablespoon
+T5	quantity 22 26	1 -2
+T6	quantity 0 1	8
+T7	food_product_without_unit_countable 2 21	yukon gold potatoes
+R2	refers Arg1:T7 Arg2:T6	
+T8	physical_quality 38 50	extra virgin
+T9	food_product_with_unit 51 60	olive oil
+R3	refers Arg1:T9 Arg2:T8	
+R4	refers Arg1:T9 Arg2:T4	
+R5	refers Arg1:T4 Arg2:T5	
+T10	trade_name 89 96	Mastero
+R6	refers Arg1:T9 Arg2:T11	
+T11	example 89 96	Mastero
+T12	physical_quality 68 80	good quality
+R7	refers Arg1:T9 Arg2:T12	

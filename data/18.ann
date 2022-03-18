@@ -1,0 +1,33 @@
+T1	food_product_with_unit 127 145	himalayan sea salt
+T2	unit 118 126	teaspoon
+T3	quantity 116 117	¼
+T4	process 97 103	seeded
+T5	process 108 115	chopped
+T6	food_product_with_unit 87 95	jalapeño
+T7	unit 75 86	tablespoons
+T8	quantity 73 74	2
+R1	refers Arg1:T6 Arg2:T4	
+R2	refers Arg1:T6 Arg2:T5	
+R3	refers Arg1:T6 Arg2:T7	
+R4	refers Arg1:T7 Arg2:T8	
+R5	refers Arg1:T1 Arg2:T2	
+R6	refers Arg1:T2 Arg2:T3	
+T9	food_product_with_unit 59 72	coconut water
+T10	unit 55 58	cup
+T11	quantity 53 54	½
+R7	refers Arg1:T9 Arg2:T10	
+R8	refers Arg1:T10 Arg2:T11	
+T12	process 47 52	cubed
+T13	process 36 42	peeled
+T14	food_product_without_unit_countable 26 34	cucumber
+T15	quantity 24 25	½
+R9	refers Arg1:T14 Arg2:T13	
+R10	refers Arg1:T14 Arg2:T12	
+R11	refers Arg1:T14 Arg2:T15	
+T16	process 17 23	sliced
+T17	unit 2 8	stalks
+T18	quantity 0 1	3
+T19	food_product_with_unit 9 15	celery
+R12	refers Arg1:T19 Arg2:T17	
+R13	refers Arg1:T19 Arg2:T16	
+R14	refers Arg1:T17 Arg2:T18	

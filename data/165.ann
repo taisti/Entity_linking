@@ -1,0 +1,53 @@
+T1	unit 6 9	lbs
+T2	unit 42 45	cup
+T3	unit 64 73	teaspoons
+T4	unit 85 94	teaspoons
+T5	unit 120 128	teaspoon
+T6	unit 146 149	cup
+T7	unit 200 211	tablespoons
+T8	unit 229 240	tablespoons
+T9	unit 260 266	ounces
+T10	quantity 0 5	1 1⁄2
+T11	quantity 38 41	1⁄2
+T12	quantity 62 63	2
+T13	quantity 83 84	2
+T14	quantity 118 119	1
+T15	quantity 142 145	1⁄2
+T16	quantity 198 199	4
+T17	quantity 227 228	4
+T18	quantity 257 259	16
+T19	food_product_with_unit 129 141	onion powder
+R1	refers Arg1:T19 Arg2:T5	
+R2	refers Arg1:T5 Arg2:T14	
+T20	food_product_with_unit 150 167	nutritional yeast
+R3	refers Arg1:T20 Arg2:T6	
+R4	refers Arg1:T6 Arg2:T15	
+T21	food_product_with_unit 267 283	fettuccine pasta
+R5	refers Arg1:T21 Arg2:T9	
+R6	refers Arg1:T9 Arg2:T18	
+T22	possible_substitute 184 196	soy parmesan
+R7	substitutable_with Arg1:T20 Arg2:T22	
+T23	trade_name 212 223	Butter Buds
+T24	food_product_with_unit 212 223	Butter Buds
+R8	refers Arg1:T24 Arg2:T7	
+R9	refers Arg1:T7 Arg2:T16	
+R10	refers Arg1:T8 Arg2:T17	
+T25	food_product_with_unit 241 256	vegan margarine
+R11	refers Arg1:T25 Arg2:T8	
+R12	or Arg1:T24 Arg2:T25	
+T26	food_product_with_unit 95 117	Italian herb seasoning
+R13	refers Arg1:T26 Arg2:T4	
+R14	refers Arg1:T4 Arg2:T13	
+T27	food_product_with_unit 74 79	basil
+R15	refers Arg1:T27 Arg2:T3	
+R16	refers Arg1:T3 Arg2:T12	
+R17	or Arg1:T27 Arg2:T26	
+T28	food_product_with_unit 46 61	vegetable broth
+R18	refers Arg1:T28 Arg2:T2	
+R19	refers Arg1:T2 Arg2:T11	
+T29	food_product_with_unit 15 37	silken extra firm tofu
+R20	refers Arg1:T29 Arg2:T1	
+R21	refers Arg1:T1 Arg2:T10	
+R22	refers Arg1:T24 Arg2:T23	
+T30	diet 10 14	lite
+R23	refers Arg1:T29 Arg2:T30	

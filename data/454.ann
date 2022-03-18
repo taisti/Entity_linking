@@ -1,0 +1,54 @@
+T1	unit 10 15	ounce
+T2	unit 58 63	ounce
+T3	unit 110 119	teaspoons
+T4	unit 162 165	cup
+T5	unit 197 205	teaspoon
+T6	unit 222 230	teaspoon
+T7	unit 241 249	teaspoon
+T8	quantity 0 1	1
+T9	quantity 3 9	14 1/2
+T10	quantity 48 49	1
+T11	quantity 51 57	14 1/2
+T12	quantity 108 109	4
+T13	quantity 158 161	1⁄4
+T14	quantity 187 196	1⁄2 - 3⁄4
+T16	quantity 218 221	1⁄2
+T17	quantity 237 240	1⁄4
+T18	unit 17 20	can
+R1	refers Arg1:T18 Arg2:T8	
+R2	refers Arg1:T1 Arg2:T9	
+R3	refers Arg1:T2 Arg2:T11	
+T19	unit 65 68	can
+R4	refers Arg1:T19 Arg2:T10	
+T20	food_product_with_unit 120 129	jalapenos
+R5	refers Arg1:T3 Arg2:T12	
+R6	refers Arg1:T20 Arg2:T3	
+R7	refers Arg1:T4 Arg2:T13	
+T21	color 166 172	yellow
+T22	food_product_with_unit 173 178	onion
+R8	refers Arg1:T22 Arg2:T21	
+T23	process 180 185	diced
+R9	refers Arg1:T22 Arg2:T23	
+T24	physical_quality 131 137	canned
+T26	physical_quality 138 156	diced, not pickled
+R10	refers Arg1:T20 Arg2:T24	
+R11	refers Arg1:T20 Arg2:T26	
+T25	food_product_with_unit 206 217	garlic salt
+R12	refers Arg1:T25 Arg2:T5	
+R13	refers Arg1:T5 Arg2:T14	
+T15	food_product_with_unit 231 236	cumin
+R14	refers Arg1:T15 Arg2:T6	
+R15	refers Arg1:T6 Arg2:T16	
+T27	food_product_with_unit 250 255	sugar
+R16	refers Arg1:T27 Arg2:T7	
+R17	refers Arg1:T7 Arg2:T17	
+T28	physical_quality 69 74	whole
+T29	physical_quality 75 81	canned
+T30	food_product_with_unit 82 90;92 106	tomatoes plus the juice
+R18	refers Arg1:T30 Arg2:T29	
+R19	refers Arg1:T30 Arg2:T28	
+R20	refers Arg1:T30 Arg2:T19	
+R21	refers Arg1:T30 Arg2:T2	
+T31	food_product_with_unit 21 47	tomatoes and green chilies
+R22	refers Arg1:T31 Arg2:T18	
+R23	refers Arg1:T31 Arg2:T1	

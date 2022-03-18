@@ -1,0 +1,39 @@
+T1	unit 2 8	ounces
+T2	unit 31 34	cup
+T3	unit 98 106	teaspoon
+T4	unit 121 131	tablespoon
+T5	unit 170 180	tablespoon
+T6	quantity 0 1	8
+T7	quantity 27 30	1⁄4
+T8	quantity 94 97	1⁄2
+T9	quantity 119 120	1
+T10	quantity 168 169	1
+T11	quantity 212 214	12
+T12	physical_quality 35 40	dried
+T13	food_product_with_unit 41 52	cranberries
+T14	process 54 68	finely chopped
+R1	refers Arg1:T13 Arg2:T14	
+R2	refers Arg1:T13 Arg2:T12	
+R3	refers Arg1:T13 Arg2:T2	
+R4	refers Arg1:T2 Arg2:T7	
+T15	food_product_with_unit 9 26	mascarpone cheese
+R5	refers Arg1:T15 Arg2:T1	
+R6	refers Arg1:T1 Arg2:T6	
+T16	food_product_with_unit 107 118	orange zest
+R7	refers Arg1:T16 Arg2:T3	
+R8	refers Arg1:T3 Arg2:T8	
+T17	food_product_with_unit 132 146	orange liqueur
+R9	refers Arg1:T17 Arg2:T4	
+R10	refers Arg1:T4 Arg2:T9	
+T18	example 154 163	Cointreau
+R11	refers Arg1:T17 Arg2:T18	
+R12	refers Arg1:T5 Arg2:T10	
+T19	food_product_with_unit 181 193	orange juice
+R13	refers Arg1:T19 Arg2:T5	
+R14	or Arg1:T17 Arg2:T19	
+T20	physical_quality 215 220	large
+T21	food_product_without_unit_countable 221 233	strawberries
+T22	process 235 241;249 269	halved green tops on or off
+R15	refers Arg1:T21 Arg2:T22	
+R16	refers Arg1:T21 Arg2:T20	
+R17	refers Arg1:T21 Arg2:T11	

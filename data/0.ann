@@ -1,0 +1,22 @@
+T1	quantity 0 1	5
+T2	unit 2 8	ounces
+T3	food_product_with_unit 9 12	rum
+R1	refers Arg1:T3 Arg2:T2	
+T4	quantity 33 34	3
+T5	unit 35 41	ounces
+T6	trade_name 42 51	Tia Maria
+T7	food_product_with_unit 42 51	Tia Maria
+R3	refers Arg1:T7 Arg2:T5	
+R2	refers Arg1:T2 Arg2:T1	
+R4	refers Arg1:T5 Arg2:T4	
+T8	food_product_with_unit 22 32	triple sec
+T9	unit 15 21	ounces
+R5	refers Arg1:T8 Arg2:T9	
+T10	quantity 13 14	4
+R6	refers Arg1:T9 Arg2:T10	
+T11	food_product_with_unit 62 74	orange juice
+T12	unit 55 61	ounces
+R7	refers Arg1:T11 Arg2:T12	
+T13	quantity 52 54	20
+R8	refers Arg1:T12 Arg2:T13	
+R9	refers Arg1:T7 Arg2:T6	

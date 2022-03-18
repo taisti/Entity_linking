@@ -1,0 +1,30 @@
+T1	food_product_with_unit 130 137	almonds
+T2	process 121 129	slivered
+T3	unit 114 120	ounces
+T4	quantity 112 113	3
+R1	refers Arg1:T1 Arg2:T2	
+R2	refers Arg1:T1 Arg2:T3	
+R3	refers Arg1:T3 Arg2:T4	
+T5	quantity 77 79	12
+T6	unit 80 86	ounces
+T7	food_product_with_unit 87 92	bacon
+T8	process 94 100	cooked
+T9	process 103 110	crubled
+R4	refers Arg1:T7 Arg2:T8	
+R5	refers Arg1:T7 Arg2:T9	
+R6	refers Arg1:T7 Arg2:T6	
+R7	refers Arg1:T6 Arg2:T5	
+T10	unit 44 50	ounces
+T11	quantity 42 43	6
+T12	food_product_with_unit 51 65	cheddar cheese
+T13	process 67 75	shredded
+R8	refers Arg1:T12 Arg2:T13	
+R9	refers Arg1:T12 Arg2:T10	
+R10	refers Arg1:T10 Arg2:T11	
+T15	process 33 40	chopped
+T17	quantity 17 18	4
+T14	food_product_without_unit_countable 25 31	onions
+T16	color 19 24	green
+R11	refers Arg1:T14 Arg2:T15	
+R12	refers Arg1:T14 Arg2:T17	
+R13	refers Arg1:T14 Arg2:T16	

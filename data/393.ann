@@ -1,0 +1,29 @@
+T1	unit 4 7	cup
+T2	unit 30 34	cups
+T3	unit 50 53	cup
+T4	quantity 0 3	1/2
+T5	quantity 24 29	1 3/4
+T6	quantity 48 49	1
+T7	quantity 76 77	3
+T8	quantity 94 95	3
+T9	food_product_with_unit 35 47	almond flour
+R1	refers Arg1:T9 Arg2:T2	
+R2	refers Arg1:T2 Arg2:T5	
+R3	refers Arg1:T3 Arg2:T6	
+T10	food_product_with_unit 54 64	erythritol
+T11	physical_quality 66 74	powdered
+R4	refers Arg1:T10 Arg2:T11	
+R5	refers Arg1:T10 Arg2:T3	
+T12	food_product_without_unit_countable 78 84	lemons
+T13	physical_quality 86 92	medium
+R6	refers Arg1:T12 Arg2:T13	
+R7	refers Arg1:T12 Arg2:T7	
+T14	physical_quality 96 101	large
+T15	food_product_without_unit_countable 102 106	eggs
+R8	refers Arg1:T15 Arg2:T14	
+R9	refers Arg1:T15 Arg2:T8	
+T16	food_product_with_unit 8 14	butter
+T17	process 16 22	melted
+R10	refers Arg1:T16 Arg2:T17	
+R11	refers Arg1:T16 Arg2:T1	
+R12	refers Arg1:T1 Arg2:T4	

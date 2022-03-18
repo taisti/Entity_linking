@@ -1,0 +1,36 @@
+T1	unit 2 6	cups
+T2	unit 32 36	cups
+T3	unit 86 97	tablespoons
+T4	unit 113 121	teaspoon
+T5	unit 142 150	teaspoon
+T6	quantity 0 1	3
+T7	quantity 30 31	2
+T8	quantity 84 85	3
+T9	quantity 111 112	1
+T10	quantity 138 141	1⁄2
+T11	quantity 167 168	1
+T12	food_product_with_unit 122 137	vanilla extract
+T14	food_product_with_unit 7 14	bananas
+T15	process 16 22	frozen
+T16	process 24 29	diced
+R1	refers Arg1:T14 Arg2:T15	
+R2	refers Arg1:T14 Arg2:T16	
+R3	refers Arg1:T14 Arg2:T1	
+R4	refers Arg1:T1 Arg2:T6	
+R5	refers Arg1:T2 Arg2:T7	
+T17	food_product_with_unit 98 110	agave nectar
+R7	refers Arg1:T17 Arg2:T3	
+R8	refers Arg1:T3 Arg2:T8	
+R9	refers Arg1:T4 Arg2:T9	
+R10	refers Arg1:T12 Arg2:T4	
+T18	process 151 157	ground
+T19	food_product_with_unit 158 166	cinnamon
+R11	refers Arg1:T19 Arg2:T18	
+R12	refers Arg1:T19 Arg2:T5	
+R13	refers Arg1:T5 Arg2:T10	
+T20	unit 169 174	pinch
+T21	food_product_with_unit 175 183	sea salt
+R14	refers Arg1:T21 Arg2:T20	
+R15	refers Arg1:T20 Arg2:T11	
+T22	food_product_with_unit 52 60	nut milk
+R16	refers Arg1:T22 Arg2:T2	

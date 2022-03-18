@@ -1,0 +1,38 @@
+T1	unit 17 20	cup
+T2	unit 37 40	cup
+T3	unit 95 103	teaspoon
+T4	unit 124 127	cup
+T5	unit 152 156	cups
+T6	quantity 0 1	3
+T7	quantity 13 16	1/2
+T8	quantity 33 36	1/2
+T9	quantity 93 94	1
+T10	quantity 120 123	1/2
+T11	quantity 146 151	2 1/2
+T12	food_product_with_unit 104 119	vanilla extract
+R1	refers Arg1:T12 Arg2:T3	
+R2	refers Arg1:T3 Arg2:T9	
+T13	food_product_with_unit 128 145	all-purpose flour
+R3	refers Arg1:T4 Arg2:T10	
+R4	refers Arg1:T13 Arg2:T4	
+T14	taste 157 166	sweetened
+T15	food_product_with_unit 167 181	coconut flakes
+R5	refers Arg1:T15 Arg2:T14	
+R6	refers Arg1:T15 Arg2:T5	
+R7	refers Arg1:T5 Arg2:T11	
+T16	food_product_with_unit 41 51	corn syrup
+T17	color 53 59	golden
+R8	refers Arg1:T16 Arg2:T17	
+R9	refers Arg1:T16 Arg2:T2	
+R10	refers Arg1:T2 Arg2:T8	
+T18	color 21 26	white
+T19	food_product_with_unit 27 32	sugar
+R11	refers Arg1:T19 Arg2:T18	
+R12	refers Arg1:T19 Arg2:T1	
+R13	refers Arg1:T1 Arg2:T7	
+T20	food_product_without_unit_countable 2 5	egg
+T21	part 6 12	whites
+R14	refers Arg1:T20 Arg2:T21	
+R15	refers Arg1:T20 Arg2:T6	
+T22	possible_substitute 41 51;76 87	corn syrup transparent
+R16	substitutable_with Arg1:T16 Arg2:T22	

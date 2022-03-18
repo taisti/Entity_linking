@@ -1,0 +1,53 @@
+T1	unit 30 33	cup
+T2	unit 62 65	cup
+T3	unit 88 91	cup
+T4	unit 156 159	cup
+T5	unit 179 187	teaspoon
+T6	unit 201 209	teaspoon
+T7	unit 228 236	teaspoon
+T8	quantity 0 1	1
+T9	quantity 28 29	1
+T10	quantity 60 61	1
+T11	quantity 86 87	1
+T12	quantity 152 155	1⁄4
+T13	quantity 175 178	1⁄2
+T14	quantity 197 200	1⁄2
+T15	quantity 224 227	1⁄4
+T16	physical_quality 66 74	uncooked
+T17	process 34 40	cooked
+T18	color 41 46	brown
+T19	food_product_with_unit 47 51	rice
+T20	process 53 59	cooled
+R1	refers Arg1:T19 Arg2:T20	
+R2	refers Arg1:T19 Arg2:T17	
+R3	refers Arg1:T19 Arg2:T18	
+R4	refers Arg1:T19 Arg2:T1	
+R5	refers Arg1:T1 Arg2:T9	
+T21	unit 2 4	lb
+R6	refers Arg1:T21 Arg2:T8	
+T22	food_product_with_unit 20 27	chicken
+T23	process 5 19	regular ground
+R7	refers Arg1:T22 Arg2:T23	
+R8	refers Arg1:T22 Arg2:T21	
+T24	food_product_with_unit 160 174	barbecue sauce
+R9	refers Arg1:T24 Arg2:T4	
+R10	refers Arg1:T4 Arg2:T12	
+R11	refers Arg1:T2 Arg2:T10	
+T25	food_product_with_unit 75 82	oatmeal
+R12	refers Arg1:T25 Arg2:T16	
+R13	refers Arg1:T25 Arg2:T2	
+T26	physical_quality 92 100	uncooked
+T27	food_product_with_unit 101 151	oatmeal, with flax seed and wheat bran combination
+R14	refers Arg1:T27 Arg2:T26	
+R15	refers Arg1:T27 Arg2:T3	
+R16	refers Arg1:T3 Arg2:T11	
+R17	or Arg1:T25 Arg2:T27	
+T28	food_product_with_unit 188 196	sea salt
+R18	refers Arg1:T28 Arg2:T5	
+R19	refers Arg1:T5 Arg2:T13	
+T29	food_product_with_unit 210 223	garlic powder
+R20	refers Arg1:T29 Arg2:T6	
+R21	refers Arg1:T6 Arg2:T14	
+T30	food_product_with_unit 237 243	pepper
+R22	refers Arg1:T30 Arg2:T7	
+R23	refers Arg1:T7 Arg2:T15	

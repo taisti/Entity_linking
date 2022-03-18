@@ -1,0 +1,9 @@
+T2	quantity 159 160	1
+T3	food_product_without_unit_countable 161 166	onion
+T4	food_product_without_unit_uncountable 188 201	garlic powder
+T5	process 168 187	cut into thin rings
+R1	refers Arg1:T3 Arg2:T5	
+R2	refers Arg1:T3 Arg2:T2	
+T6	food_product_without_unit_uncountable 0 10	roast beef
+T1	process 107 157	adjust the baking time in the oven 5 mins. per lb.
+R3	refers Arg1:T6 Arg2:T1	

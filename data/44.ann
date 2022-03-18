@@ -1,0 +1,26 @@
+T1	quantity 0 1	6
+T2	quantity 30 31	3
+T3	quantity 52 53	2
+T4	quantity 72 73	3
+T5	unit 54 63	teaspoons
+T6	unit 74 85	tablespoons
+T7	unit 32 36	cups
+T8	unit 2 13	tablespoons
+T9	food_product_with_unit 14 20	butter
+T10	food_product_with_unit 46 51	sugar
+T11	food_product_with_unit 64 71	vanilla
+T14	process 22 28	melted
+R4	refers Arg1:T6 Arg2:T4	
+R5	refers Arg1:T5 Arg2:T3	
+R6	refers Arg1:T10 Arg2:T7	
+R7	refers Arg1:T7 Arg2:T2	
+R8	refers Arg1:T9 Arg2:T14	
+R9	refers Arg1:T9 Arg2:T8	
+R10	refers Arg1:T8 Arg2:T1	
+T15	possible_substitute 115 119	milk
+T12	food_product_with_unit 86 97	heavy cream
+R1	substitutable_with Arg1:T12 Arg2:T15	
+R2	refers Arg1:T12 Arg2:T6	
+R3	refers Arg1:T11 Arg2:T5	
+T16	physical_quality 37 45	powdered
+R11	refers Arg1:T10 Arg2:T16	

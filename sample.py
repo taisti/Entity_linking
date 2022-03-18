@@ -8,13 +8,18 @@ from brat_parser import get_entities_relations_attributes_groups
 
 def read_entities():
     entities_list, relations_list = [], []
-
+    datapath = Path.cwd() / "data"
     for i in range(300):
-        entities, relations, _, _ = get_entities_relations_attributes_groups(r".\0-1-2\{0}.ann".format(i))
+        entities, relations, _, _ = get_entities_relations_attributes_groups(datapath / "{0}.ann".format(i))
         entities_list.append(entities)
         relations_list.append(relations)
 
     return entities_list
+
+
+def read_file_as_stream_elem(path):
+    with open(path, 'r') as input_data:
+        return [{"text": input_data.read()}]
 
 
 @prodigy.recipe(
@@ -41,7 +46,7 @@ def entity_linker_manual(dataset, source_dir, recipe_number, nlp_dir, kb_loc, en
             id_dict[row[0]] = (row[1], row[2])
 
     file_name = r"{0}.txt".format(recipe_number)
-    stream = prodigy.components.loaders.TXT(Path(source_dir, file_name))
+    stream = read_file_as_stream_elem(Path(source_dir, file_name))
     stream = [prodigy.util.set_hashes(eg) for eg in stream]
     # stream = (eg for score, eg in model(stream))
     for i, elem in enumerate(stream):

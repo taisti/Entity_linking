@@ -1,0 +1,34 @@
+T1	unit 2 6	cups
+T2	unit 76 79	cup
+T3	unit 100 103	cup
+T4	unit 120 123	cup
+T5	quantity 0 1	3
+T6	quantity 74 75	1
+T7	quantity 98 99	1
+T8	quantity 110 111	1
+T9	quantity 116 119	3/4
+T10	food_product_with_unit 124 130	butter
+T11	process 132 138	melted
+R1	refers Arg1:T10 Arg2:T11	
+R2	refers Arg1:T10 Arg2:T4	
+R3	refers Arg1:T4 Arg2:T9	
+T12	food_product_without_unit_countable 112 115	egg
+R4	refers Arg1:T12 Arg2:T8	
+T13	food_product_with_unit 104 109	sugar
+R5	refers Arg1:T13 Arg2:T3	
+R6	refers Arg1:T3 Arg2:T7	
+T14	food_product_with_unit 80 97	all-purpose flour
+R7	refers Arg1:T14 Arg2:T2	
+R8	refers Arg1:T2 Arg2:T6	
+T15	physical_quality 7 13	frozen
+T16	food_product_with_unit 14 26	blackberries
+R9	refers Arg1:T16 Arg2:T15	
+R10	refers Arg1:T16 Arg2:T1	
+R11	refers Arg1:T1 Arg2:T5	
+T17	food_product_with_unit 31 38	peaches
+T18	food_product_with_unit 42 66	canned apple pie filling
+R12	refers Arg1:T17 Arg2:T1	
+R13	refers Arg1:T18 Arg2:T1	
+R14	or Arg1:T16 Arg2:T17	
+R15	or Arg1:T17 Arg2:T18	
+R16	or Arg1:T16 Arg2:T18	

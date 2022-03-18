@@ -1,0 +1,35 @@
+T1	unit 47 50	cup
+T2	unit 114 117	cup
+T3	quantity 0 2	12
+T4	quantity 43 46	1⁄2
+T5	quantity 58 60	12
+T6	quantity 104 106	12
+T7	quantity 112 113	1
+T8	unit 61 67	pieces
+T9	food_product_without_unit_countable 107 111	eggs
+T10	food_product_with_unit 68 73	bacon
+T11	physical_quality 3 12	miniature
+T12	food_product_without_unit_countable 13 19;21 32	bagels whole wheat
+R2	refers Arg1:T12 Arg2:T11	
+R3	refers Arg1:T12 Arg2:T3	
+T14	food_product_without_unit_countable 13 19	bagels
+T15	color 36 41	white
+R4	refers Arg1:T14 Arg2:T15	
+R5	refers Arg1:T14 Arg2:T11	
+R6	refers Arg1:T14 Arg2:T3	
+R7	or Arg1:T14 Arg2:T12	
+T16	food_product_with_unit 51 57	butter
+R8	refers Arg1:T16 Arg2:T1	
+R9	refers Arg1:T1 Arg2:T4	
+R10	refers Arg1:T8 Arg2:T5	
+R11	refers Arg1:T9 Arg2:T6	
+T17	process 91 102	cut in half
+R12	refers Arg1:T10 Arg2:T17	
+T18	process 75 86	fried crisp
+R13	refers Arg1:T10 Arg2:T18	
+R14	refers Arg1:T10 Arg2:T8	
+T19	food_product_with_unit 118 132	cheddar cheese
+R15	refers Arg1:T19 Arg2:T2	
+R16	refers Arg1:T2 Arg2:T7	
+T20	process 134 140	grated
+R17	refers Arg1:T19 Arg2:T20	

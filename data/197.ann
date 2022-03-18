@@ -1,0 +1,28 @@
+T1	unit 96 106	tablespoon
+T2	unit 122 131	teaspoons
+T3	quantity 0 1	2
+T5	quantity 65 66	2
+T6	quantity 94 95	1
+T7	quantity 120 121	2
+T8	food_product_with_unit 107 119	apple butter
+R1	refers Arg1:T8 Arg2:T1	
+R2	refers Arg1:T1 Arg2:T6	
+T9	food_product_with_unit 132 138	butter
+R4	refers Arg1:T9 Arg2:T2	
+R5	refers Arg1:T2 Arg2:T7	
+T11	unit 67 73	slices
+R6	refers Arg1:T11 Arg2:T5	
+T12	food_product_with_unit 79 93	cheddar cheese
+T10	process 140 148	softened
+R3	refers Arg1:T9 Arg2:T10	
+T13	unit 2 8	slices
+T14	food_product_with_unit 18 22;9 16	loaf challah
+R7	refers Arg1:T14 Arg2:T13	
+R8	refers Arg1:T13 Arg2:T3	
+T4	process 37 64	sliced about 1/2 inch thick
+T15	physical_quality 24 35	not braided
+R9	refers Arg1:T14 Arg2:T15	
+R10	refers Arg1:T14 Arg2:T4	
+R11	refers Arg1:T12 Arg2:T11	
+T16	taste 74 78	mild
+R12	refers Arg1:T12 Arg2:T16	

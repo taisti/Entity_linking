@@ -1,0 +1,41 @@
+T1	unit 5 11	ounces
+T2	unit 68 74	ounces
+T3	unit 114 117	cup
+T4	unit 139 147	teaspoon
+T5	unit 170 174	cups
+T6	quantity 0 4	16.5
+T7	quantity 66 67	8
+T8	quantity 110 113	1/3
+T9	quantity 135 138	1/2
+T10	quantity 164 169	1 1/2
+T11	food_product_with_unit 118 134	granulated sugar
+T12	food_product_with_unit 148 163	vanilla extract
+R1	refers Arg1:T11 Arg2:T3	
+R2	refers Arg1:T12 Arg2:T4	
+R3	refers Arg1:T4 Arg2:T9	
+R4	refers Arg1:T3 Arg2:T8	
+T13	food_product_with_unit 175 180	fruit
+T14	example 182 193;195 207;209 218;226 233	raspberries sliced mango kiwifruit bananas
+T15	example 195 207	sliced mango
+T16	example 226 233	bananas
+T17	example 209 218	kiwifruit
+R5	refers Arg1:T13 Arg2:T14	
+R6	refers Arg1:T13 Arg2:T15	
+R7	refers Arg1:T13 Arg2:T17	
+R8	refers Arg1:T13 Arg2:T16	
+R9	refers Arg1:T13 Arg2:T5	
+R10	refers Arg1:T5 Arg2:T10	
+T18	food_product_with_unit 75 87	cream cheese
+T19	physical_quality 89 108	at room temperature
+R11	refers Arg1:T18 Arg2:T19	
+R12	refers Arg1:T18 Arg2:T2	
+R13	refers Arg1:T2 Arg2:T7	
+R14	refers Arg1:T1 Arg2:T6	
+T21	trade_name 12 18	NESTLÉ
+T20	food_product_with_unit 30 65	Refrigerated Sugar Cookie Bar Dough
+T22	trade_name 19 29	TOLL HOUSE
+R15	refers Arg1:T20 Arg2:T22	
+R16	refers Arg1:T20 Arg2:T21	
+R17	refers Arg1:T20 Arg2:T1	
+T23	example 182 193	raspberries
+R18	refers Arg1:T13 Arg2:T23	

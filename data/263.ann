@@ -1,0 +1,48 @@
+T1	quantity 0 1	8
+T2	quantity 65 66	8
+T3	quantity 133 134	8
+T4	quantity 161 162	8
+T5	physical_quality 235 240	dried
+T6	food_product_without_unit_uncountable 241 248	parsley
+T7	food_product_without_unit_uncountable 253 258	basil
+R1	refers Arg1:T6 Arg2:T5	
+R2	refers Arg1:T7 Arg2:T5	
+R3	or Arg1:T6 Arg2:T7	
+T8	purpose 259 284	for sprinkling onto bread
+R4	refers Arg1:T7 Arg2:T8	
+R5	refers Arg1:T6 Arg2:T8	
+T9	food_product_without_unit_uncountable 286 300	marinara sauce
+T10	purpose 302 313	for dipping
+R6	refers Arg1:T9 Arg2:T10	
+T11	unit 135 141	slices
+T12	food_product_with_unit 142 151	pineapple
+T13	physical_quality 153 159	canned
+T14	food_product_without_unit_countable 204 214	prosciutto
+T15	process 174 202	generously sized thin-sliced
+T16	food_product_without_unit_countable 219 233	Canadian bacon
+R7	refers Arg1:T14 Arg2:T4	
+R8	refers Arg1:T14 Arg2:T15	
+R9	refers Arg1:T16 Arg2:T15	
+R10	refers Arg1:T16 Arg2:T4	
+R11	or Arg1:T16 Arg2:T14	
+T17	unit 67 73	slices
+T18	food_product_with_unit 74 80	cheese
+R12	refers Arg1:T18 Arg2:T17	
+R13	refers Arg1:T17 Arg2:T2	
+T19	unit 2 8	slices
+T20	food_product_with_unit 9 23	sandwich bread
+T21	physical_quality 25 31	hearty
+R14	refers Arg1:T20 Arg2:T21	
+R15	refers Arg1:T20 Arg2:T19	
+R16	refers Arg1:T19 Arg2:T1	
+T22	food_product_without_unit_uncountable 42 48	butter
+T23	purpose 50 63	for spreading
+T24	process 33 41	softened
+R17	refers Arg1:T22 Arg2:T23	
+R18	refers Arg1:T22 Arg2:T24	
+T25	example 82 90	muenster
+T26	example 92 105	monterey jack
+T27	example 111 121	mozzarella
+R19	refers Arg1:T18 Arg2:T25	
+R20	refers Arg1:T18 Arg2:T26	
+R21	refers Arg1:T18 Arg2:T27	

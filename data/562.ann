@@ -1,0 +1,4 @@
+T1	physical_quality 0 5	dried
+T2	food_product_without_unit_uncountable 6 11	beans
+R1	refers Arg1:T2 Arg2:T1	
+T3	food_product_without_unit_uncountable 26 38	canning salt

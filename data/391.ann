@@ -1,0 +1,43 @@
+T1	unit 40 43	cup
+T2	unit 89 100	tablespoons
+T3	unit 159 164	pound
+T4	quantity 0 1	6
+T6	quantity 85 88	1 ½
+T7	quantity 118 119	6
+T8	quantity 157 158	½
+T9	unit 120 126	leaves
+T10	food_product_without_unit_countable 2 10	tomatoes
+T11	process 12 37	cut into bite-size pieces
+T12	physical_quality 44 56	extra-virgin
+T13	food_product_with_unit 57 66	olive oil
+R1	refers Arg1:T13 Arg2:T12	
+R2	refers Arg1:T13 Arg2:T1	
+R4	refers Arg1:T10 Arg2:T4	
+R5	refers Arg1:T10 Arg2:T11	
+T14	food_product_with_unit 101 117	balsamic vinegar
+R6	refers Arg1:T14 Arg2:T2	
+R7	refers Arg1:T2 Arg2:T6	
+T15	physical_quality 127 132	fresh
+T16	food_product_with_unit 165 182	mozzarella cheese
+T17	food_product_with_unit 133 138	basil
+T18	process 140 156	cut into slivers
+R8	refers Arg1:T17 Arg2:T18	
+R9	refers Arg1:T17 Arg2:T15	
+R10	refers Arg1:T17 Arg2:T9	
+R11	refers Arg1:T9 Arg2:T7	
+R12	refers Arg1:T16 Arg2:T3	
+R13	refers Arg1:T3 Arg2:T8	
+T19	process 184 208	cut into bite-size cubes
+R14	refers Arg1:T16 Arg2:T19	
+T20	food_product_without_unit_uncountable 209 213	salt
+T21	process 218 224	ground
+T22	color 225 230	black
+T23	food_product_without_unit_uncountable 231 237	pepper
+T24	quantity 238 246	to taste
+R15	refers Arg1:T23 Arg2:T24	
+R16	and Arg1:T20 Arg2:T23	
+R17	refers Arg1:T23 Arg2:T22	
+R18	refers Arg1:T23 Arg2:T21	
+R19	refers Arg1:T20 Arg2:T24	
+T5	quantity 38 39;68 84	¼ or more to taste
+R3	refers Arg1:T1 Arg2:T5	

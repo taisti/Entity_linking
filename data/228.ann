@@ -1,0 +1,27 @@
+T1	quantity 0 1	4
+T2	quantity 24 25	2
+T3	quantity 62 63	4
+T4	food_product_without_unit_countable 26 41	English muffins
+T5	process 43 48	split
+T6	process 53 60	toasted
+R1	refers Arg1:T4 Arg2:T5	
+R2	refers Arg1:T4 Arg2:T6	
+R3	refers Arg1:T4 Arg2:T2	
+T7	unit 2 8	slices
+R4	refers Arg1:T7 Arg2:T1	
+T8	food_product_with_unit 9 23	canadian bacon
+R5	refers Arg1:T8 Arg2:T7	
+T9	food_product_without_unit_countable 64 68	eggs
+T10	process 70 77	poached
+R6	refers Arg1:T9 Arg2:T10	
+R7	refers Arg1:T9 Arg2:T3	
+T11	food_product_without_unit_uncountable 79 96	hollandaise sauce
+T12	food_product_without_unit_uncountable 135 139	dill
+T13	physical_quality 129 134	fresh
+R8	refers Arg1:T12 Arg2:T13	
+T14	food_product_without_unit_uncountable 163 170	parsley
+R9	refers Arg1:T14 Arg2:T13	
+R10	refers Arg1:T12 Arg2:T14	
+R11	refers Arg1:T14 Arg2:T13	
+A1	Optional T12
+A2	Optional T14

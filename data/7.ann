@@ -1,0 +1,26 @@
+T1	unit 94 97	cup
+T2	unit 81 85	cups
+T3	unit 62 66	cups
+T4	food_product_without_unit_uncountable 54 59	sugar
+T5	color 48 53	brown
+T6	food_product_without_unit_uncountable 32 39	carrots
+T7	taste 41 46	Sweet
+R1	refers Arg1:T6 Arg2:T7	
+T8	food_product_without_unit_uncountable 0 7	carrots
+T9	food_product_without_unit_uncountable 8 20	canning salt
+A1	Optional T9
+T10	food_product_with_unit 73 78	sugar
+T11	color 67 72	brown
+T12	food_product_with_unit 86 91	water
+T13	food_product_with_unit 98 110	orange juice
+T14	quantity 92 93	1
+T15	quantity 79 80	2
+T16	quantity 60 61	2
+R2	refers Arg1:T10 Arg2:T3	
+R3	refers Arg1:T3 Arg2:T16	
+R4	refers Arg1:T2 Arg2:T15	
+R5	refers Arg1:T1 Arg2:T14	
+R6	refers Arg1:T13 Arg2:T1	
+R7	refers Arg1:T12 Arg2:T2	
+R8	refers Arg1:T4 Arg2:T5	
+R9	refers Arg1:T10 Arg2:T11	

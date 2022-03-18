@@ -1,0 +1,20 @@
+T1	unit 2 8	pounds
+T2	unit 23 29	ounces
+T3	quantity 0 1	5
+T4	quantity 20 22	16
+T5	quantity 65 66	1
+T6	quantity 102 103	1
+T7	unit 104 111	package
+T8	unit 67 74	package
+T9	food_product_with_unit 75 101	italian salad dressing mix
+R1	refers Arg1:T9 Arg2:T8	
+R2	refers Arg1:T8 Arg2:T5	
+T10	food_product_with_unit 9 19	beef roast
+R3	refers Arg1:T10 Arg2:T1	
+R4	refers Arg1:T1 Arg2:T3	
+T11	food_product_with_unit 30 50;52 63	pepperoncini peppers with liquid
+R5	refers Arg1:T11 Arg2:T2	
+R6	refers Arg1:T2 Arg2:T4	
+T12	food_product_with_unit 112 127	brown gravy mix
+R7	refers Arg1:T12 Arg2:T7	
+R8	refers Arg1:T7 Arg2:T6	

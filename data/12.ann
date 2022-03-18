@@ -1,0 +1,31 @@
+T1	food_product_with_unit 98 111	baking powder
+T2	unit 89 97	teaspoon
+T3	quantity 87 88	1
+R1	refers Arg1:T1 Arg2:T2	
+T4	food_product_with_unit 0 68	5 eggs
+150 grams sugar (/, 5 1/3 ounces)
+100 grams all purpose flour
+T5	unit 45 50	grams
+T6	quantity 41 44	100
+T8	unit 79 85	ounces
+T9	quantity 73 78	3 1/2
+R6	refers Arg1:T4 Arg2:T5	
+T10	food_product_with_unit 17 22	sugar
+T11	unit 11 16	grams
+T12	quantity 7 10	150
+T13	unit 33 39	ounces
+T14	quantity 27 32	5 1/3
+R10	refers Arg1:T10 Arg2:T11	
+T15	food_product_without_unit_countable 2 6	eggs
+T16	quantity 0 1	5
+R12	refers Arg1:T15 Arg2:T16	
+R2	refers Arg1:T11 Arg2:T12	
+R7	refers Arg1:T5 Arg2:T6	
+R11	refers Arg1:T2 Arg2:T3	
+R3	refers Arg1:T4 Arg2:T8	
+R4	refers Arg1:T8 Arg2:T9	
+R13	refers Arg1:T13 Arg2:T14	
+R9	refers Arg1:T10 Arg2:T13	
+T7	food_product_with_unit 51 68	all purpose flour
+R5	refers Arg1:T7 Arg2:T5	
+R8	refers Arg1:T7 Arg2:T8	

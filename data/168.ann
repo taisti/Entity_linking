@@ -1,0 +1,33 @@
+T1	unit 45 51	ounces
+T2	unit 73 79	ounces
+T3	unit 98 107	teaspoons
+T4	unit 130 139	teaspoons
+T5	quantity 0 1	1
+T6	quantity 43 44	8
+T7	quantity 67 72	2 1⁄8
+T8	quantity 92 97	1 1⁄2
+T9	quantity 124 129	2 1⁄8
+T10	food_product_with_unit 80 91	lemon juice
+R1	refers Arg1:T10 Arg2:T2	
+R2	refers Arg1:T2 Arg2:T7	
+T11	food_product_with_unit 108 114	garlic
+R3	refers Arg1:T11 Arg2:T3	
+R4	refers Arg1:T3 Arg2:T8	
+T12	process 116 122	minced
+R5	refers Arg1:T11 Arg2:T12	
+T13	food_product_with_unit 140 150	sesame oil
+R6	refers Arg1:T13 Arg2:T4	
+R7	refers Arg1:T4 Arg2:T9	
+T14	food_product_with_unit 52 66	teriyaki sauce
+R8	refers Arg1:T14 Arg2:T1	
+R9	refers Arg1:T1 Arg2:T6	
+T15	unit 2 4	lb
+T16	physical_quality 5 13	boneless
+T17	physical_quality 14 22	skinless
+T18	food_product_with_unit 23 30	chicken
+T19	part 31 42	breast half
+R10	refers Arg1:T18 Arg2:T17	
+R11	refers Arg1:T18 Arg2:T16	
+R12	refers Arg1:T18 Arg2:T15	
+R13	refers Arg1:T15 Arg2:T5	
+R14	refers Arg1:T18 Arg2:T19	

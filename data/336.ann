@@ -1,0 +1,46 @@
+T1	unit 4 7	cup
+T2	unit 32 35	cup
+T3	unit 60 66	ounces
+T4	unit 122 128	ounces
+T5	quantity 0 3	1/4
+T6	quantity 30 31	1
+T7	quantity 57 59	20
+T8	quantity 120 121	6
+T9	quantity 174 175	1
+T10	color 36 41	brown
+T11	food_product_with_unit 42 47	sugar
+T12	physical_quality 49 55	packed
+R1	refers Arg1:T11 Arg2:T12	
+R2	refers Arg1:T11 Arg2:T10	
+R3	refers Arg1:T11 Arg2:T2	
+R4	refers Arg1:T2 Arg2:T6	
+T13	food_product_with_unit 8 14	butter
+R5	refers Arg1:T13 Arg2:T1	
+R6	refers Arg1:T1 Arg2:T5	
+T14	food_product_with_unit 19 28	margarine
+R7	refers Arg1:T14 Arg2:T1	
+R8	or Arg1:T13 Arg2:T14	
+T15	food_product_with_unit 67 83	pineapple slices
+T16	food_product_with_unit 129 148	maraschino cherries
+T17	unit 176 179	box
+T18	color 180 186	yellow
+T19	food_product_with_unit 187 195	cake mix
+T20	trade_name 197 223	Betty Crocker™ SuperMoist™
+R9	refers Arg1:T19 Arg2:T20	
+R10	refers Arg1:T19 Arg2:T18	
+R11	refers Arg1:T19 Arg2:T17	
+R12	refers Arg1:T17 Arg2:T9	
+T21	food_product_without_unit_uncountable 225 238	vegetable oil
+T22	food_product_without_unit_uncountable 239 243	eggs
+T23	process 165 172	drained
+T24	physical_quality 150 163	without stems
+R13	refers Arg1:T16 Arg2:T24	
+R14	refers Arg1:T16 Arg2:T23	
+R15	refers Arg1:T16 Arg2:T4	
+R16	refers Arg1:T4 Arg2:T8	
+R17	refers Arg1:T3 Arg2:T7	
+R18	refers Arg1:T15 Arg2:T3	
+T25	process 95 118	drained, juice reserved
+T26	physical_quality 85 93	in juice
+R19	refers Arg1:T15 Arg2:T26	
+R20	refers Arg1:T15 Arg2:T25	

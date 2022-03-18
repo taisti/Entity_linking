@@ -1,0 +1,24 @@
+T1	unit 23 26	cup
+T2	unit 41 51	tablespoon
+T3	unit 74 84	tablespoon
+T4	quantity 0 1	1
+T5	quantity 3 4	1
+T6	quantity 19 22	1⁄4
+T7	quantity 39 40	1
+T8	quantity 72 73	1
+T9	food_product_with_unit 27 38	maple syrup
+T10	food_product_with_unit 9 18	ham steak
+T11	unit 5 7	lb
+R1	refers Arg1:T10 Arg2:T11	
+R2	refers Arg1:T10 Arg2:T5	
+T12	food_product_without_unit_countable 9 18	ham steak
+R3	refers Arg1:T12 Arg2:T4	
+R4	or Arg1:T12 Arg2:T10	
+T13	food_product_with_unit 52 71	apple cider vinegar
+R5	refers Arg1:T13 Arg2:T2	
+R6	refers Arg1:T2 Arg2:T7	
+R7	refers Arg1:T3 Arg2:T8	
+T14	food_product_with_unit 85 98	Dijon mustard
+R8	refers Arg1:T14 Arg2:T3	
+R9	refers Arg1:T1 Arg2:T6	
+R10	refers Arg1:T9 Arg2:T1	

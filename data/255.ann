@@ -1,0 +1,21 @@
+T1	unit 43 46	cup
+T2	unit 72 75	cup
+T3	quantity 0 4	2 -4
+T5	quantity 39 42	1⁄2
+T7	quantity 68 71	1⁄2
+T8	trade_name 47 55	Heinz 57
+T9	food_product_with_unit 56 67	steak sauce
+R1	refers Arg1:T9 Arg2:T1	
+R2	refers Arg1:T1 Arg2:T5	
+R3	refers Arg1:T2 Arg2:T7	
+T10	food_product_with_unit 76 92	Italian dressing
+R4	refers Arg1:T10 Arg2:T2	
+R5	refers Arg1:T9 Arg2:T8	
+T6	physical_quality 5 13	boneless
+T4	physical_quality 14 22	skinless
+T11	food_product_with_unit 23 30	chicken
+T12	part 31 38	breasts
+R6	refers Arg1:T11 Arg2:T12	
+R7	refers Arg1:T11 Arg2:T4	
+R8	refers Arg1:T11 Arg2:T6	
+R9	refers Arg1:T11 Arg2:T3	

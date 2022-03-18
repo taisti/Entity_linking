@@ -1,0 +1,36 @@
+T1	trade_name 131 141	tater tots
+T2	unit 111 117	ounces
+T3	quantity 108 110	16
+T4	taste 118 123	sweet
+T6	food_product_with_unit 93 107	cheddar cheese
+T7	process 84 92	shredded
+T8	unit 80 83	cup
+T9	quantity 78 79	1
+R4	refers Arg1:T6 Arg2:T7	
+R5	refers Arg1:T6 Arg2:T8	
+T10	unit 35 45	tablespoon
+T11	quantity 33 34	1
+T12	color 70 76	yellow
+T13	food_product_with_unit 46 65	horseradish mustard
+R7	refers Arg1:T13 Arg2:T10	
+T14	food_product_without_unit_countable 24 32	hot dogs
+T15	quantity 22 23	6
+R9	refers Arg1:T14 Arg2:T15	
+T16	food_product_with_unit 16 21	beans
+T17	process 10 15	baked
+T18	unit 3 9	ounces
+T19	quantity 0 2	32
+R10	refers Arg1:T16 Arg2:T17	
+R11	refers Arg1:T16 Arg2:T18	
+T20	food_product_with_unit 58 65;70 76	mustard yellow
+R12	refers Arg1:T20 Arg2:T10	
+R14	or Arg1:T13 Arg2:T20	
+R13	refers Arg1:T10 Arg2:T11	
+R8	refers Arg1:T18 Arg2:T19	
+R6	refers Arg1:T8 Arg2:T9	
+R3	refers Arg1:T2 Arg2:T3	
+T5	food_product_with_unit 124 130	potato
+R1	refers Arg1:T5 Arg2:T2	
+R2	refers Arg1:T5 Arg2:T4	
+T21	food_product_without_unit_uncountable 131 141	tater tots
+R15	refers Arg1:T21 Arg2:T1	

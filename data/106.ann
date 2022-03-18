@@ -1,0 +1,46 @@
+T1	quantity 0 1	2
+T2	quantity 16 18	30
+T3	quantity 65 66	5
+T4	quantity 81 84	150
+T7	quantity 118 121	1/2
+T8	quantity 134 137	1/2
+T9	quantity 151 154	1/2
+T11	unit 2 10	handfuls
+T12	food_product_with_unit 11 15	kale
+R1	refers Arg1:T11 Arg2:T1	
+R2	refers Arg1:T12 Arg2:T11	
+T13	unit 19 24	grams
+T14	unit 67 72	grams
+T15	unit 85 90	grams
+T16	food_product_with_unit 128 133	apple
+T17	color 122 127	green
+R3	refers Arg1:T16 Arg2:T7	
+T18	food_product_without_unit_countable 138 143	lemon
+T19	process 144 150	juiced
+R4	refers Arg1:T18 Arg2:T19	
+R5	refers Arg1:T18 Arg2:T8	
+T20	food_product_with_unit 155 168	matcha powder
+T21	food_product_with_unit 25 31	rocket
+R7	refers Arg1:T21 Arg2:T13	
+R8	refers Arg1:T13 Arg2:T2	
+T22	food_product_with_unit 73 80	parsley
+R9	refers Arg1:T22 Arg2:T14	
+R10	refers Arg1:T14 Arg2:T3	
+T23	food_product_with_unit 91 97	celery
+R11	refers Arg1:T23 Arg2:T15	
+R12	refers Arg1:T15 Arg2:T4	
+T24	color 99 104	green
+R13	refers Arg1:T23 Arg2:T24	
+T25	unit 110 116	stalks
+R15	refers Arg1:T23 Arg2:T25	
+T5	quantity 106 109	2-3
+R14	refers Arg1:T25 Arg2:T5	
+T6	unit 170 179	level tsp
+T10	food_product_with_unit 56 63	arugula
+R17	refers Arg1:T10 Arg2:T13	
+R18	or Arg1:T21 Arg2:T10	
+R6	refers Arg1:T20 Arg2:T6	
+R16	refers Arg1:T6 Arg2:T9	
+T26	possible_substitute 184 193;227 252	green tea first 2 juices of the day
+R19	substitutable_with Arg1:T20 Arg2:T26	
+R20	refers Arg1:T16 Arg2:T17	

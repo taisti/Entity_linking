@@ -1,0 +1,28 @@
+T1	unit 91 101	tablespoon
+T2	quantity 0 1	4
+T3	quantity 20 21	2
+T4	quantity 72 73	4
+T5	quantity 89 90	1
+T6	quantity 139 140	4
+T7	unit 22 28	stalks
+T8	food_product_with_unit 29 35	celery
+R1	refers Arg1:T8 Arg2:T7	
+R2	refers Arg1:T7 Arg2:T3	
+T9	food_product_without_unit_countable 2 10	lobsters
+R3	refers Arg1:T9 Arg2:T2	
+T10	process 12 18	cooked
+R4	refers Arg1:T9 Arg2:T10	
+T11	process 37 70	chopped in small bite size pieces
+R5	refers Arg1:T8 Arg2:T11	
+T12	food_product_with_unit 74 81	lettuce
+T13	unit 82 88	leaves
+R6	refers Arg1:T12 Arg2:T13	
+R7	refers Arg1:T13 Arg2:T4	
+T14	food_product_with_unit 102 112	mayonnaise
+R8	refers Arg1:T14 Arg2:T1	
+R9	refers Arg1:T1 Arg2:T5	
+T15	food_product_without_unit_uncountable 113 128	salt and pepper
+T16	quantity 130 138	to taste
+R10	refers Arg1:T15 Arg2:T16	
+T17	food_product_without_unit_countable 141 153	hot dog buns
+R11	refers Arg1:T17 Arg2:T6	

@@ -1,0 +1,11 @@
+T1	quantity 4 5	2
+T2	unit 6 12	slices
+T3	food_product_with_unit 13 18	bacon
+A1	Optional T3
+R1	refers Arg1:T3 Arg2:T2	
+R2	refers Arg1:T2 Arg2:T1	
+T4	food_product_without_unit_uncountable 29 34	chive
+A2	Optional T4
+T5	food_product_without_unit_uncountable 45 60	parmesan cheese
+A3	Optional T5
+T6	food_product_whole 0 3	egg

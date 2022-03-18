@@ -1,0 +1,31 @@
+T1	unit 43 48	pound
+T2	unit 80 83	cup
+T3	unit 100 103	cup
+T4	quantity 0 1	1
+T5	quantity 39 42	1/2
+T6	quantity 76 79	1/2
+T7	quantity 96 99	1/2
+T8	food_product_without_unit_uncountable 109 114	salsa
+T9	food_product_without_unit_uncountable 115 124	jalapenos
+T10	physical_quality 126 132	canned
+R1	refers Arg1:T9 Arg2:T10	
+T11	color 84 89	black
+T12	food_product_with_unit 104 108	corn
+R2	refers Arg1:T12 Arg2:T3	
+R3	refers Arg1:T2 Arg2:T6	
+R4	refers Arg1:T3 Arg2:T7	
+T13	food_product_with_unit 90 95	beans
+R5	refers Arg1:T13 Arg2:T11	
+R6	refers Arg1:T13 Arg2:T2	
+T14	process 49 55	ground
+T15	food_product_with_unit 56 60	beef
+T16	unit 2 5	box
+T17	food_product_with_unit 6 12	potato
+R7	refers Arg1:T17 Arg2:T16	
+R8	refers Arg1:T16 Arg2:T4	
+T18	trade_name 14 37	Farm Rich Loaded, Skins
+R9	refers Arg1:T17 Arg2:T18	
+T19	food_product_without_unit_uncountable 61 75	taco seasoning
+R10	refers Arg1:T15 Arg2:T14	
+R11	refers Arg1:T15 Arg2:T1	
+R12	refers Arg1:T1 Arg2:T5	

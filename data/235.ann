@@ -1,0 +1,47 @@
+T1	unit 2 5	lbs
+T2	unit 45 48	cup
+T3	unit 77 80	cup
+T4	unit 116 125	teaspoons
+T5	unit 137 146	teaspoons
+T6	unit 161 166	ounce
+T7	quantity 0 1	2
+T8	quantity 43 44	1
+T9	quantity 73 76	1⁄2
+T10	quantity 110 115	1 1⁄2
+T11	quantity 131 136	1 1⁄2
+T12	quantity 155 156	2
+T13	quantity 158 160	12
+T14	food_product_with_unit 81 98	all-purpose flour
+T15	food_product_with_unit 49 66	all-purpose flour
+R1	refers Arg1:T15 Arg2:T2	
+R2	refers Arg1:T2 Arg2:T8	
+R3	refers Arg1:T1 Arg2:T7	
+T16	physical_quality 6 12	frozen
+T17	process 18 24	thawed
+T18	food_product_with_unit 13 16	cod
+R4	refers Arg1:T18 Arg2:T16	
+R5	refers Arg1:T18 Arg2:T17	
+R6	refers Arg1:T18 Arg2:T1	
+T19	purpose 100 109	to dredge
+R7	refers Arg1:T14 Arg2:T19	
+R8	refers Arg1:T14 Arg2:T3	
+R9	refers Arg1:T3 Arg2:T9	
+T20	food_product_with_unit 126 130	salt
+R10	refers Arg1:T20 Arg2:T4	
+R11	refers Arg1:T4 Arg2:T10	
+T21	food_product_with_unit 147 154	paprika
+R12	refers Arg1:T21 Arg2:T5	
+R13	refers Arg1:T5 Arg2:T11	
+T22	unit 168 172	cans
+T23	physical_quality 173 177	cold
+T24	food_product_with_unit 184 188	beer
+T25	physical_quality 178 183	fresh
+R14	refers Arg1:T24 Arg2:T25	
+R15	refers Arg1:T24 Arg2:T23	
+R16	refers Arg1:T24 Arg2:T22	
+R17	refers Arg1:T22 Arg2:T12	
+R18	refers Arg1:T6 Arg2:T13	
+R19	each Arg1:T22 Arg2:T6	
+T26	food_product_without_unit_uncountable 189 192	oil
+T27	purpose 194 204	for frying
+R20	refers Arg1:T26 Arg2:T27	
