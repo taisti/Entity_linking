@@ -8,7 +8,7 @@ from brat_parser import get_entities_relations_attributes_groups
 
 def read_entities():
     entities_list, relations_list = [], []
-    datapath = Path.cwd() / "dat"
+    datapath = Path.cwd() / "data"
     for i in range(300):
         entities, relations, _, _ = get_entities_relations_attributes_groups(datapath / "{0}.ann".format(i))
         entities_list.append(entities)
