@@ -8,7 +8,7 @@ from brat_parser import get_entities_relations_attributes_groups
 
 def read_entities():
     entities_list, relations_list = [], []
-    datapath = Path.cwd() / "data"
+    datapath = Path.cwd() / "dat"
     for i in range(300):
         entities, relations, _, _ = get_entities_relations_attributes_groups(datapath / "{0}.ann".format(i))
         entities_list.append(entities)
@@ -20,6 +20,22 @@ def read_entities():
 def read_file_as_stream_elem(path):
     with open(path, 'r') as input_data:
         return [{"text": input_data.read()}]
+
+
+def make_single_labeled_stream(stream, annotated_entities):
+    stream_of_separate_annotations = []
+    for input_entry in stream:
+        for entity in annotated_entities:
+            if entity.text in input_entry['text']:
+                input_entry_tagged = input_entry.copy()
+                input_entry_tagged['spans'] = [
+                    {'start': entity.span[0][0],
+                     'end': entity.span[0][1],
+                     'text': entity.text,
+                     'label': entity.type}
+                ]
+                stream_of_separate_annotations.append(input_entry_tagged)
+    return stream_of_separate_annotations
 
 
 @prodigy.recipe(
@@ -47,18 +63,12 @@ def entity_linker_manual(dataset, source_dir, recipe_number, nlp_dir, kb_loc, en
 
     file_name = r"{0}.txt".format(recipe_number)
     stream = read_file_as_stream_elem(Path(source_dir, file_name))
-    stream = [prodigy.util.set_hashes(eg) for eg in stream]
-    # stream = (eg for score, eg in model(stream))
-    for i, elem in enumerate(stream):
-        spans = []
-        for entity in entities_list[recipe_number].values():
-            if entity.text in elem['text']:
-                span = {'start': entity.span[0][0], 'end': entity.span[0][1], 'text': entity.text, 'label': entity.type}
-                spans.append(span)
-        stream[i]['spans'] = spans
 
+    entities_sorted = sorted(entities_list[recipe_number].values(), key=lambda e: e.span[0][0])
+
+    stream_of_separate_annotations = make_single_labeled_stream(stream, entities_sorted)
+    stream = [prodigy.util.set_hashes(eg) for eg in stream_of_separate_annotations]
     stream = _add_option(stream, kb, id_dict)
-    stream = prodigy.components.filters.filter_duplicates(stream, by_input=True, by_task=False)
 
     return {
         "dataset": dataset,
