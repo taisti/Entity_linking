@@ -4,6 +4,7 @@ from pathlib import Path
 import prodigy
 import spacy
 from brat_parser import get_entities_relations_attributes_groups
+import re
 
 
 def read_entities():
@@ -86,6 +87,8 @@ def _add_option(stream, kb, id_dict):
             start_char = int(span["start"])
             end_char = int(span["end"])
             mention = text[start_char:end_char]
+            mention = re.sub(r'[^a-zA-Z0-9]', ' ', mention)
+            mention = re.sub(r'\s+', ' ', mention)
 
             candidates = []
             for elem in mention.split(' '):
