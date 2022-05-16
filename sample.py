@@ -5,6 +5,9 @@ import prodigy
 import spacy
 from brat_parser import get_entities_relations_attributes_groups
 import re
+from nltk.stem import PorterStemmer
+from nltk.tokenize import word_tokenize
+ps = PorterStemmer()
 
 
 def read_entities():
@@ -69,7 +72,7 @@ def entity_linker_manual(dataset, source_dir, recipe_number, nlp_dir, kb_loc, en
 
     stream_of_separate_annotations = make_single_labeled_stream(stream, entities_sorted)
     stream = [prodigy.util.set_hashes(eg) for eg in stream_of_separate_annotations]
-    stream = _add_option(stream, kb, id_dict)
+    stream = _add_option(stream, kb, id_dict, nlp)
 
     return {
         "dataset": dataset,
@@ -79,7 +82,7 @@ def entity_linker_manual(dataset, source_dir, recipe_number, nlp_dir, kb_loc, en
     }
 
 
-def _add_option(stream, kb, id_dict):
+def _add_option(stream, kb, id_dict, nlp):
     for task in stream:
         text = task["text"]
 
@@ -87,16 +90,27 @@ def _add_option(stream, kb, id_dict):
             start_char = int(span["start"])
             end_char = int(span["end"])
             mention = text[start_char:end_char]
-            mention = re.sub(r'[^a-zA-Z0-9]', ' ', mention)
+            mention = re.sub(r'[^a-zA-Z]', ' ', mention)
             mention = re.sub(r'\s+', ' ', mention)
+            mention = mention.lower()
+            mention_stemmed = ' '.join([ps.stem(t.text) for t in nlp(mention)])
+
 
             candidates = []
-            for elem in mention.split(' '):
-                res = kb.get_alias_candidates(elem)
-                if res:
-                    candidates.append(res[0])
+            if len(mention) > 1:
+                if len(kb.get_alias_candidates(mention_stemmed)) > 0:
+                    for alias in kb.get_alias_candidates(mention_stemmed):
+                        candidates.append(alias)
+                else:
+                    for token in mention_stemmed.split(' '):
+                        for alias in kb.get_alias_candidates(token):
+                            candidates.append(alias)
+            #for elem in mention.split(' '):
+            #    res = kb.get_alias_candidates(elem)
+            #    if res:
+            #        candidates.append(res[0])
 
-            if candidates:
+            if candidates or True:
                 options = [{"id": c.entity_, "html": _print_url(c.entity_, id_dict)} for c in candidates]
                 options = sorted(options, key=lambda r: r["id"])
                 options.append({"id": "NIL_otherLink", "text": "Link not in options"})
