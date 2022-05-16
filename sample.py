@@ -93,10 +93,11 @@ def _add_option(stream, kb, id_dict, nlp):
             mention = re.sub(r'[^a-zA-Z]', ' ', mention)
             mention = re.sub(r'\s+', ' ', mention)
             mention = mention.lower()
+            if mention.isdigit():
+                continue
             mention_stemmed = ' '.join([ps.stem(t.text) for t in nlp(mention)])
-
-
             candidates = []
+
             if len(mention) > 1:
                 if len(kb.get_alias_candidates(mention_stemmed)) > 0:
                     for alias in kb.get_alias_candidates(mention_stemmed):
@@ -105,12 +106,8 @@ def _add_option(stream, kb, id_dict, nlp):
                     for token in mention_stemmed.split(' '):
                         for alias in kb.get_alias_candidates(token):
                             candidates.append(alias)
-            #for elem in mention.split(' '):
-            #    res = kb.get_alias_candidates(elem)
-            #    if res:
-            #        candidates.append(res[0])
 
-            if candidates or True:
+            if candidates:
                 options = [{"id": c.entity_, "html": _print_url(c.entity_, id_dict)} for c in candidates]
                 options = sorted(options, key=lambda r: r["id"])
                 options.append({"id": "NIL_otherLink", "text": "Link not in options"})
