@@ -1,4 +1,36 @@
 # Entity_linking
+In order to run entity linker, run the following steps:
+```
+cd entity_linker
+pip3 install -r requirements.txt
+python3 entity_linker.py
+```
+
+The output of the process is stored in a CSV file that joins each BRAT annotation with its metadata and appropriate entity IRI and label.
+
+The output file consists of the following columns:
+```
+    file_id  - the numeric id of the BRAT annotation file (eg. 100)
+    id       - annotation id in BRAT annotation file (eg., T1 marking the first token)
+    category - the category a given span was assigned by a linguist
+    start    - where the span marked in BRAT begins
+    end      - where the span marked in BRAT ends
+    text     - the span text itself
+    iri      - the linked entity IRI (NONE if nothing linked)
+    label    - the linked entity LABEL (NONE if nothing is linked)
+
+```
+
+The `entity_linker.py` script expects optional 3 parameters:
+```
+    --ontology_path - Path to an ontology we want to link to (by default it is set to ../foodon.owl)
+    --annotations_path - Path to a folder with BRAT annotations (by default it is set to ../data)
+    --output_file_path - Path to a result CSV file (by default it is set to ./report.csv)
+```
+
+
+# Prodigy
+
 
 To run some example code, you can simply type:
 `bash run.sh`
