@@ -1,5 +1,6 @@
 from typing import Dict, Optional
-from commons import LabelWithIRI, read_annotation_files
+from commons import (LabelWithIRI, read_brat_annotation_files,
+                     read_ner_annotation_file)
 from ontology_parser import OntologyParser
 from text_processor import TextProcessor
 
@@ -12,16 +13,22 @@ class EntityLinker:
         self,
         ontology_path: str,
         annotated_examples_base_path: str,
+        ner_output_path: str,
         min_acceptable_similarity: float = 0.5,
     ):
         self.ontology_path = ontology_path
         self.annotated_examples_base_path = annotated_examples_base_path
+        self.ner_output_path = ner_output_path
         self.min_acceptable_similarity = min_acceptable_similarity
         self.ontology_parser = OntologyParser(ontology_path)
         self.text_processor = TextProcessor()
 
-        self.annotated_docs = \
-            read_annotation_files(annotated_examples_base_path)
+        if len(ner_output_path) > 0:
+            self.annotated_docs = read_ner_annotation_file(ner_output_path)
+        else:
+            self.annotated_docs = \
+                read_brat_annotation_files(annotated_examples_base_path)
+
         self.normalized_label_mapping = \
             self.ontology_parser.get_IRI_labels_data(
                 normalizator=self.text_processor
@@ -55,6 +62,7 @@ class EntityLinker:
                     annotation.start,
                     annotation.end,
                     annotation.text,
+                    annotation.source
                 ]
                 if linked_item:
                     writer.writerow(
@@ -87,8 +95,8 @@ class EntityLinker:
         return best_item
 
 
-def main(ontology_path, annotations_path, output_file_path):
-    el = EntityLinker(ontology_path, annotations_path)
+def main(ontology_path, annotations_path, output_file_path, ner_output):
+    el = EntityLinker(ontology_path, annotations_path, ner_output)
     el.link_all(output_file_path)
 
 
@@ -103,10 +111,17 @@ if __name__ == "__main__":
                         help='Path to BRAT annotations folder',
                         type=str,
                         default='../data/')
+
+    parser.add_argument('-ner', '--ner_output',
+                        help='Use NER output stored in a given file to process',
+                        type=str,
+                        default='')
+
     parser.add_argument('-out', '--output_file_path',
-                    help='Path to generated output file',
-                    type=str,
-                    default='./report.csv')
-    
+                        help='Path to generated output file',
+                        type=str,
+                        default='./report.csv')
+
     args = parser.parse_args()
-    main(args.ontology_path, args.annotations_path, args.output_file_path)
+    main(args.ontology_path, args.annotations_path, args.output_file_path,
+         args.ner_output)

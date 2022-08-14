@@ -21,7 +21,7 @@ The output file consists of the following columns:
 
 ```
 
-The `entity_linker.py` script expects optional 3 parameters:
+The `entity_linker.py` script expects 3 optional parameters:
 ```
     --ontology_path - Path to an ontology we want to link to (by default it is set to ../foodon.owl)
     --annotations_path - Path to a folder with BRAT annotations (by default it is set to ../data)

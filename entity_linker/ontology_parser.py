@@ -1,8 +1,7 @@
-from tkinter import Label
 import owlready2
 from commons import LabelWithIRI
 from text_processor import TextProcessor
-from typing import Dict, Optional
+from typing import Dict
 
 
 class OntologyParser:
