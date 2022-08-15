@@ -1,0 +1,25 @@
+T1	unit 23 27	cups
+T2	unit 72 75	cup
+T3	unit 104 112	teaspoon
+T4	quantity 0 2	10
+T5	quantity 21 22	2
+T6	quantity 43 44	3
+T7	quantity 68 71	1/4
+T8	quantity 102 103	1
+T9	food_product_without_unit_countable 3 20	egg roll wrappers
+R1	refers Arg1:T9 Arg2:T4	
+T10	food_product_with_unit 28 42	scrambled eggs
+R2	refers Arg1:T10 Arg2:T1	
+R3	refers Arg1:T1 Arg2:T5	
+T11	food_product_without_unit_countable 45 57	strips bacon
+R4	refers Arg1:T11 Arg2:T6	
+T12	process 59 66	chopped
+R5	refers Arg1:T11 Arg2:T12	
+T13	food_product_with_unit 76 90	cheddar cheese
+R6	refers Arg1:T13 Arg2:T2	
+R7	refers Arg1:T2 Arg2:T7	
+T14	process 92 100	shredded
+R8	refers Arg1:T13 Arg2:T14	
+T15	food_product_with_unit 113 122	olive oil
+R9	refers Arg1:T15 Arg2:T3	
+R10	refers Arg1:T3 Arg2:T8	

@@ -1,0 +1,49 @@
+T1	unit 2 12	tablespoon
+T2	unit 25 30	pound
+T3	unit 82 88	ounces
+T4	unit 183 187	cups
+T5	unit 196 206	tablespoon
+T6	unit 235 245	tablespoon
+T7	quantity 0 1	1
+T8	quantity 23 24	1
+T10	quantity 79 81	10
+T11	quantity 123 124	1
+T12	quantity 177 182	1 1/4
+T13	quantity 194 195	1
+T14	quantity 233 234	1
+T15	physical_quality 31 39	boneless
+T16	food_product_with_unit 13 22	olive oil
+R1	refers Arg1:T16 Arg2:T1	
+R2	refers Arg1:T1 Arg2:T7	
+T17	food_product_with_unit 40 53	sirloin steak
+R3	refers Arg1:T17 Arg2:T15	
+R4	refers Arg1:T17 Arg2:T2	
+R5	refers Arg1:T2 Arg2:T8	
+T18	process 55 77	cut into 1-inch strips
+R6	refers Arg1:T17 Arg2:T18	
+T9	food_product_with_unit 89 105	broccoli florets
+R7	refers Arg1:T9 Arg2:T3	
+R8	refers Arg1:T3 Arg2:T10	
+T19	physical_quality 107 113	frozen
+T20	physical_quality 115 121	thawed
+R9	refers Arg1:T9 Arg2:T19	
+R10	refers Arg1:T9 Arg2:T20	
+T21	unit 125 132	package
+T22	food_product_with_unit 188 193	water
+R11	refers Arg1:T22 Arg2:T4	
+R12	refers Arg1:T4 Arg2:T12	
+T23	physical_quality 207 220	firmly packed
+T24	color 221 226	brown
+T25	food_product_with_unit 230 231	a
+R13	refers Arg1:T25 Arg2:T24	
+R14	refers Arg1:T25 Arg2:T23	
+R15	refers Arg1:T25 Arg2:T5	
+R16	refers Arg1:T5 Arg2:T13	
+T26	food_product_with_unit 246 255	soy sauce
+R17	refers Arg1:T26 Arg2:T6	
+R18	refers Arg1:T6 Arg2:T14	
+T27	food_product_with_unit 133 176	lipton recip secret onion mushroom soup mix
+T28	trade_name 133 139	lipton
+R19	refers Arg1:T27 Arg2:T28	
+R20	refers Arg1:T27 Arg2:T21	
+R21	refers Arg1:T21 Arg2:T11	

@@ -1,0 +1,10 @@
+T1	quantity 0 1	1
+T2	quantity 15 16	8
+T3	unit 17 23	slices
+T4	food_product_with_unit 24 29	bacon
+T5	food_product_with_unit 5 14	asparagus
+T6	unit 2 4	lb
+R1	refers Arg1:T5 Arg2:T6	
+R2	refers Arg1:T4 Arg2:T3	
+R3	refers Arg1:T3 Arg2:T2	
+R4	refers Arg1:T6 Arg2:T1	

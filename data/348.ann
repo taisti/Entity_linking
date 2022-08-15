@@ -1,0 +1,36 @@
+T1	unit 147 158	tablespoons
+T2	quantity 0 1	8
+T3	quantity 17 20	150
+T4	quantity 66 67	8
+T5	quantity 83 86	150
+T6	quantity 128 129	8
+T7	quantity 145 146	5
+T8	unit 21 26	grams
+T9	food_product_with_unit 27 50	jamaican jerk seasoning
+T10	trade_name 52 64	Dunn's River
+R1	refers Arg1:T9 Arg2:T10	
+R2	refers Arg1:T9 Arg2:T8	
+R3	refers Arg1:T8 Arg2:T3	
+T11	food_product_without_unit_countable 2 9	chicken
+T12	part 10 16	thighs
+R4	refers Arg1:T11 Arg2:T12	
+R5	refers Arg1:T11 Arg2:T2	
+T13	food_product_without_unit_countable 68 75	chicken
+T14	food_product_whole 76 82	thighs
+R6	refers Arg1:T13 Arg2:T4	
+R7	refers Arg1:T13 Arg2:T14	
+T15	unit 87 92	grams
+T16	food_product_without_unit_countable 130 137	chicken
+T17	part 138 144	thighs
+R8	refers Arg1:T16 Arg2:T17	
+R9	refers Arg1:T16 Arg2:T6	
+R10	refers Arg1:T1 Arg2:T7	
+T18	food_product_with_unit 159 166	fry mix
+T19	trade_name 168 205	Dunn's River Hot & Spicy Jerk Chicken
+R11	refers Arg1:T18 Arg2:T19	
+R12	refers Arg1:T18 Arg2:T1	
+R13	refers Arg1:T15 Arg2:T5	
+T20	food_product_with_unit 93 97	jerk
+R14	refers Arg1:T20 Arg2:T15	
+T21	trade_name 99 126	Jamaican Style, BBQ Chicken
+R15	refers Arg1:T20 Arg2:T21	

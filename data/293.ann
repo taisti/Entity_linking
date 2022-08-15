@@ -1,0 +1,23 @@
+T1	unit 22 25	cup
+T2	unit 63 66	cup
+T3	unit 100 104	cups
+T4	quantity 0 1	4
+T5	quantity 18 21;38 57	1⁄4 or more if you like
+T6	quantity 59 62;77 96	1⁄2 or more if you like
+T7	quantity 98 99	2
+T8	food_product_with_unit 26 36	mayonnaise
+T9	food_product_with_unit 2 9	halibut
+T10	unit 10 17	fillets
+R1	refers Arg1:T10 Arg2:T4	
+R2	refers Arg1:T9 Arg2:T10	
+R3	refers Arg1:T8 Arg2:T1	
+R4	refers Arg1:T1 Arg2:T5	
+T11	food_product_with_unit 67 75	jalapeno
+R5	refers Arg1:T11 Arg2:T2	
+R6	refers Arg1:T2 Arg2:T6	
+T12	food_product_with_unit 105 125	monterey jack cheese
+R7	refers Arg1:T12 Arg2:T3	
+R8	refers Arg1:T3 Arg2:T7	
+T13	food_product_without_unit_uncountable 126 140	jalapeno juice
+T14	quantity 142 154	small amount
+R9	refers Arg1:T13 Arg2:T14	

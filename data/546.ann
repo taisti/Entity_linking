@@ -1,0 +1,52 @@
+T1	unit 2 8	ounces
+T2	unit 63 65	oz
+T3	unit 102 104	oz
+T4	unit 109 115	ounces
+T5	unit 155 159	cups
+T6	unit 172 178	ounces
+T7	quantity 0 1	7
+T8	quantity 38 39	1
+T9	quantity 60 62	14
+T10	quantity 67 68	1
+T11	quantity 99 101	14
+T12	quantity 106 108	11
+T13	quantity 147 154	about 2
+T14	quantity 169 171	16
+T15	physical_quality 83 92	condensed
+T16	food_product_with_unit 93 97	milk
+T17	taste 73 82	sweetened
+T18	unit 69 72	can
+R1	refers Arg1:T18 Arg2:T10	
+R2	refers Arg1:T16 Arg2:T15	
+R3	refers Arg1:T16 Arg2:T17	
+R4	refers Arg1:T3 Arg2:T11	
+R5	refers Arg1:T16 Arg2:T3	
+T19	unit 40 43	can
+T20	food_product_with_unit 44 58	dulce de leche
+R6	refers Arg1:T20 Arg2:T2	
+R7	refers Arg1:T2 Arg2:T9	
+R8	refers Arg1:T20 Arg2:T19	
+R9	refers Arg1:T19 Arg2:T8	
+R10	refers Arg1:T1 Arg2:T7	
+T21	process 9 17	shredded
+T22	food_product_with_unit 18 25	coconut
+T23	taste 27 36	sweetened
+R11	refers Arg1:T22 Arg2:T23	
+R12	refers Arg1:T22 Arg2:T21	
+R13	refers Arg1:T22 Arg2:T1	
+T24	food_product_with_unit 116 129	wafer cookies
+R14	refers Arg1:T24 Arg2:T4	
+R15	refers Arg1:T4 Arg2:T12	
+T25	food_product_with_unit 179 195	chocolate wafers
+R16	refers Arg1:T25 Arg2:T6	
+R17	refers Arg1:T6 Arg2:T14	
+T26	trade_name 197 208	Ghirardelli
+R18	refers Arg1:T25 Arg2:T26	
+T27	color 209 213	dark
+R19	refers Arg1:T25 Arg2:T27	
+T28	trade_name 131 136	Nilla
+T29	process 138 145	crushed
+R20	refers Arg1:T24 Arg2:T28	
+R21	refers Arg1:T24 Arg2:T29	
+R22	refers Arg1:T5 Arg2:T13	
+R23	refers Arg1:T24 Arg2:T5	

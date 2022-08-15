@@ -1,0 +1,46 @@
+T1	unit 75 86	tablespoons
+T2	unit 157 168	tablespoons
+T3	quantity 0 1	8
+T4	quantity 47 48	6
+T5	quantity 73 74	2
+T6	quantity 155 156	2
+T7	quantity 176 177	1
+T8	quantity 202 205	175
+T11	quantity 302 303	4
+T12	food_product_without_unit_countable 304 317;320 329	spring onions scallions
+R1	refers Arg1:T12 Arg2:T11	
+T13	unit 206 211	grams
+T14	food_product_with_unit 212 218	cheese
+R2	refers Arg1:T14 Arg2:T13	
+R3	refers Arg1:T13 Arg2:T8	
+T15	unit 178 183	pinch
+T16	food_product_with_unit 184 188	salt
+T17	food_product_with_unit 194 200	pepper
+R4	and Arg1:T16 Arg2:T17	
+R5	refers Arg1:T16 Arg2:T15	
+R6	refers Arg1:T15 Arg2:T7	
+R7	refers Arg1:T17 Arg2:T15	
+T18	process 330 337	chopped
+R8	refers Arg1:T12 Arg2:T18	
+T9	example 243 292	a mix of 75% mature chedder and 25% red Leicester
+R9	refers Arg1:T14 Arg2:T9	
+T10	process 294 300	grated
+R10	refers Arg1:T14 Arg2:T10	
+T19	food_product_with_unit 169 175	butter
+R11	refers Arg1:T19 Arg2:T2	
+R12	refers Arg1:T2 Arg2:T6	
+T20	food_product_with_unit 87 91	milk
+R13	refers Arg1:T20 Arg2:T1	
+R14	refers Arg1:T1 Arg2:T5	
+T21	physical_quality 93 117	double/heavy cream whole
+R15	refers Arg1:T20 Arg2:T21	
+T23	unit 49 56	rashers
+T24	food_product_with_unit 58 71	streaky bacon
+R16	refers Arg1:T23 Arg2:T4	
+R17	refers Arg1:T23 Arg2:T24	
+T22	food_product_without_unit_countable 2 10	potatoes
+T25	example 33 45	Maris Pipers
+T26	physical_quality 12 24	small floury
+R18	refers Arg1:T22 Arg2:T26	
+R19	refers Arg1:T22 Arg2:T3	
+R20	refers Arg1:T22 Arg2:T25	

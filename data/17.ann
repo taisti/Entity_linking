@@ -1,0 +1,34 @@
+T1	food_product_with_unit 120 124	milk
+T2	unit 116 119	cup
+T3	quantity 112 115	2⁄3
+T4	food_product_with_unit 105 111	butter
+T5	unit 93 104	tablespoons
+T6	quantity 91 92	2
+T7	process 84 90	grated
+T8	food_product_with_unit 76 82	cheese
+T9	physical_quality 68 75	low-fat
+T10	unit 64 67	cup
+T11	quantity 60 63	1⁄2
+T12	food_product_with_unit 55 59	salt
+T13	unit 46 54	teaspoon
+T14	quantity 42 45	1⁄2
+T15	food_product_with_unit 28 41	baking powder
+T16	unit 18 27	teaspoons
+T17	quantity 12 17	1 1⁄4
+T18	food_product_with_unit 6 11	flour
+T19	unit 2 5	cup
+T20	quantity 0 1	1
+R1	refers Arg1:T1 Arg2:T2	
+R2	refers Arg1:T2 Arg2:T3	
+R3	refers Arg1:T4 Arg2:T5	
+R4	refers Arg1:T5 Arg2:T6	
+R5	refers Arg1:T8 Arg2:T7	
+R6	refers Arg1:T8 Arg2:T9	
+R7	refers Arg1:T8 Arg2:T10	
+R8	refers Arg1:T10 Arg2:T11	
+R9	refers Arg1:T12 Arg2:T13	
+R10	refers Arg1:T13 Arg2:T14	
+R11	refers Arg1:T15 Arg2:T16	
+R12	refers Arg1:T16 Arg2:T17	
+R13	refers Arg1:T18 Arg2:T19	
+R14	refers Arg1:T19 Arg2:T20	

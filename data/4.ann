@@ -1,0 +1,40 @@
+T1	food_product_with_unit 148 160	sesame seeds
+T2	unit 136 147	tablespoons
+T3	quantity 134 135	2
+R1	refers Arg1:T1 Arg2:T2	
+R2	refers Arg1:T2 Arg2:T3	
+T4	unit 84 87	cup
+T5	quantity 82 83	1
+R3	refers Arg1:T4 Arg2:T5	
+T6	food_product_with_unit 97 109	swiss cheese
+T7	process 88 96	shredded
+R4	refers Arg1:T6 Arg2:T7	
+R5	refers Arg1:T6 Arg2:T4	
+T8	quantity 113 114	1
+T9	unit 115 118	cup
+T10	food_product_with_unit 119 133	cheddar cheese
+R6	refers Arg1:T10 Arg2:T9	
+R7	refers Arg1:T9 Arg2:T8	
+R8	or Arg1:T6 Arg2:T10	
+A1	Optional T1
+T11	unit 55 64	teaspoons
+T12	quantity 53 54	4
+T13	quantity 35 36	8
+T14	unit 37 43	slices
+T15	food_product_with_unit 44 52	deli ham
+R9	refers Arg1:T15 Arg2:T14	
+R10	refers Arg1:T14 Arg2:T13	
+T16	quantity 0 1	1
+T17	unit 12 19	package
+T18	unit 5 10	ounce
+T19	quantity 3 4	8
+T20	food_product_with_unit 20 34	crescent rolls
+R11	refers Arg1:T20 Arg2:T17	
+R12	refers Arg1:T17 Arg2:T16	
+R13	refers Arg1:T20 Arg2:T18	
+R14	refers Arg1:T20 Arg2:T19	
+T21	process 65 73	prepared
+T22	food_product_with_unit 74 81	mustard
+R15	refers Arg1:T22 Arg2:T21	
+R16	refers Arg1:T22 Arg2:T11	
+R17	refers Arg1:T11 Arg2:T12	

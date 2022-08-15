@@ -1,0 +1,33 @@
+T1	unit 6 11	ounce
+T2	unit 38 41	cup
+T3	unit 76 80	cups
+T4	quantity 0 1	1
+T5	quantity 3 5	64
+T6	quantity 36 37	1
+T7	quantity 74 75	2
+T8	quantity 112 113	1
+T9	quantity 129 130	1
+T10	taste 81 100	lemon-lime flavored
+T11	food_product_with_unit 101 105	soda
+R1	refers Arg1:T11 Arg2:T10	
+R2	refers Arg1:T11 Arg2:T3	
+R3	refers Arg1:T3 Arg2:T7	
+T12	food_product_without_unit_uncountable 106 111	sugar
+T13	food_product_without_unit_countable 114 120	orange
+T14	food_product_without_unit_countable 131 135	lime
+R4	refers Arg1:T13 Arg2:T8	
+T15	process 122 128	sliced
+T16	process 137 143	sliced
+R5	refers Arg1:T14 Arg2:T16	
+R6	refers Arg1:T13 Arg2:T15	
+T17	food_product_with_unit 42 54	orange juice
+T18	taste 56 64	low acid
+R7	refers Arg1:T17 Arg2:T18	
+R8	refers Arg1:T17 Arg2:T2	
+R9	refers Arg1:T2 Arg2:T6	
+T19	unit 13 19	bottle
+T20	food_product_with_unit 20 35	cranberry juice
+R10	refers Arg1:T20 Arg2:T19	
+R11	refers Arg1:T19 Arg2:T4	
+R12	refers Arg1:T20 Arg2:T1	
+R13	refers Arg1:T1 Arg2:T5	

@@ -1,0 +1,70 @@
+T1	unit 272 276	cups
+T2	quantity 270 271	2
+T4	food_product_with_unit 284 294	vegetables
+T3	process 277 283	cooked
+T5	food_product_with_unit 255 269	cheddar cheese
+T6	process 246 254	shredded
+T7	unit 242 245	cup
+T8	quantity 238 241	1⁄2
+R1	refers Arg1:T1 Arg2:T2	
+R2	refers Arg1:T4 Arg2:T3	
+R3	refers Arg1:T4 Arg2:T1	
+R4	refers Arg1:T5 Arg2:T6	
+R5	refers Arg1:T5 Arg2:T7	
+R6	refers Arg1:T7 Arg2:T8	
+T9	food_product_with_unit 233 237	milk
+T10	unit 229 232	cup
+T11	quantity 225 228	1⁄2
+R7	refers Arg1:T10 Arg2:T11	
+R8	refers Arg1:T10 Arg2:T9	
+T12	quantity 132 133	1
+T13	quantity 135 141	10 3/4
+T14	unit 142 147	ounce
+T15	unit 149 152	can
+T16	food_product_with_unit 153 166	mushroom soup
+R9	refers Arg1:T16 Arg2:T15	
+R10	refers Arg1:T16 Arg2:T14	
+R11	refers Arg1:T15 Arg2:T12	
+R12	refers Arg1:T14 Arg2:T13	
+T17	unit 185 188	can
+T18	unit 178 183	ounce
+T19	quantity 171 177	10 3/4
+R13	refers Arg1:T18 Arg2:T19	
+T20	diet 189 201	98% fat-free
+T21	food_product_with_unit 202 224	cream of mushroom soup
+R15	refers Arg1:T21 Arg2:T20	
+R16	refers Arg1:T21 Arg2:T17	
+R17	refers Arg1:T21 Arg2:T18	
+R18	or Arg1:T21 Arg2:T16	
+R14	refers Arg1:T17 Arg2:T12	
+T22	unit 25 35	tablespoon
+T23	food_product_with_unit 36 45	margarine
+T24	quantity 23 24	1
+T25	food_product_with_unit 13 19	butter
+T26	unit 2 12	tablespoon
+T27	quantity 0 1	1
+R19	refers Arg1:T26 Arg2:T27	
+R20	refers Arg1:T25 Arg2:T26	
+R21	refers Arg1:T23 Arg2:T22	
+R22	refers Arg1:T22 Arg2:T24	
+R23	or Arg1:T25 Arg2:T23	
+T28	physical_quality 48 56	boneless
+T29	physical_quality 57 65	skinless
+T30	food_product_without_unit_countable 66 73	chicken
+T31	part 74 87	breast halves
+R24	refers Arg1:T30 Arg2:T31	
+R25	refers Arg1:T30 Arg2:T29	
+R26	refers Arg1:T30 Arg2:T28	
+T32	quantity 46 47	4
+R27	refers Arg1:T30 Arg2:T32	
+T33	quantity 88 89	1
+T34	quantity 91 92	6
+T35	unit 93 98	ounce
+T36	unit 100 103	box
+T37	trade_name 104 131	chicken flavor stuffing mix
+R29	refers Arg1:T36 Arg2:T33	
+T38	food_product_with_unit 104 131	chicken flavor stuffing mix
+R28	refers Arg1:T38 Arg2:T36	
+R30	refers Arg1:T38 Arg2:T35	
+R31	refers Arg1:T35 Arg2:T34	
+R32	refers Arg1:T38 Arg2:T37	

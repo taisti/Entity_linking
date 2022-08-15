@@ -1,0 +1,26 @@
+T1	unit 2 8	ounces
+T2	unit 28 34	ounces
+T3	unit 49 55	ounces
+T4	quantity 0 1	2
+T5	quantity 24 27	0.5
+T6	quantity 45 48	0.5
+T7	quantity 91 92	3
+T8	food_product_with_unit 35 44	cointreau
+T9	food_product_with_unit 9 12	gin
+T11	trade_name 14 22	Plymouth
+R2	refers Arg1:T9 Arg2:T1	
+R1	refers Arg1:T1 Arg2:T4	
+R3	refers Arg1:T2 Arg2:T5	
+R4	refers Arg1:T8 Arg2:T2	
+R5	refers Arg1:T3 Arg2:T6	
+T10	unit 93 99	dashes
+T12	food_product_with_unit 100 108	absinthe
+R6	refers Arg1:T10 Arg2:T7	
+R7	refers Arg1:T12 Arg2:T10	
+T13	food_product_with_unit 56 68	lillet blanc
+R8	refers Arg1:T13 Arg2:T3	
+T14	trade_name 73 89	Cocchi Americano
+T15	food_product_with_unit 73 89	Cocchi Americano
+R9	refers Arg1:T15 Arg2:T3	
+R10	or Arg1:T13 Arg2:T15	
+R11	refers Arg1:T15 Arg2:T14	

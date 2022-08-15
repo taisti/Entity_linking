@@ -1,0 +1,19 @@
+T1	food_product_with_unit 6 16	strawberry
+T2	unit 2 5	cup
+T3	quantity 0 1	¼
+T4	quantity 25 26	1
+T5	quantity 37 38	1
+T6	unit 39 42	cup
+T7	unit 27 30	cup
+T8	food_product_with_unit 31 36	water
+T9	food_product_with_unit 49 53	milk
+T10	physical_quality 43 48	whole
+R1	refers Arg1:T9 Arg2:T10	
+R2	refers Arg1:T9 Arg2:T6	
+R3	refers Arg1:T6 Arg2:T5	
+R4	refers Arg1:T7 Arg2:T4	
+R5	refers Arg1:T2 Arg2:T3	
+R6	refers Arg1:T1 Arg2:T2	
+R7	refers Arg1:T8 Arg2:T7	
+T11	process 18 24	sliced
+R8	refers Arg1:T1 Arg2:T11	

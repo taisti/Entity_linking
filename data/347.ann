@@ -1,0 +1,25 @@
+T1	unit 2 7	ounce
+T2	unit 36 41	ounce
+T3	unit 55 61	ounces
+T4	unit 79 85	ounces
+T5	quantity 0 1	1
+T6	quantity 34 35	1
+T7	quantity 53 54	2
+T8	quantity 77 78	2
+T9	food_product_with_unit 62 73	heavy cream
+T10	food_product_with_unit 68 73;86 99	cream half-and-half
+R1	refers Arg1:T10 Arg2:T4	
+R2	refers Arg1:T4 Arg2:T8	
+R3	refers Arg1:T9 Arg2:T3	
+R4	refers Arg1:T3 Arg2:T7	
+R5	or Arg1:T9 Arg2:T10	
+T11	food_product_with_unit 42 52	Frangelico
+T12	trade_name 42 52	Frangelico
+R6	refers Arg1:T11 Arg2:T2	
+R7	refers Arg1:T2 Arg2:T6	
+T13	trade_name 8 16	Chambord
+T14	food_product_with_unit 17 33	raspberry liquor
+R8	refers Arg1:T14 Arg2:T13	
+R9	refers Arg1:T14 Arg2:T1	
+R10	refers Arg1:T1 Arg2:T5	
+R11	refers Arg1:T11 Arg2:T12	

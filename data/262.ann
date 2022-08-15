@@ -1,0 +1,55 @@
+T1	unit 41 46	ounce
+T2	unit 99 102	cup
+T3	unit 125 134	teaspoons
+T4	unit 154 163	teaspoons
+T5	unit 181 189	teaspoon
+T6	quantity 0 1	1
+T7	quantity 35 36	1
+T8	quantity 38 40	10
+T9	quantity 97 98	1
+T10	quantity 123 124	2
+T11	quantity 152 153	2
+T12	quantity 177 180	3⁄4
+T13	quantity 207 208	3
+T14	process 87 96	undrained
+T15	unit 48 51	can
+R1	refers Arg1:T15 Arg2:T7	
+R2	refers Arg1:T1 Arg2:T8	
+T16	unit 2 4	lb
+T18	process 20 34	cut into cubes
+T19	food_product_with_unit 5 18	cheese spread
+R3	refers Arg1:T19 Arg2:T18	
+R4	refers Arg1:T19 Arg2:T16	
+R5	refers Arg1:T16 Arg2:T6	
+T17	physical_quality 52 57	diced
+T20	food_product_with_unit 58 85	tomatoes with green chilies
+R6	refers Arg1:T20 Arg2:T14	
+R7	refers Arg1:T20 Arg2:T17	
+R8	refers Arg1:T20 Arg2:T15	
+T21	color 103 108	green
+T22	food_product_with_unit 109 114	onion
+T23	process 116 122	sliced
+R9	refers Arg1:T22 Arg2:T23	
+R10	refers Arg1:T22 Arg2:T21	
+R11	refers Arg1:T22 Arg2:T2	
+R12	refers Arg1:T2 Arg2:T9	
+T24	food_product_with_unit 142 151	coriander
+T26	process 135 141	ground
+R13	refers Arg1:T24 Arg2:T26	
+R14	refers Arg1:T24 Arg2:T3	
+R15	refers Arg1:T3 Arg2:T10	
+T25	process 164 170	ground
+T27	food_product_with_unit 171 176	cumin
+R16	refers Arg1:T27 Arg2:T25	
+R17	refers Arg1:T27 Arg2:T4	
+R18	refers Arg1:T4 Arg2:T11	
+T28	food_product_with_unit 190 206	hot pepper sauce
+R19	refers Arg1:T28 Arg2:T5	
+R20	refers Arg1:T5 Arg2:T12	
+T29	color 209 214	green
+T30	food_product_without_unit_countable 215 221	onions
+T31	purpose 223 234	for garnish
+A1	Optional T30
+R21	refers Arg1:T30 Arg2:T31	
+R22	refers Arg1:T30 Arg2:T29	
+R23	refers Arg1:T30 Arg2:T13	

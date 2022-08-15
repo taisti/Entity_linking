@@ -1,0 +1,47 @@
+T1	food_product_without_unit_uncountable 199 208	olive oil
+T2	physical_quality 186 198	extra virgin
+R1	refers Arg1:T1 Arg2:T2	
+T3	food_product_without_unit_uncountable 169 185	balsamic vinegar
+T4	physical_quality 150 155	fresh
+T5	food_product_with_unit 156 161	basil
+T6	unit 162 168	leaves
+R2	refers Arg1:T5 Arg2:T6	
+R3	refers Arg1:T5 Arg2:T4	
+T7	quantity 148 149	8
+R4	refers Arg1:T6 Arg2:T7	
+T8	quantity 78 83	1 1⁄2
+T9	unit 84 88	cups
+T10	physical_quality 89 94	fresh
+T11	food_product_with_unit 95 99	corn
+T12	quantity 103 108	1 1/2
+T13	unit 109 113	cups
+T14	physical_quality 114 120	frozen
+T15	food_product_with_unit 121 125	corn
+T16	process 127 135	blanched
+T17	process 140 147	drained
+R5	refers Arg1:T9 Arg2:T8	
+R6	refers Arg1:T11 Arg2:T10	
+R7	refers Arg1:T11 Arg2:T9	
+R8	or Arg1:T11 Arg2:T15	
+R9	refers Arg1:T15 Arg2:T16	
+R10	refers Arg1:T15 Arg2:T17	
+R11	refers Arg1:T15 Arg2:T14	
+R12	refers Arg1:T15 Arg2:T13	
+R13	refers Arg1:T13 Arg2:T12	
+R14	refers Arg1:T11 Arg2:T16	
+R15	refers Arg1:T11 Arg2:T17	
+T18	quantity 0 1	2
+T19	physical_quality 2 7	large
+T20	physical_quality 8 13	fresh
+T21	food_product_without_unit_countable 14 22	tomatoes
+T22	quantity 56 57	2
+T23	unit 58 61	lbs
+T24	food_product_with_unit 62 77	cherry tomatoes
+R16	refers Arg1:T24 Arg2:T23	
+R17	refers Arg1:T23 Arg2:T22	
+R18	or Arg1:T21 Arg2:T24	
+R19	refers Arg1:T21 Arg2:T20	
+R20	refers Arg1:T21 Arg2:T19	
+R21	refers Arg1:T21 Arg2:T18	
+T25	example 31 51	creole and beefsteak
+R22	refers Arg1:T21 Arg2:T25	

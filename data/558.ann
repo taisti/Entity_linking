@@ -1,0 +1,37 @@
+T1	unit 2 13	tablespoons
+T2	unit 36 39	cup
+T3	unit 64 69	ounce
+T4	unit 102 113	tablespoons
+T5	unit 122 130	teaspoon
+T6	quantity 0 1	2
+T7	quantity 32 35	1⁄3
+T8	quantity 58 59	1
+T9	quantity 61 63	14
+T10	quantity 100 101	2
+T11	quantity 120 121	1
+T12	physical_quality 85 94	condensed
+T13	unit 71 74	can
+T14	food_product_with_unit 114 119	water
+R1	refers Arg1:T14 Arg2:T4	
+R2	refers Arg1:T4 Arg2:T10	
+T15	food_product_with_unit 131 138	vanilla
+R3	refers Arg1:T15 Arg2:T5	
+R4	refers Arg1:T5 Arg2:T11	
+T16	food_product_with_unit 95 99	milk
+R5	refers Arg1:T16 Arg2:T12	
+T17	taste 75 84	sweetened
+R6	refers Arg1:T16 Arg2:T17	
+R7	refers Arg1:T16 Arg2:T13	
+R8	refers Arg1:T13 Arg2:T8	
+R9	refers Arg1:T3 Arg2:T9	
+R10	refers Arg1:T16 Arg2:T3	
+T18	food_product_with_unit 40 45	cocoa
+T19	trade_name 47 56	Hershey's
+R11	refers Arg1:T18 Arg2:T19	
+T20	process 25 31	melted
+T21	food_product_with_unit 14 23	margarine
+R12	refers Arg1:T21 Arg2:T20	
+R13	refers Arg1:T21 Arg2:T1	
+R14	refers Arg1:T1 Arg2:T6	
+R15	refers Arg1:T18 Arg2:T2	
+R16	refers Arg1:T2 Arg2:T7	

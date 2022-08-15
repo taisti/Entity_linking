@@ -1,0 +1,45 @@
+T1	unit 4 7	cup
+T2	unit 23 27	cups
+T3	unit 43 52	teaspoons
+T4	unit 68 76	teaspoon
+T5	unit 86 89	cup
+T6	unit 117 123	pounds
+T7	unit 139 145	ounces
+T8	quantity 0 3	1/2
+T9	quantity 21 22	2
+T10	quantity 41 42	2
+T11	quantity 66 67	1
+T12	quantity 82 85	3/4
+T13	quantity 111 116	1 1/2
+T14	quantity 136 138	12
+T15	food_product_with_unit 90 96	cheese
+R2	refers Arg1:T15 Arg2:T5	
+R3	refers Arg1:T5 Arg2:T12	
+T17	food_product_with_unit 131 135	beef
+T18	process 124 130	ground
+R5	refers Arg1:T7 Arg2:T14	
+R6	refers Arg1:T17 Arg2:T18	
+R7	refers Arg1:T17 Arg2:T6	
+R8	refers Arg1:T6 Arg2:T13	
+T20	food_product_with_unit 77 81	salt
+R9	refers Arg1:T20 Arg2:T4	
+T21	food_product_with_unit 157 166	spaghetti
+R4	refers Arg1:T21 Arg2:T7	
+T19	food_product_with_unit 28 40	tomato juice
+R10	refers Arg1:T19 Arg2:T2	
+T22	food_product_with_unit 53 65	chili powder
+R11	refers Arg1:T22 Arg2:T3	
+R12	refers Arg1:T3 Arg2:T10	
+R13	refers Arg1:T2 Arg2:T9	
+T23	process 8 13	diced
+T24	food_product_with_unit 14 20	onions
+R14	refers Arg1:T24 Arg2:T23	
+R15	refers Arg1:T24 Arg2:T1	
+R16	refers Arg1:T1 Arg2:T8	
+R17	refers Arg1:T4 Arg2:T11	
+T16	process 98 104	grated
+T25	taste 105 109	mild
+R1	refers Arg1:T15 Arg2:T16	
+R18	refers Arg1:T15 Arg2:T25	
+T26	physical_quality 153 156	dry
+R19	refers Arg1:T21 Arg2:T26	

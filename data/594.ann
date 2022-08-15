@@ -1,0 +1,16 @@
+T1	quantity 0 1	1
+T2	quantity 15 16	3
+T3	food_product_without_unit_countable 17 24	carrots
+T4	process 26 34	shredded
+T5	unit 2 6	head
+T6	food_product_with_unit 7 14	cabbage
+T7	food_product_without_unit_uncountable 35 44	olive oil
+T8	food_product_without_unit_uncountable 45 52	vinegar
+T9	food_product_without_unit_uncountable 56 67	lemon juice
+R1	or Arg1:T8 Arg2:T9	
+R2	refers Arg1:T3 Arg2:T4	
+R3	refers Arg1:T6 Arg2:T5	
+R4	refers Arg1:T5 Arg2:T1	
+R5	refers Arg1:T3 Arg2:T2	
+T10	food_product_without_unit_uncountable 68 72	salt
+T11	food_product_without_unit_uncountable 73 79	pepper

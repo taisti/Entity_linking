@@ -1,0 +1,38 @@
+T1	unit 28 31	cup
+T2	unit 50 53	cup
+T3	unit 69 73	cups
+T4	unit 129 133	cups
+T5	quantity 0 1	1
+T6	quantity 24 27	1⁄2
+T7	quantity 46 49	1⁄2
+T8	quantity 67 68	4
+T9	quantity 93 98	9 -12
+T11	quantity 123 128	1 1⁄2
+T12	color 54 59	green
+T13	physical_quality 74 80	frozen
+T14	process 32 39	chopped
+T15	unit 2 4	lb
+T16	food_product_with_unit 16 23	sausage
+T17	trade_name 5 15	Jimmy Dean
+R1	refers Arg1:T16 Arg2:T17	
+R2	refers Arg1:T16 Arg2:T15	
+R3	refers Arg1:T15 Arg2:T5	
+R4	refers Arg1:T1 Arg2:T6	
+T18	food_product_with_unit 40 45	onion
+R5	refers Arg1:T18 Arg2:T14	
+R6	refers Arg1:T18 Arg2:T1	
+T19	food_product_with_unit 60 66	pepper
+R7	refers Arg1:T19 Arg2:T12	
+R8	refers Arg1:T19 Arg2:T2	
+R9	refers Arg1:T2 Arg2:T7	
+T20	food_product_with_unit 81 92	hash browns
+R10	refers Arg1:T20 Arg2:T13	
+R11	refers Arg1:T20 Arg2:T3	
+R12	refers Arg1:T3 Arg2:T8	
+T10	food_product_without_unit_countable 99 103	eggs
+R13	refers Arg1:T10 Arg2:T9	
+T21	food_product_with_unit 134 148	cheddar cheese
+T22	process 150 158	shredded
+R14	refers Arg1:T21 Arg2:T22	
+R15	refers Arg1:T21 Arg2:T4	
+R16	refers Arg1:T4 Arg2:T11	

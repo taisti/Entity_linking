@@ -1,0 +1,20 @@
+T1	unit 14 17	cup
+T2	quantity 0 1	4
+T3	quantity 12 13	¼
+T4	quantity 24 26	20
+T5	quantity 55 56	2
+T6	food_product_without_unit_countable 57 65	tomatoes
+T7	process 67 73	sliced
+T8	unit 27 33	pieces
+T9	food_product_with_unit 18 23	pesto
+R1	refers Arg1:T9 Arg2:T1	
+R2	refers Arg1:T1 Arg2:T3	
+T10	food_product_without_unit_countable 2 11	cucumbers
+R3	refers Arg1:T10 Arg2:T2	
+T11	physical_quality 34 38	mini
+T12	food_product_with_unit 39 54	mozzarella ball
+R4	refers Arg1:T12 Arg2:T11	
+R5	refers Arg1:T12 Arg2:T8	
+R6	refers Arg1:T8 Arg2:T4	
+R7	refers Arg1:T6 Arg2:T5	
+R8	refers Arg1:T6 Arg2:T7	

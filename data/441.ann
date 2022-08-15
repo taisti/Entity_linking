@@ -1,0 +1,25 @@
+T1	unit 2 7	ounce
+T2	unit 48 53	ounce
+T3	unit 80 85	ounce
+T4	unit 109 114	ounce
+T5	quantity 0 1	1
+T6	quantity 44 47	1⁄2
+T7	quantity 76 79	1⁄2
+T8	quantity 107 108	1
+T9	food_product_with_unit 54 75	butterscotch schnapps
+T10	color 86 91	white
+T11	food_product_with_unit 92 106	Creme de Cacao
+R1	refers Arg1:T11 Arg2:T10	
+R2	refers Arg1:T11 Arg2:T3	
+R3	refers Arg1:T3 Arg2:T7	
+R4	refers Arg1:T4 Arg2:T8	
+T12	food_product_with_unit 115 119	milk
+R5	refers Arg1:T12 Arg2:T4	
+T13	food_product_without_unit_uncountable 120 134	cinnamon sugar
+T14	food_product_with_unit 8 22	coffee tequila
+R6	refers Arg1:T14 Arg2:T1	
+R7	refers Arg1:T1 Arg2:T5	
+R8	refers Arg1:T2 Arg2:T6	
+R9	refers Arg1:T9 Arg2:T2	
+T15	trade_name 28 42	Patron XO Cafe
+R10	refers Arg1:T14 Arg2:T15	

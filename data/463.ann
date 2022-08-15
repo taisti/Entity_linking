@@ -1,0 +1,13 @@
+T1	unit 3 5	oz
+T2	unit 41 44	cup
+T3	quantity 0 2	13
+T4	quantity 32 33	2
+T5	quantity 39 40	½
+T6	food_product_without_unit_countable 34 38	eggs
+T7	food_product_with_unit 45 50	flour
+R1	refers Arg1:T7 Arg2:T2	
+R2	refers Arg1:T2 Arg2:T5	
+R3	refers Arg1:T6 Arg2:T4	
+T8	food_product_with_unit 6 31	chocolate hazelnut spread
+R4	refers Arg1:T8 Arg2:T1	
+R5	refers Arg1:T1 Arg2:T3	

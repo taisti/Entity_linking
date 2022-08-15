@@ -1,0 +1,30 @@
+T1	food_product_without_unit_uncountable 182 190	cinnamon
+T2	food_product_without_unit_uncountable 199 213	whipping cream
+T3	process 191 198	whipped
+R1	refers Arg1:T2 Arg2:T3	
+T4	food_product_without_unit_uncountable 175 181	nutmeg
+T5	unit 143 154	fluid ounce
+T6	unit 89 100	fluid ounce
+T7	unit 2 13	fluid ounce
+T9	food_product_with_unit 108 111	rum
+T10	quantity 87 88	1
+T11	quantity 0 1	1
+T12	quantity 139 142	1⁄2
+R2	refers Arg1:T5 Arg2:T12	
+R3	refers Arg1:T6 Arg2:T10	
+R4	refers Arg1:T7 Arg2:T11	
+T14	physical_quality 72 85	half and half
+T16	example 113 128	Captain Morgans
+R10	refers Arg1:T9 Arg2:T16	
+R11	refers Arg1:T9 Arg2:T6	
+T17	food_product_with_unit 155 174	pumpkin spice syrup
+R12	refers Arg1:T17 Arg2:T5	
+T13	food_product_with_unit 20 34	whipping cream
+R5	refers Arg1:T13 Arg2:T7	
+T18	food_product_with_unit 20 34	whipping cream
+R6	or Arg1:T13 Arg2:T18	
+R7	refers Arg1:T18 Arg2:T14	
+T8	physical_quality 14 19	heavy
+R8	refers Arg1:T13 Arg2:T8	
+T15	taste 101 107	spiced
+R9	refers Arg1:T9 Arg2:T15	

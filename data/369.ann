@@ -1,0 +1,38 @@
+T1	unit 20 31	tablespoons
+T2	unit 54 64	tablespoon
+T3	unit 103 106	cup
+T4	unit 132 143	tablespoons
+T5	quantity 0 1	4
+T6	quantity 18 19	2
+T7	quantity 52 53	1
+T8	quantity 99 102	1⁄4
+T9	quantity 130 131	2
+T10	food_product_with_unit 32 38	butter
+T11	process 40 46	melted
+T12	food_product_without_unit_countable 2 17	baking potatoes
+R1	refers Arg1:T12 Arg2:T5	
+R2	refers Arg1:T1 Arg2:T6	
+R3	refers Arg1:T10 Arg2:T1	
+R4	refers Arg1:T10 Arg2:T11	
+T13	physical_quality 65 70	fresh
+T14	food_product_with_unit 71 78	parsley
+T15	process 80 87	chopped
+T16	food_product_with_unit 92 97	thyme
+R5	refers Arg1:T14 Arg2:T13	
+R6	refers Arg1:T14 Arg2:T2	
+R7	refers Arg1:T2 Arg2:T7	
+R8	refers Arg1:T14 Arg2:T15	
+R9	or Arg1:T14 Arg2:T16	
+R10	refers Arg1:T16 Arg2:T13	
+R11	refers Arg1:T16 Arg2:T15	
+T17	food_product_with_unit 107 121	cheddar cheese
+T18	process 123 129	grated
+R12	refers Arg1:T17 Arg2:T18	
+R13	refers Arg1:T17 Arg2:T3	
+R14	refers Arg1:T3 Arg2:T8	
+R15	refers Arg1:T4 Arg2:T9	
+T19	food_product_with_unit 144 159	parmesan cheese
+R16	refers Arg1:T19 Arg2:T4	
+T20	process 161 167	grated
+R17	refers Arg1:T19 Arg2:T20	
+T21	food_product_without_unit_uncountable 47 51	salt

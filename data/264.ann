@@ -1,0 +1,36 @@
+T1	unit 27 30	cup
+T2	unit 49 60	tablespoons
+T3	unit 95 99	cups
+T4	quantity 0 1	4
+T5	quantity 23 26	1/2
+T6	quantity 47 48	3
+T7	quantity 89 94	1 3/4
+T8	quantity 124 125	1
+T9	food_product_with_unit 41 46	sugar
+T10	physical_quality 31 40	superfine
+T11	physical_quality 2 7	large
+T12	food_product_without_unit_countable 8 12	eggs
+T13	process 14 21	divided
+T14	food_product_with_unit 61 66;68 79	flour all-purpose
+T15	process 81 87	sifted
+R1	refers Arg1:T14 Arg2:T2	
+R2	refers Arg1:T2 Arg2:T6	
+R3	refers Arg1:T14 Arg2:T15	
+R4	refers Arg1:T9 Arg2:T10	
+R5	refers Arg1:T9 Arg2:T1	
+R6	refers Arg1:T1 Arg2:T5	
+R7	refers Arg1:T12 Arg2:T11	
+R8	refers Arg1:T12 Arg2:T13	
+R9	refers Arg1:T12 Arg2:T4	
+T16	food_product_with_unit 100 112	greek yogurt
+R10	refers Arg1:T16 Arg2:T3	
+R11	refers Arg1:T3 Arg2:T7	
+T17	food_product_without_unit_countable 126 131	lemon
+R12	refers Arg1:T17 Arg2:T8	
+T18	food_product_without_unit_uncountable 152 172	confectioner's sugar
+T19	process 133 139	grated
+T20	process 144 150	juiced
+T21	process 114 122	strained
+R13	refers Arg1:T16 Arg2:T21	
+R14	refers Arg1:T17 Arg2:T19	
+R15	refers Arg1:T17 Arg2:T20	

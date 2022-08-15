@@ -1,0 +1,38 @@
+T1	unit 2 5	cup
+T2	unit 37 41	cups
+T3	unit 59 62	cup
+T4	unit 69 80	tablespoons
+T5	unit 89 100	tablespoons
+T6	unit 127 138	tablespoons
+T7	quantity 0 1	¾
+T8	quantity 35 36	3
+T9	quantity 57 58	1
+T10	quantity 67 68	3
+T11	quantity 87 88	3
+T12	quantity 125 126	2
+T13	food_product_with_unit 51 56	water
+T14	process 42 50	filtered
+R1	refers Arg1:T13 Arg2:T14	
+T15	process 6 21	coarsely ground
+T16	food_product_with_unit 22 34	coffee beans
+R2	refers Arg1:T16 Arg2:T15	
+R3	refers Arg1:T16 Arg2:T1	
+R4	refers Arg1:T1 Arg2:T7	
+R5	refers Arg1:T2 Arg2:T8	
+R6	refers Arg1:T3 Arg2:T9	
+T17	food_product_with_unit 63 66	ice
+R7	refers Arg1:T17 Arg2:T3	
+R8	refers Arg1:T13 Arg2:T2	
+T18	food_product_with_unit 81 86	vodka
+R9	refers Arg1:T18 Arg2:T4	
+R10	refers Arg1:T4 Arg2:T10	
+R11	refers Arg1:T5 Arg2:T11	
+T19	food_product_with_unit 101 124	coffee-flavored liqueur
+R12	refers Arg1:T19 Arg2:T5	
+R13	refers Arg1:T6 Arg2:T12	
+T20	physical_quality 139 143	cold
+T21	food_product_with_unit 144 155	brew coffee
+T22	physical_quality 157 168	concentrate
+R14	refers Arg1:T21 Arg2:T22	
+R15	refers Arg1:T21 Arg2:T20	
+R16	refers Arg1:T21 Arg2:T6	

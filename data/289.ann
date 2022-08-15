@@ -1,0 +1,44 @@
+T1	unit 29 34	ounce
+T2	unit 70 74	cups
+T3	unit 85 90	ounce
+T4	quantity 0 2	10
+T5	quantity 20 21	1
+T6	quantity 23 28	3 1/2
+T7	quantity 64 69	1 1⁄2
+T8	quantity 80 81	1
+T9	quantity 83 84	8
+T10	quantity 133 134	2
+T11	taste 141 150	sweetened
+T12	physical_quality 151 157	frozen
+T13	food_product_with_unit 158 170	strawberries
+T14	process 172 178	thawed
+T15	unit 135 140	boxes
+R1	refers Arg1:T13 Arg2:T12	
+R2	refers Arg1:T13 Arg2:T14	
+R3	refers Arg1:T13 Arg2:T11	
+R4	refers Arg1:T13 Arg2:T15	
+R5	refers Arg1:T15 Arg2:T10	
+T16	food_product_with_unit 109 124	whipped topping
+T17	physical_quality 102 108	frozen
+T18	unit 92 101	container
+T19	process 126 132	thawed
+R6	refers Arg1:T16 Arg2:T19	
+R7	refers Arg1:T16 Arg2:T17	
+R8	refers Arg1:T16 Arg2:T18	
+R9	refers Arg1:T18 Arg2:T8	
+R10	refers Arg1:T16 Arg2:T3	
+R11	refers Arg1:T3 Arg2:T9	
+T20	food_product_with_unit 75 79	milk
+R12	refers Arg1:T20 Arg2:T2	
+R13	refers Arg1:T2 Arg2:T7	
+T21	unit 36 39	box
+T22	physical_quality 40 47	instant
+T23	food_product_with_unit 48 63	vanilla pudding
+R14	refers Arg1:T23 Arg2:T22	
+R15	refers Arg1:T23 Arg2:T21	
+R16	refers Arg1:T21 Arg2:T5	
+R17	refers Arg1:T1 Arg2:T6	
+R18	refers Arg1:T23 Arg2:T1	
+T24	trade_name 3 19	Hostess Twinkies
+T25	food_product_without_unit_countable 3 19	Hostess Twinkies
+R19	refers Arg1:T25 Arg2:T4	

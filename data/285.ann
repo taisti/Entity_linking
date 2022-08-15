@@ -1,0 +1,10 @@
+T1	quantity 0 1	6
+T2	trade_name 36 68	Hormel Black Label 'Thick Slice'
+T3	example 36 68	Hormel Black Label 'Thick Slice'
+T4	unit 2 8	slices
+T5	food_product_with_unit 21 26	bacon
+T6	physical_quality 9 20	thick slice
+R1	refers Arg1:T5 Arg2:T6	
+R2	refers Arg1:T5 Arg2:T3	
+R3	refers Arg1:T5 Arg2:T4	
+R4	refers Arg1:T4 Arg2:T1	

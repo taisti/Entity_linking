@@ -1,0 +1,24 @@
+T1	unit 2 8	pounds
+T2	unit 27 33	ounces
+T3	unit 73 79	ounces
+T4	unit 104 109	ounce
+T5	quantity 0 1	2
+T6	quantity 21 26	10.75
+T7	quantity 67 72	10.75
+T8	quantity 102 103	1
+T9	food_product_with_unit 9 20	flank steak
+R1	refers Arg1:T9 Arg2:T1	
+R2	refers Arg1:T1 Arg2:T5	
+T10	food_product_with_unit 110 124	onion soup mix
+R3	refers Arg1:T10 Arg2:T4	
+R4	refers Arg1:T4 Arg2:T8	
+T11	physical_quality 34 43	condensed
+T12	physical_quality 80 89	condensed
+T13	food_product_with_unit 90 101	tomato soup
+T14	food_product_with_unit 44 66	cream of mushroom soup
+R5	refers Arg1:T14 Arg2:T11	
+R6	refers Arg1:T13 Arg2:T12	
+R7	refers Arg1:T14 Arg2:T2	
+R8	refers Arg1:T2 Arg2:T6	
+R9	refers Arg1:T3 Arg2:T7	
+R10	refers Arg1:T13 Arg2:T3	

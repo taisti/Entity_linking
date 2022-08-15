@@ -1,0 +1,32 @@
+T1	unit 4 9	ounce
+T2	unit 23 28	ounce
+T3	unit 43 48	ounce
+T4	unit 74 80	ounces
+T5	unit 96 102	ounces
+T6	unit 123 128	ounce
+T7	quantity 0 3	1⁄2
+T8	quantity 19 22	1⁄2
+T9	quantity 39 42	1⁄2
+T10	quantity 72 73	3
+T11	quantity 94 95	3
+T12	quantity 119 122	1⁄2
+T13	food_product_with_unit 103 118	pineapple juice
+R1	refers Arg1:T13 Arg2:T5	
+R2	refers Arg1:T5 Arg2:T11	
+T14	trade_name 129 145	Southern Comfort
+T15	food_product_with_unit 129 145	Southern Comfort
+R3	refers Arg1:T15 Arg2:T6	
+R4	refers Arg1:T6 Arg2:T12	
+T16	food_product_with_unit 81 93	orange juice
+R5	refers Arg1:T16 Arg2:T4	
+R6	refers Arg1:T4 Arg2:T10	
+R7	refers Arg1:T3 Arg2:T9	
+R8	refers Arg1:T2 Arg2:T8	
+R9	refers Arg1:T1 Arg2:T7	
+T17	food_product_with_unit 10 18	Amaretto
+R10	refers Arg1:T17 Arg2:T1	
+T18	food_product_with_unit 29 38	grenadine
+R11	refers Arg1:T18 Arg2:T2	
+T19	food_product_with_unit 49 62;64 70	melon liqueur Midori
+R12	refers Arg1:T19 Arg2:T3	
+R13	refers Arg1:T15 Arg2:T14	

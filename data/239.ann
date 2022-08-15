@@ -1,0 +1,33 @@
+T1	unit 4 7	cup
+T2	unit 30 34	cups
+T3	unit 76 80	cups
+T4	unit 104 108	cups
+T5	quantity 0 3	1/2
+T6	quantity 24 29	1 1/4
+T7	quantity 51 52	1
+T8	quantity 70 75	1 1/4
+T9	quantity 98 103	1 1/2
+T10	food_product_with_unit 8 14	butter
+T11	process 16 22	melted
+R1	refers Arg1:T10 Arg2:T11	
+R2	refers Arg1:T10 Arg2:T1	
+R3	refers Arg1:T1 Arg2:T5	
+R4	refers Arg1:T2 Arg2:T6	
+T12	food_product_with_unit 35 41	pecans
+T13	process 43 49	halves
+R5	refers Arg1:T12 Arg2:T13	
+R6	refers Arg1:T12 Arg2:T2	
+T14	unit 53 60	package
+T15	color 81 91	dark brown
+R8	refers Arg1:T14 Arg2:T7	
+T16	physical_quality 109 112	hot
+T17	food_product_with_unit 113 118	water
+R9	refers Arg1:T17 Arg2:T16	
+R10	refers Arg1:T17 Arg2:T4	
+R11	refers Arg1:T4 Arg2:T9	
+T18	food_product_with_unit 61 69	cake mix
+R7	refers Arg1:T18 Arg2:T14	
+T19	food_product_with_unit 92 97	sugar
+R12	refers Arg1:T19 Arg2:T15	
+R13	refers Arg1:T19 Arg2:T3	
+R14	refers Arg1:T3 Arg2:T8	

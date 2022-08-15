@@ -1,0 +1,25 @@
+T1	unit 6 10	cups
+T2	unit 43 52	teaspoons
+T3	unit 67 76	teaspoons
+T4	quantity 0 5	1 1⁄4
+T5	quantity 41 42	2
+T6	quantity 65 66	3
+T7	color 53 58	white
+T8	food_product_with_unit 59 64	sugar
+T9	food_product_with_unit 11 26	plain rice milk
+R1	refers Arg1:T9 Arg2:T1	
+R2	refers Arg1:T1 Arg2:T4	
+T10	excluded 22 26;32 39	milk vanilla
+R3	not_substitutable_with Arg1:T9 Arg2:T10	
+T11	example 99 112	Maxwell house
+T12	trade_name 99 112	Maxwell house
+T13	food_product_with_unit 85 91	coffee
+T14	physical_quality 77 84	instant
+R4	refers Arg1:T13 Arg2:T14	
+R5	refers Arg1:T13 Arg2:T11	
+R6	refers Arg1:T13 Arg2:T3	
+R7	refers Arg1:T3 Arg2:T6	
+R8	refers Arg1:T2 Arg2:T5	
+R9	refers Arg1:T8 Arg2:T7	
+R10	refers Arg1:T8 Arg2:T2	
+R11	refers Arg1:T11 Arg2:T12	

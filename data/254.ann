@@ -1,0 +1,49 @@
+T1	unit 156 162	ounces
+T2	quantity 0 3	1 1
+T3	quantity 35 36	1
+T4	quantity 69 70	1
+T5	quantity 101 102	1
+T6	quantity 154 155	2
+T7	food_product_with_unit 163 169	butter
+R1	refers Arg1:T7 Arg2:T1	
+R2	refers Arg1:T1 Arg2:T6	
+T8	food_product_without_unit_uncountable 170 174	salt
+T9	food_product_without_unit_uncountable 181 187	pepper
+T10	color 175 180	black
+R3	refers Arg1:T9 Arg2:T10	
+T11	food_product_whole 188 194	carrot
+T12	process 196 201	diced
+A1	Optional T11
+R4	refers Arg1:T11 Arg2:T12	
+T13	unit 71 73	lb
+T14	unit 4 6	lb
+T15	unit 37 39	lb
+T16	process 63 68	diced
+T17	food_product_with_unit 23 31;7 15	potatoes leftover
+T18	food_product_with_unit 40 48;55 61	leftover potato
+T19	process 49 54	roast
+T20	process 16 22	boiled
+R5	refers Arg1:T17 Arg2:T20	
+R6	refers Arg1:T17 Arg2:T14	
+R7	refers Arg1:T14 Arg2:T2	
+R8	refers Arg1:T15 Arg2:T3	
+R9	refers Arg1:T18 Arg2:T19	
+R10	refers Arg1:T18 Arg2:T16	
+R11	refers Arg1:T17 Arg2:T16	
+R12	refers Arg1:T18 Arg2:T15	
+R13	or Arg1:T17 Arg2:T18	
+T21	food_product_with_unit 74 82;90 97	leftover cabbage
+T22	process 83 89	cooked
+T23	unit 103 105	lb
+T24	food_product_with_unit 106 114;122 137	leftover Brussels sprout
+T25	process 115 121	cooked
+R14	refers Arg1:T24 Arg2:T25	
+R15	refers Arg1:T24 Arg2:T23	
+R16	refers Arg1:T23 Arg2:T5	
+R17	refers Arg1:T21 Arg2:T22	
+R18	refers Arg1:T21 Arg2:T13	
+R19	refers Arg1:T13 Arg2:T4	
+T26	process 139 153	finely chopped
+R20	refers Arg1:T24 Arg2:T26	
+R21	refers Arg1:T21 Arg2:T26	
+R22	or Arg1:T21 Arg2:T24	

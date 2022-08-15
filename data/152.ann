@@ -1,0 +1,44 @@
+T1	unit 48 59	tablespoons
+T2	unit 96 99	cup
+T3	unit 110 113	cup
+T4	unit 142 152	tablespoon
+T5	unit 182 192	tablespoon
+T6	quantity 0 3	1⁄2
+T7	quantity 21 24	1⁄2
+T8	quantity 46 47	3
+T9	quantity 71 72	1
+T10	quantity 92 95	1⁄2
+T11	quantity 106 109	1⁄2
+T12	quantity 140 141	1
+T13	quantity 180 181	1
+T15	food_product_with_unit 100 105	sugar
+T16	food_product_with_unit 153 156	rum
+T17	food_product_with_unit 193 199	liquor
+R1	refers Arg1:T17 Arg2:T5	
+R2	refers Arg1:T5 Arg2:T13	
+R3	refers Arg1:T16 Arg2:T4	
+R4	refers Arg1:T4 Arg2:T12	
+R5	or Arg1:T16 Arg2:T17	
+T18	food_product_with_unit 118 128	poppy seed
+T19	physical_quality 114 117	dry
+A1	Optional T18
+R6	refers Arg1:T18 Arg2:T3	
+R7	refers Arg1:T3 Arg2:T11	
+R8	refers Arg1:T2 Arg2:T10	
+R9	refers Arg1:T15 Arg2:T2	
+T20	food_product_with_unit 73 83	baked beet
+T21	process 85 91	juiced
+R10	refers Arg1:T20 Arg2:T21	
+R11	refers Arg1:T20 Arg2:T9	
+T22	food_product_with_unit 60 70	sour cream
+R12	refers Arg1:T22 Arg2:T1	
+R13	refers Arg1:T1 Arg2:T8	
+T23	unit 25 27	lb
+T24	food_product_with_unit 28 45	shortbread cookie
+R14	refers Arg1:T24 Arg2:T23	
+R15	refers Arg1:T23 Arg2:T7	
+T25	unit 4 6	lb
+T26	food_product_with_unit 7 20	vanilla wafer
+R16	refers Arg1:T26 Arg2:T25	
+R17	refers Arg1:T25 Arg2:T6	
+R18	refers Arg1:T18 Arg2:T19	

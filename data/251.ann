@@ -1,0 +1,28 @@
+T1	unit 15 18	cup
+T2	unit 26 34	teaspoon
+T3	quantity 0 1	1
+T4	quantity 11 14	1/2
+T5	quantity 24 25	1
+T6	quantity 82 84	30
+T7	unit 2 5	can
+T8	food_product_with_unit 6 10	corn
+T9	food_product_with_unit 19 23	milk
+T10	unit 85 86	g
+R1	refers Arg1:T10 Arg2:T6	
+T11	physical_quality 58 64	Smoked
+T12	food_product_with_unit 50 56	cheese
+R2	refers Arg1:T12 Arg2:T11	
+T13	process 66 79	finely grated
+R3	refers Arg1:T12 Arg2:T13	
+R4	refers Arg1:T12 Arg2:T10	
+T14	food_product_without_unit_uncountable 88 92	salt
+T15	food_product_without_unit_uncountable 93 99	pepper
+T16	physical_quality 35 41	smoked
+T17	food_product_with_unit 42 49	paprika
+R5	refers Arg1:T17 Arg2:T16	
+R6	refers Arg1:T17 Arg2:T2	
+R7	refers Arg1:T2 Arg2:T5	
+R8	refers Arg1:T1 Arg2:T4	
+R9	refers Arg1:T9 Arg2:T1	
+R10	refers Arg1:T8 Arg2:T7	
+R11	refers Arg1:T7 Arg2:T3	

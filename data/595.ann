@@ -1,0 +1,26 @@
+T1	unit 2 13	tablespoons
+T2	unit 23 29	ounces
+T3	unit 56 59	cup
+T4	unit 77 88	tablespoons
+T5	quantity 0 1	2
+T6	quantity 21 22	2
+T7	quantity 54 55	1
+T8	quantity 75 76	2
+T9	food_product_with_unit 30 39	chocolate
+T10	taste 41 52	unsweetened
+T11	food_product_with_unit 14 20	butter
+R1	refers Arg1:T11 Arg2:T1	
+R2	refers Arg1:T1 Arg2:T5	
+R3	refers Arg1:T2 Arg2:T6	
+R4	refers Arg1:T9 Arg2:T2	
+R5	refers Arg1:T9 Arg2:T10	
+T12	food_product_with_unit 89 94	water
+R6	refers Arg1:T12 Arg2:T4	
+R7	refers Arg1:T4 Arg2:T8	
+T13	physical_quality 96 103	boiling
+R8	refers Arg1:T12 Arg2:T13	
+T14	physical_quality 60 68	powdered
+T15	food_product_with_unit 69 74	sugar
+R9	refers Arg1:T15 Arg2:T14	
+R10	refers Arg1:T15 Arg2:T3	
+R11	refers Arg1:T3 Arg2:T7	

@@ -1,0 +1,47 @@
+T1	unit 44 47	cup
+T2	unit 63 66	cup
+T3	unit 86 89	cup
+T4	unit 111 120	teaspoons
+T5	unit 141 150	teaspoons
+T6	unit 167 175	teaspoon
+T7	quantity 0 1	1
+T8	quantity 40 43	1⁄2
+T9	quantity 59 62	1⁄3
+T10	quantity 82 85	1⁄4
+T11	quantity 109 110	2
+T12	quantity 139 140	2
+T13	quantity 163 166	1⁄4
+T14	food_product_with_unit 151 162	lemon juice
+R1	refers Arg1:T14 Arg2:T5	
+R2	refers Arg1:T5 Arg2:T12	
+R3	refers Arg1:T6 Arg2:T13	
+T15	food_product_with_unit 176 196	Worcestershire sauce
+R4	refers Arg1:T15 Arg2:T6	
+T16	food_product_with_unit 121 138	Old Bay Seasoning
+T17	trade_name 121 138	Old Bay Seasoning
+R5	refers Arg1:T16 Arg2:T17	
+R6	refers Arg1:T16 Arg2:T4	
+R7	refers Arg1:T4 Arg2:T11	
+T18	process 90 102	finely diced
+T19	food_product_with_unit 103 108	onion
+R8	refers Arg1:T19 Arg2:T18	
+R9	refers Arg1:T19 Arg2:T3	
+R10	refers Arg1:T3 Arg2:T10	
+R11	refers Arg1:T2 Arg2:T9	
+R12	refers Arg1:T1 Arg2:T8	
+T20	food_product_with_unit 48 58	mayonnaise
+R13	refers Arg1:T20 Arg2:T1	
+T21	process 67 74	chopped
+T22	food_product_with_unit 75 81	celery
+R14	refers Arg1:T22 Arg2:T21	
+R15	refers Arg1:T22 Arg2:T2	
+T23	unit 2 4	lb
+T24	process 5 11	cooked
+T25	food_product_with_unit 12 18	shrimp
+T26	process 20 26	peeled
+T27	process 31 39	deveined
+R16	refers Arg1:T25 Arg2:T26	
+R17	refers Arg1:T25 Arg2:T27	
+R18	refers Arg1:T25 Arg2:T24	
+R19	refers Arg1:T25 Arg2:T23	
+R20	refers Arg1:T23 Arg2:T7	

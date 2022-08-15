@@ -1,0 +1,23 @@
+T1	unit 87 95	teaspoon
+T2	unit 116 120	cups
+T3	quantity 0 1	4
+T5	quantity 85 86	1
+T6	quantity 110 115	1 1/2
+T7	food_product_with_unit 121 126	salsa
+R1	refers Arg1:T7 Arg2:T2	
+R2	refers Arg1:T2 Arg2:T6	
+T8	food_product_with_unit 96 109	vegetable oil
+R3	refers Arg1:T8 Arg2:T1	
+R4	refers Arg1:T1 Arg2:T5	
+T9	food_product_without_unit_uncountable 67 73	pepper
+T10	quantity 75 83	to taste
+R5	refers Arg1:T9 Arg2:T10	
+T11	food_product_without_unit_uncountable 51 55	salt
+T12	quantity 57 65	to taste
+R6	refers Arg1:T11 Arg2:T12	
+T15	physical_quality 2 9	bone-in
+T16	food_product_without_unit_countable 10 33	ribeye (rib) pork chops
+R7	refers Arg1:T16 Arg2:T15	
+R8	refers Arg1:T16 Arg2:T3	
+T4	physical_quality 35 49	3/4-inch thick
+R9	refers Arg1:T16 Arg2:T4	

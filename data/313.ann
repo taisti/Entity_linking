@@ -1,0 +1,23 @@
+T1	unit 2 8	ounces
+T2	unit 56 62	ounces
+T3	quantity 0 1	3
+T4	quantity 52 55	0.5
+T5	taste 63 66	dry
+T6	food_product_with_unit 67 75	vermouth
+R1	refers Arg1:T6 Arg2:T5	
+R2	refers Arg1:T6 Arg2:T2	
+R3	refers Arg1:T2 Arg2:T4	
+R4	refers Arg1:T1 Arg2:T3	
+T7	food_product_with_unit 9 12	gin
+R5	refers Arg1:T7 Arg2:T1	
+T8	physical_quality 14 26	good-quality
+R6	refers Arg1:T7 Arg2:T8	
+T9	food_product_with_unit 31 36	vodka
+R7	or Arg1:T9 Arg2:T7	
+R8	refers Arg1:T9 Arg2:T1	
+T10	food_product_without_unit_uncountable 108 114;86 101	olives pimento-stuffed
+T11	color 102 107	green
+R9	refers Arg1:T10 Arg2:T11	
+T12	physical_quality 116 121	large
+R10	refers Arg1:T10 Arg2:T12	
+T13	food_product_without_unit_uncountable 137 148	lemon twist

@@ -1,0 +1,38 @@
+T1	unit 14 20	pounds
+T2	unit 103 107	cups
+T3	unit 167 170	cup
+T4	quantity 12 13	3
+T5	quantity 51 52	1
+T6	quantity 74 75	1
+T7	quantity 97 102	2 1/2
+T8	quantity 148 151	115
+T9	quantity 165 166	1
+T10	food_product_without_unit_countable 53 56	egg
+T11	process 58 72	lightly beaten
+T12	process 81 95	lightly beaten
+T13	food_product_without_unit_countable 76 79	egg
+T14	food_product_with_unit 108 125	all purpose flour
+T15	food_product_without_unit_uncountable 108 125	all purpose flour
+T16	quantity 137 146	as needed
+R1	refers Arg1:T15 Arg2:T16	
+R2	refers Arg1:T14 Arg2:T2	
+R3	refers Arg1:T2 Arg2:T7	
+R4	and Arg1:T15 Arg2:T14	
+T17	unit 152 157	grams
+T18	food_product_with_unit 158 164	butter
+T19	food_product_with_unit 171 183	bread crumbs
+T20	physical_quality 185 189	fine
+R5	refers Arg1:T19 Arg2:T20	
+R6	refers Arg1:T19 Arg2:T3	
+R7	refers Arg1:T3 Arg2:T9	
+R8	refers Arg1:T13 Arg2:T6	
+R9	refers Arg1:T13 Arg2:T12	
+R10	refers Arg1:T10 Arg2:T11	
+R11	refers Arg1:T10 Arg2:T5	
+T21	food_product_with_unit 21 29	potatoes
+T22	physical_quality 31 39	unpeeled
+T23	process 41 49	scrubbed
+R12	refers Arg1:T21 Arg2:T22	
+R13	refers Arg1:T21 Arg2:T23	
+R14	refers Arg1:T21 Arg2:T1	
+R15	refers Arg1:T1 Arg2:T4	

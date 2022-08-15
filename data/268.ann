@@ -1,0 +1,37 @@
+T1	unit 2 6	cups
+T2	unit 78 89	tablespoons
+T3	unit 163 171	teaspoon
+T4	unit 188 196	teaspoon
+T5	unit 213 221	teaspoon
+T6	unit 229 232	cup
+T7	unit 299 303	cups
+T8	quantity 0 1	3
+T9	quantity 76 77	4
+T10	quantity 159 162	1/2
+T11	quantity 184 187	1/2
+T12	quantity 211 212	1
+T13	quantity 227 228	1
+T14	quantity 293 298	1 1/3
+T15	food_product_with_unit 172 183	baking soda
+T16	food_product_with_unit 197 210	baking powder
+R1	refers Arg1:T16 Arg2:T4	
+R2	refers Arg1:T4 Arg2:T11	
+R3	refers Arg1:T3 Arg2:T10	
+T17	food_product_with_unit 90 95	sugar
+R4	refers Arg1:T2 Arg2:T9	
+R5	refers Arg1:T1 Arg2:T8	
+T18	food_product_with_unit 7 12	flour
+R6	refers Arg1:T18 Arg2:T1	
+R7	refers Arg1:T17 Arg2:T2	
+R8	refers Arg1:T15 Arg2:T3	
+T19	food_product_with_unit 222 226	salt
+R9	refers Arg1:T19 Arg2:T5	
+R10	refers Arg1:T5 Arg2:T12	
+R11	refers Arg1:T6 Arg2:T13	
+R12	refers Arg1:T7 Arg2:T14	
+T20	food_product_with_unit 304 314	buttermilk
+T21	food_product_with_unit 233 240	raisins
+R13	refers Arg1:T21 Arg2:T6	
+R14	refers Arg1:T20 Arg2:T7	
+T22	process 14 20	sifted
+R15	refers Arg1:T18 Arg2:T22	

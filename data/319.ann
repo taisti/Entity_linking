@@ -1,0 +1,54 @@
+T1	unit 2 13	tablespoons
+T2	unit 83 91	teaspoon
+T3	unit 116 124	teaspoon
+T4	unit 152 160	teaspoon
+T5	unit 170 178	teaspoon
+T6	unit 209 217	teaspoon
+T7	quantity 0 1	4
+T8	quantity 30 31	1
+T9	quantity 79 82	1⁄2
+T10	quantity 112 115	1⁄2
+T11	quantity 148 151	1⁄4
+T12	quantity 166 169	1⁄4
+T13	quantity 205 208	1⁄2
+T14	process 179 191	fresh ground
+T15	color 192 197	black
+T16	food_product_with_unit 198 204	pepper
+R1	refers Arg1:T16 Arg2:T15	
+R2	refers Arg1:T16 Arg2:T14	
+R3	refers Arg1:T16 Arg2:T5	
+R4	refers Arg1:T5 Arg2:T12	
+R5	refers Arg1:T6 Arg2:T13	
+T17	color 218 223	brown
+T18	food_product_with_unit 224 229	sugar
+R6	refers Arg1:T18 Arg2:T17	
+R7	refers Arg1:T18 Arg2:T6	
+T19	physical_quality 133 138	fresh
+T20	food_product_with_unit 139 147	rosemary
+T21	process 125 132	chopped
+T22	food_product_with_unit 161 165	salt
+R8	refers Arg1:T22 Arg2:T4	
+R9	refers Arg1:T4 Arg2:T11	
+R10	refers Arg1:T3 Arg2:T10	
+R11	refers Arg1:T2 Arg2:T9	
+T23	color 35 41	yellow
+T24	food_product_with_unit 42 47	onion
+T25	process 49 55	peeled
+T26	process 60 78	very thinly sliced
+R12	refers Arg1:T24 Arg2:T25	
+R13	refers Arg1:T24 Arg2:T26	
+R14	refers Arg1:T24 Arg2:T23	
+T27	unit 32 34	lb
+R15	refers Arg1:T24 Arg2:T27	
+R16	refers Arg1:T27 Arg2:T8	
+T28	process 92 99	chopped
+T29	physical_quality 100 105	fresh
+T30	food_product_with_unit 106 111	thyme
+R17	refers Arg1:T30 Arg2:T29	
+R18	refers Arg1:T30 Arg2:T28	
+R19	refers Arg1:T30 Arg2:T2	
+T31	taste 14 22	unsalted
+T32	food_product_with_unit 23 29	butter
+R20	refers Arg1:T32 Arg2:T31	
+R21	refers Arg1:T32 Arg2:T1	
+R22	refers Arg1:T1 Arg2:T7	

@@ -1,0 +1,16 @@
+T1	unit 2 6	cups
+T2	quantity 0 1	6
+T3	quantity 28 29	1
+T4	food_product_without_unit_uncountable 13 17	salt
+T5	quantity 19 27	to taste
+R1	refers Arg1:T4 Arg2:T5	
+T6	food_product_with_unit 7 12	water
+R2	refers Arg1:T6 Arg2:T1	
+R3	refers Arg1:T1 Arg2:T2	
+T7	unit 30 34	head
+T8	food_product_with_unit 35 43	broccoli
+R4	refers Arg1:T8 Arg2:T7	
+R5	refers Arg1:T7 Arg2:T3	
+T9	food_product_without_unit_uncountable 44 50	pepper
+T10	quantity 52 60	to taste
+R6	refers Arg1:T9 Arg2:T10	

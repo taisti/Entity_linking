@@ -1,0 +1,17 @@
+T1	food_product_without_unit_uncountable 37 48	feta cheese
+T2	food_product_without_unit_uncountable 0 8	hot dogs
+T3	food_product_without_unit_uncountable 9 21	hot dog buns
+T4	food_product_whole 22 28	tomato
+T5	process 30 35	diced
+R1	refers Arg1:T4 Arg2:T5	
+T6	food_product_without_unit_uncountable 49 61	black olives
+T7	color 72 75	red
+T8	food_product_whole 76 81	onion
+T9	process 83 96	thinly sliced
+R2	refers Arg1:T8 Arg2:T9	
+R3	refers Arg1:T8 Arg2:T7	
+T10	food_product_without_unit_uncountable 98 112	tzatziki sauce
+T11	food_product_without_unit_uncountable 117 137	Greek olive dressing
+R4	or Arg1:T10 Arg2:T11	
+T12	process 63 70	chopped
+R5	refers Arg1:T6 Arg2:T12	

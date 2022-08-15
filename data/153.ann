@@ -1,0 +1,8 @@
+T1	unit 2 8	pounds
+T2	quantity 0 1	4
+T3	food_product_without_unit_uncountable 21 36	meat tenderizer
+T4	quantity 38 46	to taste
+R1	refers Arg1:T3 Arg2:T4	
+T5	food_product_with_unit 9 20	pork steaks
+R2	refers Arg1:T5 Arg2:T1	
+R3	refers Arg1:T1 Arg2:T2	

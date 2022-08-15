@@ -1,0 +1,70 @@
+T1	unit 5 10	ounce
+T2	unit 58 62	cups
+T3	unit 99 103	cups
+T4	unit 162 167	ounce
+T5	unit 210 214	cups
+T6	unit 230 234	cups
+T7	unit 273 278	ounce
+T8	unit 308 313	ounce
+T10	quantity 3 4	1
+T11	quantity 56 57	2
+T12	quantity 97 98	2
+T13	quantity 157 158	2
+T14	quantity 160 161	1
+T15	quantity 208 209	4
+T16	quantity 228 229	4
+T17	quantity 268 269	1
+T18	quantity 271 272	8
+T19	quantity 306 307	8
+T20	color 247 253	yellow
+T21	food_product_without_unit_uncountable 254 267	food coloring
+R1	refers Arg1:T21 Arg2:T20	
+T22	food_product_with_unit 215 224	skim milk
+R2	refers Arg1:T22 Arg2:T5	
+R3	refers Arg1:T5 Arg2:T15	
+T23	unit 280 286	carton
+R4	refers Arg1:T23 Arg2:T17	
+R5	refers Arg1:T7 Arg2:T18	
+T24	trade_name 287 301	Cool Whip Free
+T25	food_product_with_unit 287 301	Cool Whip Free
+R6	refers Arg1:T25 Arg2:T24	
+R7	refers Arg1:T25 Arg2:T23	
+R8	refers Arg1:T25 Arg2:T7	
+T26	unit 315 321	carton
+T27	trade_name 322 339	regular Cool Whip
+T28	food_product_with_unit 322 339	regular Cool Whip
+R9	refers Arg1:T28 Arg2:T27	
+R10	refers Arg1:T28 Arg2:T26	
+R11	refers Arg1:T8 Arg2:T19	
+R12	refers Arg1:T28 Arg2:T8	
+R13	refers Arg1:T26 Arg2:T17	
+R14	or Arg1:T25 Arg2:T28	
+T29	diet 12 22	sugar-free
+T30	physical_quality 23 30	instant
+T31	food_product_with_unit 31 55	butterscotch pudding mix
+R15	refers Arg1:T31 Arg2:T30	
+R16	refers Arg1:T31 Arg2:T29	
+R17	refers Arg1:T1 Arg2:T10	
+R18	refers Arg1:T31 Arg2:T1	
+T9	food_product_with_unit 63 72	skim milk
+R19	refers Arg1:T9 Arg2:T2	
+R20	refers Arg1:T2 Arg2:T11	
+T32	color 137 142	brown
+T33	food_product_without_unit_uncountable 143 156	food coloring
+R21	refers Arg1:T33 Arg2:T32	
+T35	food_product_with_unit 104 115	almond milk
+R23	refers Arg1:T35 Arg2:T3	
+R24	refers Arg1:T3 Arg2:T12	
+R25	or Arg1:T9 Arg2:T35	
+T34	diet 169 179	sugar-free
+T36	physical_quality 180 187	instant
+T37	food_product_with_unit 188 207	vanilla pudding mix
+R22	refers Arg1:T37 Arg2:T36	
+R26	refers Arg1:T37 Arg2:T34	
+R27	refers Arg1:T4 Arg2:T14	
+R28	refers Arg1:T37 Arg2:T13	
+R29	each Arg1:T37 Arg2:T4	
+T38	food_product_with_unit 235 246	almond milk
+R30	refers Arg1:T38 Arg2:T6	
+R31	refers Arg1:T6 Arg2:T16	
+R32	or Arg1:T22 Arg2:T38	

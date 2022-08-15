@@ -1,0 +1,28 @@
+T1	unit 53 63	tablespoon
+T2	quantity 0 1	2
+T3	quantity 51 52	1
+T4	quantity 89 90	1
+T5	quantity 113 114	1
+T6	unit 91 96	slice
+T7	food_product_without_unit_countable 115 121	cheese
+T8	example 149 158	provolone
+R1	refers Arg1:T7 Arg2:T8	
+T9	food_product_with_unit 97 112	American cheese
+R2	refers Arg1:T9 Arg2:T6	
+R3	refers Arg1:T6 Arg2:T4	
+T10	taste 64 70	salted
+T11	food_product_with_unit 71 77	butter
+T12	process 79 87	softened
+R4	refers Arg1:T11 Arg2:T12	
+R5	refers Arg1:T11 Arg2:T10	
+R6	refers Arg1:T11 Arg2:T1	
+R7	refers Arg1:T1 Arg2:T3	
+R8	refers Arg1:T7 Arg2:T5	
+T13	unit 2 8	slices
+T14	color 9 14	white
+T15	food_product_with_unit 15 20	bread
+R9	refers Arg1:T15 Arg2:T14	
+R10	refers Arg1:T15 Arg2:T13	
+R11	refers Arg1:T13 Arg2:T2	
+T16	example 22 39	Texas toast style
+R12	refers Arg1:T15 Arg2:T16	

@@ -1,0 +1,41 @@
+T1	unit 2 8	ounces
+T2	unit 31 35	cups
+T3	unit 63 69	ounces
+T4	unit 129 135	ounces
+T5	quantity 0 1	5
+T6	quantity 29 30	2
+T7	quantity 61 62	8
+T8	quantity 99 100	2
+T9	quantity 127 128	2
+T10	quantity 147 148	1
+T11	quantity 174 175	1
+T12	food_product_without_unit_countable 149 157	tomatoes
+T13	food_product_without_unit_countable 176 183	avocado
+T14	process 185 199	finely chopped
+T15	process 159 173	finely chopped
+R1	refers Arg1:T12 Arg2:T15	
+R2	refers Arg1:T13 Arg2:T14	
+R3	refers Arg1:T12 Arg2:T10	
+R4	refers Arg1:T13 Arg2:T11	
+T16	food_product_with_unit 136 146	sour cream
+R5	refers Arg1:T16 Arg2:T4	
+R6	refers Arg1:T4 Arg2:T9	
+T17	food_product_without_unit_countable 101 110	jalapenos
+T18	process 112 126	finely chopped
+R7	refers Arg1:T17 Arg2:T18	
+R8	refers Arg1:T17 Arg2:T8	
+T19	food_product_with_unit 70 77	sausage
+T20	process 79 85	cooked
+T21	process 90 98	crumbled
+R9	refers Arg1:T19 Arg2:T20	
+R10	refers Arg1:T19 Arg2:T21	
+R11	refers Arg1:T19 Arg2:T3	
+R12	refers Arg1:T3 Arg2:T7	
+T22	food_product_with_unit 36 50	cheddar cheese
+T23	process 52 60	shredded
+R13	refers Arg1:T22 Arg2:T23	
+R14	refers Arg1:T22 Arg2:T2	
+R15	refers Arg1:T2 Arg2:T6	
+T24	food_product_with_unit 9 28	corn tortilla chips
+R16	refers Arg1:T24 Arg2:T1	
+R17	refers Arg1:T1 Arg2:T5	

@@ -1,0 +1,39 @@
+T1	food_product_without_unit_uncountable 278 284	pepper
+T2	food_product_without_unit_uncountable 273 277	salt
+T3	unit 238 249	tablespoons
+T4	food_product_with_unit 263 272	olive oil
+T5	physical_quality 250 262	extra-virgin
+T6	quantity 236 237	2
+T7	food_product_with_unit 228 234	vinega
+T8	color 222 227	white
+T9	unit 210 221	tablespoons
+T10	quantity 208 209	3
+R1	refers Arg1:T7 Arg2:T8	
+T11	food_product_without_unit_countable 193 198	onion
+T12	process 200 206	sliced
+T13	color 189 192	red
+T14	quantity 187 188	1
+R2	refers Arg1:T11 Arg2:T13	
+R3	refers Arg1:T11 Arg2:T12	
+R4	refers Arg1:T11 Arg2:T14	
+R5	refers Arg1:T7 Arg2:T9	
+T15	unit 138 142	cups
+T16	physical_quality 143 148	fresh
+T17	food_product_with_unit 149 157	tomatoes
+T18	process 159 185	cut into bite-sized chunks
+R7	refers Arg1:T17 Arg2:T18	
+R8	refers Arg1:T17 Arg2:T16	
+R9	refers Arg1:T17 Arg2:T15	
+T19	quantity 132 137	1 1/2
+T20	food_product_without_unit_countable 2 10	avocados
+T21	quantity 0 1	3
+T22	physical_quality 12 16	ripe
+T23	example 52 56	Hass
+R11	refers Arg1:T20 Arg2:T22	
+R12	refers Arg1:T20 Arg2:T21	
+R13	refers Arg1:T20 Arg2:T23	
+R14	refers Arg1:T4 Arg2:T5	
+R15	refers Arg1:T4 Arg2:T3	
+R10	refers Arg1:T15 Arg2:T19	
+R6	refers Arg1:T9 Arg2:T10	
+R16	refers Arg1:T3 Arg2:T6	

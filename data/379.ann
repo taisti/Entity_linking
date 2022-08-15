@@ -1,0 +1,47 @@
+T1	unit 7 13	pounds
+T3	unit 102 108	pounds
+T4	unit 185 193	teaspoon
+T5	unit 226 235	teaspoons
+T6	unit 259 268	teaspoons
+T7	quantity 0 6	1 5/16
+T10	quantity 96 101	1 1/4
+T11	quantity 181 184	1/2
+T12	quantity 224 225	2
+T13	quantity 257 258	2
+T14	quantity 299 300	8
+T15	food_product_without_unit_countable 301 315	hamburger buns
+T16	food_product_with_unit 269 282	Dijon mustard
+T17	example 291 297	Maille
+T18	trade_name 291 297	Maille
+R1	refers Arg1:T16 Arg2:T17	
+R2	refers Arg1:T16 Arg2:T6	
+R3	refers Arg1:T6 Arg2:T13	
+R4	refers Arg1:T15 Arg2:T14	
+R5	refers Arg1:T5 Arg2:T12	
+R6	refers Arg1:T4 Arg2:T11	
+T19	process 194 200;215 222	ground freshly
+T20	color 201 206	black
+T21	food_product_with_unit 207 213	pepper
+R7	refers Arg1:T21 Arg2:T19	
+R8	refers Arg1:T21 Arg2:T20	
+R9	refers Arg1:T21 Arg2:T4	
+T22	food_product_with_unit 236 256	worcestershire sauce
+R10	refers Arg1:T22 Arg2:T5	
+T24	process 14 20	ground
+T25	food_product_with_unit 21 27	turkey
+R11	refers Arg1:T25 Arg2:T24	
+R12	refers Arg1:T25 Arg2:T1	
+R13	refers Arg1:T1 Arg2:T7	
+R14	refers Arg1:T3 Arg2:T10	
+T26	food_product_with_unit 109 131	Italian turkey sausage
+R15	refers Arg1:T26 Arg2:T3	
+T27	example 139 179	Shady Brook Farms hot or sweet varieties
+R16	refers Arg1:T26 Arg2:T27	
+T28	trade_name 139 156	Shady Brook Farms
+T29	example 46 63	Shady Brook Farms
+R17	refers Arg1:T25 Arg2:T29	
+T30	trade_name 46 63	Shady Brook Farms
+R18	refers Arg1:T21 Arg2:T19	
+R19	refers Arg1:T27 Arg2:T28	
+R20	refers Arg1:T17 Arg2:T18	
+R22	refers Arg1:T29 Arg2:T30	

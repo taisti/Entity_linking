@@ -1,0 +1,15 @@
+T1	unit 16 19	cup
+T2	quantity 0 2	12
+T3	quantity 12 15	1⁄2
+T4	quantity 32 34	20
+T5	color 20 25	brown
+T6	food_product_with_unit 26 31	sugar
+T7	food_product_without_unit_countable 3 11	hot dogs
+R1	refers Arg1:T7 Arg2:T2	
+R2	refers Arg1:T1 Arg2:T3	
+R3	refers Arg1:T6 Arg2:T5	
+R4	refers Arg1:T6 Arg2:T1	
+T8	unit 35 41	slices
+T9	food_product_with_unit 42 47	bacon
+R5	refers Arg1:T9 Arg2:T8	
+R6	refers Arg1:T8 Arg2:T4	

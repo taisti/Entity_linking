@@ -1,0 +1,29 @@
+T1	quantity 0 3	150
+T2	quantity 45 48	250
+T3	quantity 66 67	6
+T4	quantity 73 75	25
+T5	quantity 115 116	3
+T6	unit 49 60	milliliters
+T7	food_product_with_unit 61 65	milk
+T8	unit 4 9	grams
+T9	food_product_with_unit 10 21	stale bread
+T10	process 23 43	trimmed of its crust
+R1	refers Arg1:T7 Arg2:T6	
+R2	refers Arg1:T6 Arg2:T2	
+R3	refers Arg1:T8 Arg2:T1	
+R4	refers Arg1:T9 Arg2:T8	
+R5	refers Arg1:T9 Arg2:T10	
+T11	food_product_without_unit_countable 68 72	eggs
+T12	unit 76 81	grams
+T13	process 106 113;82 88	freshly grated
+T14	food_product_with_unit 89 104	Parmesan cheese
+R6	refers Arg1:T14 Arg2:T13	
+R7	refers Arg1:T14 Arg2:T12	
+R8	refers Arg1:T12 Arg2:T4	
+R9	refers Arg1:T11 Arg2:T3	
+T15	food_product_without_unit_countable 117 131	sprigs parsley
+T16	process 133 146	finely minced
+R10	refers Arg1:T15 Arg2:T16	
+R11	refers Arg1:T15 Arg2:T5	
+T17	food_product_without_unit_uncountable 148 152	salt
+T18	food_product_without_unit_uncountable 153 159	pepper

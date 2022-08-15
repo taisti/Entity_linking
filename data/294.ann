@@ -1,0 +1,35 @@
+T1	unit 39 49	tablespoon
+T2	unit 86 89	cup
+T3	quantity 0 1	1
+T4	quantity 37 38	1
+T5	quantity 69 70	2
+T6	quantity 84 85	¼
+T7	physical_quality 135 140	fresh
+T8	food_product_without_unit_uncountable 141 146	chive
+T9	purpose 148 156	to serve
+R1	refers Arg1:T8 Arg2:T9	
+R2	refers Arg1:T8 Arg2:T7	
+T10	purpose 126 134	to serve
+T11	food_product_with_unit 114 124	sour cream
+R3	refers Arg1:T11 Arg2:T10	
+T12	process 90 98	shredded
+T13	food_product_with_unit 99 113	cheddar cheese
+R4	refers Arg1:T13 Arg2:T12	
+R5	refers Arg1:T13 Arg2:T2	
+R6	refers Arg1:T2 Arg2:T6	
+T14	unit 71 77	slices
+T15	food_product_with_unit 78 83	bacon
+R7	refers Arg1:T15 Arg2:T14	
+R8	refers Arg1:T14 Arg2:T5	
+T16	food_product_without_unit_uncountable 54 58	salt
+T17	quantity 60 68	to taste
+R9	refers Arg1:T16 Arg2:T17	
+T18	food_product_with_unit 50 53	oil
+R10	refers Arg1:T18 Arg2:T1	
+R11	refers Arg1:T1 Arg2:T4	
+T19	process 17 23	washed
+T20	process 28 36	scrubbed
+T21	food_product_with_unit 2 15	russet potato
+R12	refers Arg1:T21 Arg2:T3	
+R13	refers Arg1:T21 Arg2:T19	
+R14	refers Arg1:T21 Arg2:T20	

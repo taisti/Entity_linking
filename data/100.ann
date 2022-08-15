@@ -1,0 +1,19 @@
+T1	unit 20 31	tablespoons
+T2	quantity 0 1	1
+T3	quantity 18 19	2
+T4	quantity 66 69	1⁄2
+T5	food_product_without_unit_countable 2 17	brown rice cake
+R1	refers Arg1:T5 Arg2:T2	
+T6	food_product_with_unit 32 45	almond butter
+R2	refers Arg1:T6 Arg2:T1	
+R3	refers Arg1:T1 Arg2:T3	
+T7	physical_quality 47 54	crunchy
+T8	physical_quality 58 64	creamy
+T9	food_product_with_unit 32 45	almond butter
+R4	refers Arg1:T9 Arg2:T7	
+R5	refers Arg1:T6 Arg2:T8	
+R6	or Arg1:T6 Arg2:T9	
+T10	food_product_without_unit_countable 70 76	banana
+R7	refers Arg1:T10 Arg2:T4	
+R8	refers Arg1:T9 Arg2:T1	
+T11	food_product_without_unit_uncountable 77 85	cinnamon

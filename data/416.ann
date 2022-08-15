@@ -1,0 +1,17 @@
+T1	quantity 0 1	1
+T2	quantity 15 16	1
+T3	unit 2 5	box
+T4	unit 17 20	can
+T5	food_product_without_unit_uncountable 44 55	candy melts
+T6	food_product_without_unit_uncountable 56 62	crisco
+T7	trade_name 74 82	lollipop
+T8	food_product_without_unit_uncountable 92 101	sprinkles
+A1	Optional T6
+T9	food_product_whole 74 82	lollipop
+T10	food_product_with_unit 6 14	cake mix
+R1	refers Arg1:T10 Arg2:T3	
+R2	refers Arg1:T3 Arg2:T1	
+R3	refers Arg1:T4 Arg2:T2	
+T11	food_product_with_unit 21 29	frosting
+R4	refers Arg1:T11 Arg2:T4	
+R5	refers Arg1:T9 Arg2:T7	

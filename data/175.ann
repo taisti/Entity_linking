@@ -1,0 +1,33 @@
+T1	unit 2 5	cup
+T2	unit 39 42	cup
+T3	unit 58 69	tablespoons
+T4	unit 103 106	cup
+T5	quantity 0 1	½
+T6	quantity 37 38	¼
+T7	quantity 56 57	2
+T8	quantity 84 85	1
+T9	quantity 101 102	1
+T10	food_product_with_unit 107 110	ice
+R1	refers Arg1:T10 Arg2:T4	
+R2	refers Arg1:T4 Arg2:T9	
+T11	process 111 118	whipped
+T12	food_product_without_unit_uncountable 119 124	cream
+R3	refers Arg1:T12 Arg2:T11	
+T13	food_product_without_unit_uncountable 125 138	caramel sauce
+T14	food_product_without_unit_countable 86 92	banana
+T15	physical_quality 94 100	frozen
+R4	refers Arg1:T14 Arg2:T15	
+R5	refers Arg1:T14 Arg2:T8	
+T16	food_product_with_unit 70 83	caramel sauce
+R6	refers Arg1:T16 Arg2:T3	
+R7	refers Arg1:T3 Arg2:T7	
+T17	food_product_with_unit 43 49	coffee
+R8	refers Arg1:T17 Arg2:T2	
+R9	refers Arg1:T2 Arg2:T6	
+T18	physical_quality 51 55	cold
+R10	refers Arg1:T17 Arg2:T18	
+T19	food_product_with_unit 6 17	almond milk
+R11	refers Arg1:T19 Arg2:T1	
+R12	refers Arg1:T1 Arg2:T5	
+T20	possible_substitute 22 36	milk of choice
+R14	substitutable_with Arg1:T19 Arg2:T20	

@@ -1,0 +1,11 @@
+T1	unit 26 29	cup
+T2	quantity 0 1	4
+T3	quantity 11 12	3
+T4	quantity 22 25	1⁄4
+T5	food_product_with_unit 30 46	Italian dressing
+R1	refers Arg1:T5 Arg2:T1	
+R2	refers Arg1:T1 Arg2:T4	
+T6	food_product_without_unit_countable 13 21	tomatoes
+T7	food_product_without_unit_countable 2 10	zucchini
+R3	refers Arg1:T7 Arg2:T2	
+R4	refers Arg1:T6 Arg2:T3	

@@ -1,0 +1,20 @@
+T1	unit 17 20	cup
+T2	unit 31 34	cup
+T3	unit 51 62	tablespoons
+T4	quantity 0 1	2
+T5	quantity 13 16	1⁄3
+T6	quantity 27 30	1⁄2
+T7	quantity 46 50	6 -8
+T9	food_product_with_unit 35 45	mayonnaise
+T10	food_product_with_unit 21 26	water
+T11	food_product_with_unit 8 12	eggs
+T12	unit 2 7	dozen
+R1	refers Arg1:T10 Arg2:T1	
+R2	refers Arg1:T1 Arg2:T5	
+R3	refers Arg1:T11 Arg2:T12	
+R4	refers Arg1:T12 Arg2:T4	
+R5	refers Arg1:T2 Arg2:T6	
+R6	refers Arg1:T9 Arg2:T2	
+R7	refers Arg1:T3 Arg2:T7	
+T8	food_product_with_unit 63 74	basil pesto
+R8	refers Arg1:T8 Arg2:T3	

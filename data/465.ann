@@ -1,0 +1,12 @@
+T1	unit 2 5	cup
+T2	unit 25 35	tablespoon
+T3	quantity 0 1	1
+T4	quantity 23 24	1
+T5	color 36 41	brown
+T6	food_product_with_unit 42 47	sugar
+R1	refers Arg1:T6 Arg2:T5	
+R2	refers Arg1:T6 Arg2:T2	
+R3	refers Arg1:T2 Arg2:T4	
+T7	food_product_with_unit 6 22	balsamic vinegar
+R4	refers Arg1:T7 Arg2:T1	
+R5	refers Arg1:T1 Arg2:T3	

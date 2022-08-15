@@ -1,0 +1,29 @@
+T1	unit 147 151	dash
+T2	quantity 145 146	1
+T3	food_product_with_unit 152 169	Angostura bitters
+R1	refers Arg1:T3 Arg2:T1	
+R2	refers Arg1:T1 Arg2:T2	
+T4	quantity 88 91	0.5
+T5	unit 92 98	ounces
+R5	refers Arg1:T5 Arg2:T4	
+T9	unit 65 71	ounces
+T10	quantity 63 64	2
+T11	food_product_with_unit 72 87	pineapple juice
+R7	refers Arg1:T11 Arg2:T9	
+R8	refers Arg1:T9 Arg2:T10	
+T12	unit 25 31	ounces
+T13	quantity 21 24	1.5
+T14	food_product_with_unit 32 35	rum
+T15	trade_name 38 61	Appleton Estate Reserve
+R9	refers Arg1:T14 Arg2:T15	
+R10	refers Arg1:T14 Arg2:T12	
+R11	refers Arg1:T12 Arg2:T13	
+T16	unit 2 7	slice
+T17	quantity 0 1	1
+T18	food_product_with_unit 14 20	ginger
+T19	physical_quality 8 13	fresh
+R12	refers Arg1:T18 Arg2:T19	
+R13	refers Arg1:T18 Arg2:T16	
+R14	refers Arg1:T16 Arg2:T17	
+T6	food_product_with_unit 113 143;99 111	one part sugar, one part water simple syrup
+R3	refers Arg1:T6 Arg2:T5	

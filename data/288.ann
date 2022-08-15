@@ -1,0 +1,24 @@
+T1	unit 2 8	pounds
+T2	quantity 0 1	3
+T3	quantity 61 62	1
+T4	quantity 90 91	1
+T5	quantity 118 119	1
+T6	physical_quality 96 105	condensed
+T7	unit 92 95	can
+T8	unit 63 66	can
+T9	food_product_with_unit 106 117	tomato soup
+R1	refers Arg1:T9 Arg2:T6	
+R2	refers Arg1:T9 Arg2:T7	
+R3	refers Arg1:T7 Arg2:T4	
+T10	unit 120 128	envelope
+T11	food_product_with_unit 129 143	onion soup mix
+R4	refers Arg1:T11 Arg2:T10	
+R5	refers Arg1:T10 Arg2:T5	
+T12	food_product_without_unit_uncountable 144 148	salt
+T13	food_product_without_unit_uncountable 149 155	pepper
+T14	food_product_with_unit 9 14	roast
+R6	refers Arg1:T14 Arg2:T1	
+R7	refers Arg1:T1 Arg2:T2	
+R8	refers Arg1:T8 Arg2:T3	
+T15	food_product_with_unit 67 89	cream of mushroom soup
+R9	refers Arg1:T15 Arg2:T8	

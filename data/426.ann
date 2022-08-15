@@ -1,0 +1,29 @@
+T1	quantity 0 3	500
+T2	quantity 27 29	10
+T3	quantity 120 122	25
+T4	unit 123 134	milliliters
+T5	unit 30 41	milliliters
+T6	unit 4 9	grams
+T7	food_product_with_unit 10 19	hamburger
+T8	food_product_with_unit 42 55	seasoning mix
+T9	food_product_with_unit 135 141	butter
+T10	physical_quality 143 147	cold
+R1	refers Arg1:T9 Arg2:T10	
+T11	example 42 55;57 64	seasoning mix Italian
+T12	example 42 55;66 71	seasoning mix Cajun
+T13	example 42 55;73 78	seasoning mix Greek
+T14	example 42 55;80 87	seasoning mix BBQ rub
+T15	example 42 55;89 100	seasoning mix Steak Spice
+R2	refers Arg1:T8 Arg2:T15	
+R3	refers Arg1:T8 Arg2:T14	
+R4	refers Arg1:T8 Arg2:T13	
+R5	refers Arg1:T8 Arg2:T12	
+R6	refers Arg1:T8 Arg2:T11	
+R7	refers Arg1:T4 Arg2:T3	
+R8	refers Arg1:T9 Arg2:T4	
+R9	refers Arg1:T8 Arg2:T5	
+R10	refers Arg1:T5 Arg2:T2	
+R11	refers Arg1:T7 Arg2:T6	
+R12	refers Arg1:T6 Arg2:T1	
+T16	physical_quality 21 25	lean
+R13	refers Arg1:T7 Arg2:T16	

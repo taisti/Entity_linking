@@ -1,0 +1,14 @@
+T1	unit 2 5	cup
+T2	unit 29 32	cup
+T3	quantity 0 1	1
+T4	quantity 25 28	1/4
+T5	food_product_without_unit_uncountable 57 69	marshmallows
+T6	purpose 71 85	for garnishing
+A1	Optional T5
+R1	refers Arg1:T5 Arg2:T6	
+T7	food_product_with_unit 33 42	chocolate
+R2	refers Arg1:T7 Arg2:T2	
+R3	refers Arg1:T2 Arg2:T4	
+T8	food_product_with_unit 6 10	milk
+R4	refers Arg1:T8 Arg2:T1	
+R5	refers Arg1:T1 Arg2:T3	

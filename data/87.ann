@@ -1,0 +1,48 @@
+T1	unit 5 11	slices
+T2	unit 20 26	ounces
+T3	unit 54 59	clove
+T4	unit 82 85	cup
+T5	unit 158 161	cup
+T6	quantity 154 157	1⁄4
+T7	quantity 106 107	1
+T8	quantity 18 19	8
+T9	quantity 0 4	4 -6
+T10	quantity 42 46	1 -2
+T11	food_product_without_unit_countable 47 53	garlic
+T12	process 71 77	minced
+T13	purpose 61 69	to taste
+T14	food_product_with_unit 12 17	bacon
+T15	food_product_with_unit 27 41	ranch dressing
+R1	refers Arg1:T15 Arg2:T2	
+T16	process 86 93	chopped
+T17	food_product_with_unit 100 105	basil
+T18	physical_quality 94 99	fresh
+T19	quantity 78 81	1⁄4
+R2	refers Arg1:T4 Arg2:T19	
+R3	refers Arg1:T17 Arg2:T4	
+R4	refers Arg1:T17 Arg2:T18	
+R5	refers Arg1:T17 Arg2:T16	
+T20	physical_quality 108 118	large head
+T21	food_product_with_unit 119 134	iceberg lettuce
+T22	process 136 153	cut into 4 wedges
+R6	refers Arg1:T21 Arg2:T22	
+R7	refers Arg1:T21 Arg2:T20	
+R8	refers Arg1:T21 Arg2:T7	
+T23	process 162 170	crumbled
+T24	food_product_with_unit 171 182	blue cheese
+R9	refers Arg1:T24 Arg2:T23	
+R10	refers Arg1:T24 Arg2:T5	
+R11	refers Arg1:T5 Arg2:T6	
+T25	process 183 191	shredded
+T26	food_product_without_unit_uncountable 192 197	basil
+T27	purpose 199 209	to garnish
+A1	Optional T26
+R12	refers Arg1:T26 Arg2:T25	
+R13	refers Arg1:T2 Arg2:T8	
+R14	refers Arg1:T11 Arg2:T3	
+R15	refers Arg1:T3 Arg2:T10	
+R16	refers Arg1:T11 Arg2:T13	
+R17	refers Arg1:T11 Arg2:T12	
+R18	refers Arg1:T1 Arg2:T9	
+R19	refers Arg1:T14 Arg2:T1	
+R20	refers Arg1:T26 Arg2:T27	

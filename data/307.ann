@@ -1,0 +1,32 @@
+T1	unit 24 28	cups
+T2	unit 41 43	oz
+T3	unit 62 70	teaspoon
+T4	quantity 0 2	12
+T5	quantity 22 23	2
+T6	quantity 39 40	8
+T7	quantity 60 61	½
+T9	food_product_with_unit 29 38	champagne
+T10	physical_quality 3 8	large
+T11	food_product_without_unit_countable 9 21	strawberries
+R1	refers Arg1:T11 Arg2:T10	
+R2	refers Arg1:T11 Arg2:T4	
+R3	refers Arg1:T9 Arg2:T1	
+R4	refers Arg1:T1 Arg2:T5	
+R5	refers Arg1:T2 Arg2:T6	
+T12	color 44 49	white
+T13	food_product_with_unit 50 59	chocolate
+R6	refers Arg1:T13 Arg2:T12	
+R7	refers Arg1:T13 Arg2:T2	
+T14	food_product_with_unit 71 81	canola oil
+R8	refers Arg1:T14 Arg2:T3	
+R9	refers Arg1:T3 Arg2:T7	
+T15	purpose 100 114	for decorating
+T16	purpose 130 144	for decorating
+T17	food_product_without_unit_uncountable 120 128	sprinkle
+T18	color 115 119	gold
+R10	refers Arg1:T17 Arg2:T18	
+R11	refers Arg1:T17 Arg2:T16	
+T19	color 82 86	gold
+T20	food_product_without_unit_uncountable 87 98	luster dust
+R12	refers Arg1:T20 Arg2:T15	
+R13	refers Arg1:T20 Arg2:T19	

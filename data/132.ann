@@ -1,0 +1,43 @@
+T1	unit 2 6	cups
+T2	unit 61 69	teaspoon
+T3	unit 77 80	cup
+T4	unit 95 105	tablespoon
+T5	unit 129 137	teaspoon
+T6	unit 151 154	cup
+T7	unit 170 178	teaspoon
+T8	quantity 0 1	2
+T9	quantity 59 60	1
+T10	quantity 75 76	1
+T11	quantity 93 94	1
+T12	quantity 127 128	1
+T13	quantity 149 150	1
+T14	quantity 166 169	1/2
+T15	food_product_with_unit 179 190	baking soda
+R1	refers Arg1:T15 Arg2:T7	
+R2	refers Arg1:T7 Arg2:T14	
+T16	food_product_with_unit 160 165	water
+R3	refers Arg1:T16 Arg2:T6	
+T17	physical_quality 155 159	warm
+R4	refers Arg1:T16 Arg2:T17	
+R5	refers Arg1:T6 Arg2:T13	
+T18	food_product_with_unit 138 148	cane sugar
+R6	refers Arg1:T18 Arg2:T5	
+R7	refers Arg1:T5 Arg2:T12	
+T19	food_product_with_unit 106 118	active yeast
+T20	physical_quality 120 125	dried
+R8	refers Arg1:T19 Arg2:T20	
+R9	refers Arg1:T19 Arg2:T4	
+R10	refers Arg1:T4 Arg2:T11	
+T21	food_product_with_unit 81 85	milk
+R11	refers Arg1:T21 Arg2:T3	
+R12	refers Arg1:T3 Arg2:T10	
+T22	physical_quality 87 91	warm
+R13	refers Arg1:T21 Arg2:T22	
+T23	food_product_with_unit 70 74	salt
+R14	refers Arg1:T23 Arg2:T2	
+R15	refers Arg1:T2 Arg2:T9	
+T24	food_product_with_unit 7 24	all purpose flour
+R16	refers Arg1:T24 Arg2:T1	
+R17	refers Arg1:T1 Arg2:T8	
+T25	possible_substitute 41 57	half bread flour
+R18	substitutable_with Arg1:T24 Arg2:T25	

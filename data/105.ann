@@ -1,0 +1,16 @@
+T1	unit 27 38	tablespoons
+T2	unit 66 77	tablespoons
+T3	quantity 0 1	2
+T4	quantity 25 26	2
+T5	quantity 64 65	2
+T6	food_product_with_unit 78 83	jelly
+T7	food_product_with_unit 39 55	sunflower butter
+T8	food_product_with_unit 49 55;60 63	butter nut
+T9	food_product_without_unit_countable 2 24	burrito size tortillas
+R1	refers Arg1:T9 Arg2:T3	
+R2	refers Arg1:T7 Arg2:T1	
+R4	refers Arg1:T8 Arg2:T1	
+R3	refers Arg1:T1 Arg2:T4	
+R5	or Arg1:T8 Arg2:T7	
+R6	refers Arg1:T6 Arg2:T2	
+R7	refers Arg1:T2 Arg2:T5	

@@ -1,0 +1,46 @@
+T1	unit 2 5	cup
+T2	unit 61 64	cup
+T3	unit 129 138	teaspoons
+T4	unit 203 207	cups
+T6	unit 287 296	teaspoons
+T7	unit 315 323	teaspoon
+T8	quantity 0 1	1
+T9	quantity 59 60	1
+T10	quantity 71 72	1
+T11	quantity 123 128	1 1/2
+T12	quantity 201 202	3
+T13	quantity 281 286	1 1/2
+T14	quantity 311 314	1/2
+T15	food_product_without_unit_countable 73 76	egg
+T16	food_product_with_unit 208 213	flour
+T5	process 215 279	lightly spooned into measuring cups and leveled, don’t scoop it!
+R1	refers Arg1:T16 Arg2:T5	
+R2	refers Arg1:T16 Arg2:T4	
+R3	refers Arg1:T4 Arg2:T12	
+R4	refers Arg1:T3 Arg2:T11	
+R5	refers Arg1:T15 Arg2:T10	
+R6	refers Arg1:T2 Arg2:T9	
+T17	food_product_with_unit 65 70	sugar
+R7	refers Arg1:T17 Arg2:T2	
+T18	food_product_with_unit 6 12	butter
+R8	refers Arg1:T18 Arg2:T1	
+R9	refers Arg1:T1 Arg2:T8	
+T19	physical_quality 14 18	real
+T20	physical_quality 38 57	at room temperature
+R10	refers Arg1:T18 Arg2:T19	
+R11	refers Arg1:T18 Arg2:T20	
+T21	physical_quality 97 117	large or extra large
+R12	refers Arg1:T15 Arg2:T21	
+T22	food_product_with_unit 139 153	almond extract
+R13	refers Arg1:T22 Arg2:T3	
+T23	food_product_with_unit 158 185	other flavor of your choice
+T24	example 192 199	vanilla
+R14	refers Arg1:T23 Arg2:T24	
+R15	refers Arg1:T23 Arg2:T3	
+R16	or Arg1:T22 Arg2:T23	
+T25	food_product_with_unit 297 310	baking powder
+R17	refers Arg1:T25 Arg2:T6	
+R18	refers Arg1:T6 Arg2:T13	
+R19	refers Arg1:T7 Arg2:T14	
+T26	food_product_with_unit 324 328	salt
+R20	refers Arg1:T26 Arg2:T7	

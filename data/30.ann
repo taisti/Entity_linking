@@ -1,0 +1,41 @@
+T1	food_product_with_unit 152 160	cinnamon
+T2	process 145 151	ground
+T3	unit 136 144	teaspoon
+T4	quantity 134 135	1
+R1	refers Arg1:T1 Arg2:T2	
+R2	refers Arg1:T1 Arg2:T3	
+R3	refers Arg1:T3 Arg2:T4	
+T5	quantity 105 106	1
+T6	unit 107 117	tablespoon
+T7	food_product_with_unit 118 133	vanilla extract
+R4	refers Arg1:T7 Arg2:T6	
+R5	refers Arg1:T6 Arg2:T5	
+T8	process 91 97	mashed
+T9	food_product_with_unit 98 104	banana
+T10	unit 87 90	cup
+T11	quantity 85 86	1
+R6	refers Arg1:T9 Arg2:T8	
+R7	refers Arg1:T9 Arg2:T10	
+R8	refers Arg1:T10 Arg2:T11	
+T12	quantity 0 1	3
+T13	unit 2 6	cups
+T14	trade_name 7 20	half-and-half
+T15	food_product_with_unit 7 20	half-and-half
+R9	refers Arg1:T15 Arg2:T13	
+R10	refers Arg1:T13 Arg2:T12	
+T16	unit 34 37	can
+T17	quantity 21 22	1
+T20	excluded 68 83	evaporated milk
+R13	refers Arg1:T16 Arg2:T17	
+T21	quantity 24 26	14
+T22	unit 27 32	ounce
+R14	refers Arg1:T22 Arg2:T21	
+T23	taste 38 47	sweetened
+T18	food_product_with_unit 58 62	milk
+T19	physical_quality 48 57	condensed
+R11	refers Arg1:T18 Arg2:T19	
+R12	refers Arg1:T18 Arg2:T23	
+R15	not_substitutable_with Arg1:T18 Arg2:T20	
+R16	refers Arg1:T18 Arg2:T16	
+R17	refers Arg1:T18 Arg2:T22	
+R18	refers Arg1:T15 Arg2:T14	

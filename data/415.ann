@@ -1,0 +1,31 @@
+T1	unit 2 5	cup
+T2	unit 45 55	tablespoon
+T3	unit 72 83	tablespoons
+T4	unit 96 107	tablespoons
+T5	quantity 0 1	1
+T6	quantity 35 36	1
+T7	quantity 43 44	1
+T8	quantity 70 71	2
+T9	quantity 94 95	3
+T10	process 56 62	minced
+T11	food_product_with_unit 63 69	garlic
+R1	refers Arg1:T11 Arg2:T10	
+R2	refers Arg1:T11 Arg2:T2	
+R3	refers Arg1:T2 Arg2:T7	
+T12	food_product_without_unit_countable 37 42	lemon
+R4	refers Arg1:T12 Arg2:T6	
+T13	food_product_with_unit 6 18	basil leaves
+R5	refers Arg1:T13 Arg2:T1	
+R6	refers Arg1:T1 Arg2:T5	
+T14	physical_quality 20 26	packed
+T15	physical_quality 28 33	fresh
+R7	refers Arg1:T13 Arg2:T14	
+R8	refers Arg1:T13 Arg2:T15	
+T16	food_product_with_unit 84 93	pine nuts
+R9	refers Arg1:T16 Arg2:T3	
+R10	refers Arg1:T3 Arg2:T8	
+R11	refers Arg1:T4 Arg2:T9	
+T17	food_product_with_unit 108 112	EVOO
+T18	trade_name 108 112	EVOO
+R12	refers Arg1:T17 Arg2:T4	
+R13	refers Arg1:T17 Arg2:T18	

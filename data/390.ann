@@ -1,0 +1,24 @@
+T1	unit 4 7	cup
+T2	unit 27 31	cups
+T3	unit 40 43	cup
+T4	quantity 0 3	1⁄4
+T5	quantity 21 26	1 1⁄4
+T6	quantity 38 39	1
+T7	quantity 58 59	3
+T8	food_product_with_unit 32 37	water
+R1	refers Arg1:T8 Arg2:T2	
+R2	refers Arg1:T2 Arg2:T5	
+R3	refers Arg1:T3 Arg2:T6	
+T9	food_product_with_unit 44 49	flour
+R4	refers Arg1:T9 Arg2:T3	
+T10	food_product_without_unit_countable 60 64	eggs
+R5	refers Arg1:T10 Arg2:T7	
+T11	process 51 57	sifted
+R6	refers Arg1:T9 Arg2:T11	
+T12	food_product_with_unit 8 14	butter
+R7	refers Arg1:T12 Arg2:T1	
+R8	refers Arg1:T1 Arg2:T4	
+T13	quantity 16 18	65
+T14	unit 18 19	g
+R9	refers Arg1:T12 Arg2:T14	
+R10	refers Arg1:T14 Arg2:T13	

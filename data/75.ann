@@ -1,0 +1,17 @@
+T1	physical_quality 72 81	miniature
+T2	food_product_without_unit_uncountable 40 53	peanut butter
+T3	food_product_whole 4 9	apple
+T4	color 0 3	red
+T5	process 26 38	do NOT peel!
+T6	process 11 15	wash
+R1	refers Arg1:T3 Arg2:T6	
+R2	refers Arg1:T3 Arg2:T5	
+T7	physical_quality 55 61	smooth
+T8	physical_quality 65 71	chunky
+R3	refers Arg1:T2 Arg2:T7	
+T9	food_product_without_unit_uncountable 40 53	peanut butter
+R4	refers Arg1:T9 Arg2:T8	
+R5	or Arg1:T9 Arg2:T2	
+T10	food_product_without_unit_uncountable 82 93	marshmallow
+R6	refers Arg1:T10 Arg2:T1	
+R7	refers Arg1:T3 Arg2:T4	

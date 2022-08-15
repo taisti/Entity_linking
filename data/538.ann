@@ -1,0 +1,20 @@
+T1	unit 2 7	ounce
+T2	unit 15 20	ounce
+T3	unit 31 36	ounce
+T4	unit 51 56	ounce
+T5	quantity 0 1	1
+T6	quantity 13 14	1
+T7	quantity 27 30	1⁄2
+T8	quantity 49 50	1
+T9	food_product_with_unit 37 48	lemon juice
+R1	refers Arg1:T9 Arg2:T3	
+R2	refers Arg1:T3 Arg2:T7	
+T10	food_product_with_unit 21 26	vodka
+R3	refers Arg1:T10 Arg2:T2	
+R4	refers Arg1:T2 Arg2:T6	
+T11	food_product_with_unit 8 12	ouzo
+R5	refers Arg1:T11 Arg2:T1	
+R6	refers Arg1:T1 Arg2:T5	
+T12	food_product_with_unit 57 69	orange juice
+R7	refers Arg1:T12 Arg2:T4	
+R8	refers Arg1:T4 Arg2:T8	

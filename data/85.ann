@@ -1,0 +1,31 @@
+T1	food_product_with_unit 87 94	vanilla
+T2	unit 77 86	teaspoons
+T3	quantity 75 76	2
+R1	refers Arg1:T1 Arg2:T2	
+R2	refers Arg1:T2 Arg2:T3	
+T4	food_product_with_unit 69 74	sugar
+T5	unit 65 68	cup
+T6	quantity 63 64	1
+R3	refers Arg1:T4 Arg2:T5	
+R4	refers Arg1:T5 Arg2:T6	
+T7	food_product_without_unit_countable 53 56	egg
+T8	part 57 62	yolks
+T9	physical_quality 47 52	large
+R5	refers Arg1:T7 Arg2:T9	
+R6	refers Arg1:T7 Arg2:T8	
+T10	quantity 45 46	3
+R7	refers Arg1:T7 Arg2:T10	
+T11	unit 30 33	cup
+T12	physical_quality 34 39	whole
+T13	food_product_with_unit 40 44	milk
+T14	quantity 28 29	1
+T15	taste 7 12	heavy
+T18	unit 2 6	cups
+T19	quantity 0 1	2
+R8	refers Arg1:T11 Arg2:T14	
+R9	refers Arg1:T13 Arg2:T12	
+R10	refers Arg1:T13 Arg2:T11	
+R14	refers Arg1:T18 Arg2:T19	
+T16	food_product_with_unit 13 27	whipping cream
+R11	refers Arg1:T16 Arg2:T18	
+R12	refers Arg1:T16 Arg2:T15	

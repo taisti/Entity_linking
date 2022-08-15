@@ -1,0 +1,36 @@
+T1	unit 2 8	ounces
+T2	unit 33 38	ounce
+T3	unit 150 160	tablespoon
+T4	quantity 0 1	2
+T5	quantity 31 32	1
+T6	quantity 80 81	2
+T7	quantity 125 128	1⁄2
+T8	quantity 145 149	1 -2
+T10	food_product_with_unit 9 22	agave tequila
+T11	color 24 30	blanco
+R1	refers Arg1:T10 Arg2:T11	
+R2	refers Arg1:T10 Arg2:T1	
+R3	refers Arg1:T1 Arg2:T4	
+T12	food_product_with_unit 39 53	orange liqueur
+R4	refers Arg1:T12 Arg2:T2	
+R5	refers Arg1:T2 Arg2:T5	
+T13	example 55 65	Triple Sec
+T14	example 69 78	Cointreau
+R6	refers Arg1:T12 Arg2:T13	
+R7	refers Arg1:T12 Arg2:T14	
+T15	food_product_without_unit_countable 82 87	limes
+R8	refers Arg1:T15 Arg2:T6	
+T16	food_product_without_unit_countable 129 134	lemon
+R9	refers Arg1:T16 Arg2:T7	
+T17	process 136 144	juice of
+R10	refers Arg1:T16 Arg2:T17	
+T18	process 89 97	juice of
+R11	refers Arg1:T15 Arg2:T18	
+R12	refers Arg1:T3 Arg2:T8	
+T9	food_product_with_unit 161 173	agave nectar
+R13	refers Arg1:T9 Arg2:T3	
+T19	food_product_without_unit_uncountable 206 221	nectarine juice
+T20	food_product_without_unit_uncountable 225 238	satsuma juice
+R14	or Arg1:T19 Arg2:T20	
+T21	physical_quality 99 104	small
+R15	refers Arg1:T15 Arg2:T21	

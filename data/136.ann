@@ -1,0 +1,27 @@
+T1	unit 4 10	ounces
+T2	unit 19 24	ounce
+T3	unit 48 53	ounce
+T4	quantity 0 3	1.5
+T5	quantity 17 18	1
+T6	quantity 46 47	1
+T7	quantity 66 67	3
+T8	quantity 89 90	2
+T9	food_product_with_unit 25 30	juice
+T10	taste 32 44	pepperoncini
+R1	refers Arg1:T9 Arg2:T10	
+T11	food_product_with_unit 54 65	olive juice
+R2	refers Arg1:T11 Arg2:T3	
+R3	refers Arg1:T3 Arg2:T6	
+T12	unit 68 74	dashes
+T13	food_product_with_unit 75 88	Tabasco Sauce
+R4	refers Arg1:T13 Arg2:T12	
+R5	refers Arg1:T12 Arg2:T7	
+T14	food_product_without_unit_countable 91 97	olives
+T15	example 121 144	Mezzetta Martini Olives
+R6	refers Arg1:T14 Arg2:T15	
+R7	refers Arg1:T14 Arg2:T8	
+R8	refers Arg1:T1 Arg2:T4	
+T16	food_product_with_unit 11 16	vodka
+R9	refers Arg1:T16 Arg2:T1	
+R10	refers Arg1:T9 Arg2:T2	
+R11	refers Arg1:T2 Arg2:T5	

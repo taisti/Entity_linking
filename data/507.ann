@@ -1,0 +1,40 @@
+T1	unit 4 7	cup
+T2	unit 45 50	ounce
+T3	unit 83 86	cup
+T4	unit 94 102	teaspoon
+T5	quantity 0 3	3⁄4
+T6	quantity 14 15	2
+T7	quantity 27 28	2
+T8	quantity 39 40	1
+T9	quantity 42 44	14
+T10	quantity 81 82	1
+T11	quantity 92 93	1
+T12	food_product_with_unit 8 13	sugar
+T13	physical_quality 16 21	large
+T14	food_product_without_unit_countable 22 26	eggs
+R1	refers Arg1:T14 Arg2:T13	
+R2	refers Arg1:T14 Arg2:T6	
+R3	refers Arg1:T1 Arg2:T5	
+R4	refers Arg1:T12 Arg2:T1	
+T15	food_product_with_unit 29 32	egg
+T16	part 33 38	yolks
+R5	refers Arg1:T15 Arg2:T16	
+R6	refers Arg1:T15 Arg2:T7	
+T17	unit 52 55	can
+R7	refers Arg1:T17 Arg2:T8	
+R8	refers Arg1:T2 Arg2:T9	
+T18	taste 56 65	sweetened
+T19	physical_quality 103 110	instant
+T20	food_product_with_unit 111 126	coffee granules
+R9	refers Arg1:T20 Arg2:T19	
+R10	refers Arg1:T20 Arg2:T4	
+R11	refers Arg1:T4 Arg2:T11	
+T21	food_product_with_unit 87 91	milk
+R12	refers Arg1:T21 Arg2:T3	
+R13	refers Arg1:T3 Arg2:T10	
+T22	physical_quality 66 75	condensed
+T23	food_product_with_unit 76 80	milk
+R14	refers Arg1:T23 Arg2:T22	
+R15	refers Arg1:T23 Arg2:T18	
+R16	refers Arg1:T23 Arg2:T17	
+R17	refers Arg1:T23 Arg2:T2	

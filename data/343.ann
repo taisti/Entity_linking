@@ -1,0 +1,30 @@
+T1	unit 2 14	fluid ounces
+T3	unit 63 75	fluid ounces
+T5	unit 124 136	fluid ounces
+T7	unit 177 187	tablespoon
+T8	unit 202 212	tablespoon
+T10	quantity 0 1	4
+T12	quantity 61 62	8
+T14	quantity 121 123	12
+T16	quantity 175 176	1
+T17	quantity 200 201	1
+T18	quantity 219 220	6
+T20	food_product_with_unit 15 60	juice (celery, from about 3 oz celery stalks)
+T21	food_product_with_unit 76 87;96 119	apple juice from about 10 oz apples
+T23	food_product_with_unit 188 199	lemon juice
+T24	food_product_with_unit 213 218	sugar
+T25	food_product_without_unit_countable 226 227	m
+T2	color 89 94	green
+R1	refers Arg1:T21 Arg2:T2	
+R2	refers Arg1:T20 Arg2:T1	
+R3	refers Arg1:T1 Arg2:T10	
+R4	refers Arg1:T3 Arg2:T12	
+R5	refers Arg1:T5 Arg2:T14	
+R6	refers Arg1:T7 Arg2:T16	
+R7	refers Arg1:T8 Arg2:T17	
+R8	refers Arg1:T25 Arg2:T18	
+R9	refers Arg1:T21 Arg2:T3	
+T4	food_product_with_unit 137 174	apple juice (from about 15 oz apples)
+R10	refers Arg1:T4 Arg2:T5	
+R11	refers Arg1:T23 Arg2:T7	
+R12	refers Arg1:T24 Arg2:T8	

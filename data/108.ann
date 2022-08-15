@@ -1,0 +1,27 @@
+T1	unit 4 7	cup
+T2	unit 30 38	teaspoon
+T3	unit 61 65	cups
+T4	unit 81 92	tablespoons
+T5	quantity 0 3	2/3
+T6	quantity 26 29	1/2
+T7	quantity 48 49	3
+T8	quantity 55 60	1 2/3
+T9	quantity 79 80	2
+T10	food_product_without_unit_countable 50 54	eggs
+T11	food_product_with_unit 66 78	coconut milk
+R1	refers Arg1:T11 Arg2:T3	
+R2	refers Arg1:T3 Arg2:T8	
+R3	refers Arg1:T10 Arg2:T7	
+T12	food_product_with_unit 39 47	sea salt
+R4	refers Arg1:T12 Arg2:T2	
+R5	refers Arg1:T2 Arg2:T6	
+T13	food_product_with_unit 20 25	flour
+R6	refers Arg1:T13 Arg2:T1	
+R7	refers Arg1:T1 Arg2:T5	
+T14	food_product_with_unit 93 104	coconut oil
+R8	refers Arg1:T14 Arg2:T4	
+R9	refers Arg1:T4 Arg2:T9	
+T15	process 106 112	melted
+R10	refers Arg1:T14 Arg2:T15	
+T16	diet 8 19	gluten-free
+R11	refers Arg1:T13 Arg2:T16	

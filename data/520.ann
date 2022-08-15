@@ -1,0 +1,13 @@
+T1	quantity 21 22	1
+T3	unit 23 30	package
+T4	food_product_without_unit_uncountable 0 12	strawberries
+T5	physical_quality 14 19	Fresh
+R1	refers Arg1:T4 Arg2:T5	
+T6	food_product_with_unit 31 43	baking chips
+R2	refers Arg1:T6 Arg2:T3	
+R3	refers Arg1:T3 Arg2:T1	
+T7	food_product_without_unit_uncountable 110 119	sprinkles
+T8	trade_name 121 131	Blue Sugar
+R4	refers Arg1:T7 Arg2:T8	
+T2	color 45 50	White
+R5	refers Arg1:T6 Arg2:T2	

@@ -1,0 +1,35 @@
+T1	unit 3 5	oz
+T2	unit 29 32	cup
+T3	unit 41 49	teaspoon
+T4	unit 73 84	tablespoons
+T5	unit 117 128	tablespoons
+T6	quantity 0 2	24
+T7	quantity 27 28	¼
+T8	quantity 39 40	¾
+T9	quantity 71 72	4
+T11	quantity 113 116	1 ½
+T12	taste 85 93	unsalted
+T13	food_product_with_unit 94 100	butter
+R1	refers Arg1:T13 Arg2:T12	
+R2	refers Arg1:T13 Arg2:T4	
+R3	refers Arg1:T4 Arg2:T9	
+T14	food_product_with_unit 50 61	kosher salt
+R4	refers Arg1:T14 Arg2:T3	
+R5	refers Arg1:T3 Arg2:T8	
+T15	process 63 70	divided
+R6	refers Arg1:T14 Arg2:T15	
+T16	food_product_with_unit 33 38	water
+R7	refers Arg1:T16 Arg2:T2	
+R8	refers Arg1:T2 Arg2:T7	
+R9	refers Arg1:T1 Arg2:T6	
+T17	color 6 11	green
+T18	food_product_with_unit 12 17	beans
+T19	process 19 26	trimmed
+R10	refers Arg1:T18 Arg2:T19	
+R11	refers Arg1:T18 Arg2:T17	
+R12	refers Arg1:T18 Arg2:T1	
+R13	refers Arg1:T5 Arg2:T11	
+T20	trade_name 129 164	Tasty McCormick® Savory Spice Blend
+T21	food_product_with_unit 129 164	Tasty McCormick® Savory Spice Blend
+R14	refers Arg1:T21 Arg2:T5	
+R15	refers Arg1:T21 Arg2:T20	

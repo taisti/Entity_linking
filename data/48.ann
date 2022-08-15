@@ -1,0 +1,60 @@
+T1	unit 2 8	quarts
+T2	unit 53 56	cup
+T3	unit 68 71	cup
+T4	food_product_with_unit 57 63	butter
+T5	food_product_with_unit 82 85	oil
+T6	diet 72 81	vegetable
+T7	food_product_with_unit 16 23	popcorn
+T8	process 9 15	popped
+T9	process 25 48	remove unpopped kernels
+R1	refers Arg1:T7 Arg2:T9	
+R2	refers Arg1:T7 Arg2:T8	
+R3	refers Arg1:T7 Arg2:T1	
+T10	quantity 0 1	3
+R4	refers Arg1:T1 Arg2:T10	
+T11	quantity 49 52	3⁄4
+R5	refers Arg1:T2 Arg2:T11	
+R6	refers Arg1:T4 Arg2:T2	
+R7	refers Arg1:T5 Arg2:T6	
+R8	refers Arg1:T5 Arg2:T3	
+T12	quantity 64 67	1⁄4
+R9	refers Arg1:T3 Arg2:T12	
+T13	quantity 86 87	1
+T14	unit 92 97	ounce
+T15	quantity 89 91	16
+R10	refers Arg1:T14 Arg2:T15	
+T16	unit 99 102	bag
+R11	refers Arg1:T16 Arg2:T13	
+T18	physical_quality 103 112	miniature
+T19	food_product_with_unit 165 172	peanuts
+T20	taste 156 164	unsalted
+T21	physical_quality 148 155	roasted
+T22	unit 138 147	container
+T23	unit 131 136	ounce
+T24	quantity 129 130	8
+T25	quantity 126 127	1
+R15	refers Arg1:T23 Arg2:T24	
+R16	refers Arg1:T22 Arg2:T25	
+R17	refers Arg1:T19 Arg2:T20	
+R18	refers Arg1:T19 Arg2:T21	
+R19	refers Arg1:T19 Arg2:T22	
+R20	refers Arg1:T19 Arg2:T23	
+T26	unit 179 184	ounce
+T27	quantity 176 178	16
+T28	quantity 173 174	1
+T29	unit 186 189	bag
+R21	refers Arg1:T29 Arg2:T28	
+R22	refers Arg1:T26 Arg2:T27	
+T30	food_product_with_unit 196 217	plain chocolate candy
+T31	trade_name 190 195	M&M's
+R23	refers Arg1:T30 Arg2:T31	
+R25	refers Arg1:T30 Arg2:T29	
+R26	refers Arg1:T30 Arg2:T26	
+T35	example 225 266	orange and black candy corn for Halloween
+R27	refers Arg1:T30 Arg2:T35	
+T36	example 271 278	no nuts
+R28	refers Arg1:T30 Arg2:T36	
+T37	food_product_with_unit 113 125	marshmallows
+R12	refers Arg1:T37 Arg2:T18	
+R13	refers Arg1:T37 Arg2:T16	
+R14	refers Arg1:T37 Arg2:T14	

@@ -1,0 +1,34 @@
+T1	unit 30 35	ounce
+T2	unit 89 92	cup
+T3	unit 114 117	cup
+T4	quantity 0 1	1
+T5	quantity 25 26	1
+T6	quantity 28 29	1
+T7	quantity 85 88	1⁄2
+T8	quantity 110 113	1⁄2
+T9	unit 37 44	package
+T10	unit 2 4	lb
+T11	food_product_with_unit 17 24	chicken
+T12	process 10 16	ground
+T13	diet 5 9	lean
+T14	food_product_with_unit 45 63	ranch dressing mix
+T15	trade_name 70 83	Hidden Valley
+R1	refers Arg1:T14 Arg2:T15	
+R2	refers Arg1:T14 Arg2:T9	
+R3	refers Arg1:T14 Arg2:T1	
+R4	refers Arg1:T9 Arg2:T5	
+R5	refers Arg1:T1 Arg2:T6	
+T16	physical_quality 93 98	fresh
+T17	food_product_with_unit 118 126	mushroom
+R6	refers Arg1:T17 Arg2:T3	
+R7	refers Arg1:T3 Arg2:T8	
+T18	process 128 140	chopped fine
+R8	refers Arg1:T17 Arg2:T18	
+T19	food_product_with_unit 99 109	breadcrumb
+R9	refers Arg1:T19 Arg2:T16	
+R10	refers Arg1:T19 Arg2:T2	
+R11	refers Arg1:T2 Arg2:T7	
+R12	refers Arg1:T10 Arg2:T4	
+R13	refers Arg1:T11 Arg2:T12	
+R14	refers Arg1:T11 Arg2:T13	
+R15	refers Arg1:T11 Arg2:T10	
