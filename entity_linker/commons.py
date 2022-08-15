@@ -4,7 +4,20 @@ from typing import List
 import json
 import os
 import re
+from xml.dom.minidom import Entity
 
+class EntityType(Enum):
+    FOOD = 1
+    UNIT = 2
+    QUANTITY = 3
+    PROCESS = 4
+    COLOR = 5
+    PHYSICAL_QUALITY = 6
+    DIET = 7
+    PART = 8
+    PURPOSE = 9
+    TASTE = 10
+ 
 
 class AnnotationSource(Enum):
     BRAT = 1
@@ -35,6 +48,30 @@ class LabelWithIRI:
     label: str
     iri: str
     normalized_label: str
+
+
+def get_entity_type(category: str) -> EntityType:
+    category = category.lower()
+    if 'food' in category or category in ['possible_substite', 'example', 'trade_name', 'excluded', 'exclusive']:
+        return EntityType.FOOD
+    elif category == 'unit':
+        return EntityType.UNIT
+    elif category == 'quantity':
+        return EntityType.QUANTITY
+    elif category == 'process':
+        return EntityType.PROCESS
+    elif category == 'color':
+        return EntityType.COLOR
+    elif category == 'physical_quality':
+        return EntityType.PHYSICAL_QUALITY
+    elif category == 'diet':
+        return EntityType.DIET
+    elif category == 'part':
+        return EntityType.PART
+    elif category == 'purpose':
+        return EntityType.PURPOSE
+    elif category == 'taste':
+        return EntityType.TASTE
 
 
 def read_brat_annotation_files(files_base_path: str) -> list[AnnotatedDoc]:
