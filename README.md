@@ -82,3 +82,16 @@ output_food/my_nlp - Path to NLP model
 output_food/my_kb  - Path to KB
 food_product_entities.csv - Path to the file with additional information about entities
 ```
+=======
+
+Main file: Prodigy_food.ipynb
+
+File to gereate food product entities: create_entities_file.ipynb
+
+
+Data: food_product_entities.csv
+
+File with code to run manual annotation: sample.py
+
+
+Simple Introduction to Prodigy: Prodigy_introduction.ipynb
