@@ -10,7 +10,8 @@ class TextProcessor:
         self.ps = PorterStemmer()
 
     def normalize_text(self, text: str) -> str:
-        stopwords = self.nlp.Defaults.stop_words
+        stopwords = ['the', 'a', 'an', 'at', 'by', 'for', 'in', 'into', 'on', 'to']
+        text = re.sub("(whole)", "", text)  # Hackish, in foodon default entities are annotated with (whole)
         text = re.sub(r"[^a-zA-Z]", " ", text)
         text = re.sub(r"\s+", " ", text)
         text = text.lower()
