@@ -1,5 +1,5 @@
 import owlready2
-from commons import LabelWithIRI
+from commons import EntityType, LabelWithIRI
 from text_processor import TextProcessor
 from typing import Dict
 
@@ -7,9 +7,17 @@ from typing import Dict
 class OntologyParser:
     def __init__(self, ontology_path):
         self.ontology = owlready2.get_ontology(ontology_path).load()
-        self.food_product_obj = owlready2.IRIS[
-            "http://purl.obolibrary.org/obo/FOODON_00001002"
-        ]
+        self.type_to_root_entity = self._get_root_nodes_for_categories()
+
+    def _get_root_nodes_for_categories(self):
+        return {
+            EntityType.FOOD: owlready2.IRIS[
+               "http://purl.obolibrary.org/obo/FOODON_00001002"
+            ],
+            EntityType.PROCESS: owlready2.IRIS[
+                "http://purl.obolibrary.org/obo/FOODON_03530206"
+            ]
+        }
 
     def get_possible_labels(self, obj):
         prop_names = [
@@ -26,25 +34,30 @@ class OntologyParser:
                 synonyms += prop[obj]
         return list(set(synonyms))
 
-    def get_label_to_iri_mapping(self):
-        label_to_iri = dict()
-        for c in self.food_product_obj.descendants():
-            for label in [self._get_label(c)]:
-                label_to_iri[label] = c.iri
-        return label_to_iri
-
     def get_IRI_labels_data(
-        self, normalizator: TextProcessor
+        self, normalizer: TextProcessor, category: EntityType
     ) -> Dict[str, LabelWithIRI]:
         result: Dict[str, LabelWithIRI] = dict()
 
-        for c in self.food_product_obj.descendants():
+        root = self.type_to_root_entity[category]
+
+        for c in root.descendants():
             for label in [self._get_label(c)]:
-                normalized_label = normalizator.normalize_text(label)
+                normalized_label = normalizer.normalize_text(label)
                 if normalized_label in result:
                     print(f"WARNING: {normalized_label} already in mapping")
                 result[normalized_label] = \
                     LabelWithIRI(label, c.iri, normalized_label)
+        return result
+
+    def get_IRI_labels_data_per_category(
+        self, normalizer: TextProcessor
+    ) -> Dict[EntityType, Dict[str, LabelWithIRI]]:
+        result = dict()
+
+        for entity_type in EntityType:
+            if entity_type in self.type_to_root_entity:
+                result[entity_type] = self.get_IRI_labels_data(normalizer, entity_type)
         return result
 
     def _get_label(self, obj):

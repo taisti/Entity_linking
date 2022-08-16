@@ -4,7 +4,7 @@ from typing import List
 import json
 import os
 import re
-from xml.dom.minidom import Entity
+
 
 class EntityType(Enum):
     FOOD = 1
@@ -17,7 +17,7 @@ class EntityType(Enum):
     PART = 8
     PURPOSE = 9
     TASTE = 10
- 
+
 
 class AnnotationSource(Enum):
     BRAT = 1
@@ -72,6 +72,7 @@ def get_entity_type(category: str) -> EntityType:
         return EntityType.PURPOSE
     elif category == 'taste':
         return EntityType.TASTE
+    return EntityType.FOOD
 
 
 def read_brat_annotation_files(files_base_path: str) -> list[AnnotatedDoc]:

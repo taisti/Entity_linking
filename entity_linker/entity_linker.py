@@ -1,11 +1,14 @@
-from typing import Dict, Optional
-from commons import (LabelWithIRI, read_brat_annotation_files,
+from typing import Optional
+from commons import (EntityType, LabelWithIRI, get_entity_type,
+                     read_brat_annotation_files,
                      read_ner_annotation_file)
 from ontology_parser import OntologyParser
 from text_processor import TextProcessor
 
 import argparse
 import csv
+import pickle
+import os
 
 
 class EntityLinker:
@@ -30,9 +33,22 @@ class EntityLinker:
                 read_brat_annotation_files(annotated_examples_base_path)
 
         self.normalized_label_mapping = \
-            self.ontology_parser.get_IRI_labels_data(
-                normalizator=self.text_processor
-            )
+            self.generate_label_mapping(self.text_processor)
+
+    def generate_label_mapping(self, text_processor):
+        cache_path = './foodon_cache.pkl'
+
+        if os.path.exists(cache_path):
+            with open(cache_path, 'rb') as f:
+                return pickle.load(f)
+        else:
+            normalized_label_mapping = \
+                self.ontology_parser.get_IRI_labels_data_per_category(
+                    normalizer=text_processor
+                )
+            with open('./foodon_cache.pkl', 'wb') as f:
+                pickle.dump(normalized_label_mapping, f, protocol=pickle.HIGHEST_PROTOCOL)
+            return normalized_label_mapping
 
     def link_all(self, output_path: str):
         print(f"INFO: Writing output to: {output_path}")
@@ -43,16 +59,17 @@ class EntityLinker:
             for annotation_id, annotation in enumerate(doc.annotations):
                 print(f"Processing step {id}/{annotation_id}")
                 entity_text = annotation.text
+                entity_type = get_entity_type(annotation.category)
                 normalized_entity_text = \
                     self.text_processor.normalize_text(entity_text)
 
                 linked_item: Optional[LabelWithIRI] = None
-                if normalized_entity_text in self.normalized_label_mapping:
+                if entity_type in self.normalized_label_mapping and normalized_entity_text in self.normalized_label_mapping[entity_type]:
                     linked_item = \
-                        self.normalized_label_mapping[normalized_entity_text]
+                        self.normalized_label_mapping[entity_type][normalized_entity_text]
                 else:
                     linked_item = self.link(
-                        normalized_entity_text, self.normalized_label_mapping
+                        normalized_entity_text, entity_type
                     )
 
                 annotation_data = [
@@ -72,12 +89,20 @@ class EntityLinker:
                     writer.writerow(annotation_data + ["NONE", "NONE"])
 
     def link(
-        self, text: str, normalized_label_mapping: Dict[str, LabelWithIRI]
+        self, text: str, entity_type: EntityType
     ) -> Optional[LabelWithIRI]:
         best_item = None
         max_similarity = -1.0
 
-        for _, item in normalized_label_mapping.items():
+        if entity_type not in self.normalized_label_mapping:
+            return best_item
+
+        category_label_mapping = self.normalized_label_mapping[entity_type]
+
+        # if len(category_label_mapping) == 0:
+        #    print(f"WARNING: Empty list of potential labels to link. Possibly no mapping for {entity_type} is provided in OntologyParser._get_root_nodes_for_categories()")
+
+        for _, item in category_label_mapping.items():
             label = item.label
             normalized_label = item.normalized_label
             iri = item.iri
