@@ -1,8 +1,9 @@
-from typing import Optional
+from typing import Dict, Optional
 from commons import (EntityType, LabelWithIRI, get_entity_type,
                      read_brat_annotation_files,
                      read_ner_annotation_file)
 from ontology_parser import OntologyParser
+from similarity_calculator import SimilarityCalculator, SimilarityType
 from text_processor import TextProcessor
 
 import argparse
@@ -18,15 +19,19 @@ class EntityLinker:
         annotated_examples_base_path: str,
         ner_output_path: str,
         min_acceptable_similarity: float = 0.5,
-        ignore_not_linkable: bool = False
+        ignore_not_linkable: bool = False,
+        similarity_measure: SimilarityType = SimilarityType.JACCARD
     ):
         self.ontology_path = ontology_path
         self.annotated_examples_base_path = annotated_examples_base_path
         self.ner_output_path = ner_output_path
         self.min_acceptable_similarity = min_acceptable_similarity
         self.ignore_not_linkable = ignore_not_linkable
+        self.similarity_measure = similarity_measure
         self.ontology_parser = OntologyParser(ontology_path)
         self.text_processor = TextProcessor()
+        self.similarity_calculator = SimilarityCalculator(
+            similarity_measure, self.text_processor.normalize_text)
 
         if len(ner_output_path) > 0:
             self.annotated_docs = read_ner_annotation_file(ner_output_path)
@@ -37,22 +42,14 @@ class EntityLinker:
         self.normalized_label_mapping = \
             self.generate_label_mapping(self.text_processor)
 
-    def generate_label_mapping(self, text_processor):
-        cache_path = './foodon_cache.pkl'
+    def link_all(self, output_path: str) -> None:
+        """
+            Iterate over internally stored annotated docs and link all spans marked by NER/BRAT to ontology entities.
+            The result is then stored in a CSV file.
 
-        if os.path.exists(cache_path):
-            with open(cache_path, 'rb') as f:
-                return pickle.load(f)
-        else:
-            normalized_label_mapping = \
-                self.ontology_parser.get_IRI_labels_data_per_category(
-                    normalizer=text_processor
-                )
-            with open(cache_path, 'wb') as f:
-                pickle.dump(normalized_label_mapping, f, protocol=pickle.HIGHEST_PROTOCOL)
-            return normalized_label_mapping
-
-    def link_all(self, output_path: str):
+            Args:
+                output_path (str): link to a CSV report file
+        """
         print(f"INFO: Writing output to: {output_path}")
         f = open(output_path, "w")
         writer = csv.writer(f)
@@ -94,6 +91,15 @@ class EntityLinker:
     def link(
         self, text: str, entity_type: EntityType
     ) -> Optional[LabelWithIRI]:
+        """
+            Link a given piece of text accompanied by a category to some ontology Entity
+
+            Args:
+                text (str): text to link
+                entity_type (EntityType): NER/BRAT entity type assigned to a given text
+            Returns:
+                Optional[LabelWithIRI]: linked entity or None if nothing is linked
+        """
         best_item = None
         max_similarity = -1.0
 
@@ -102,16 +108,12 @@ class EntityLinker:
 
         category_label_mapping = self.normalized_label_mapping[entity_type]
 
-        # if len(category_label_mapping) == 0:
-        #    print(f"WARNING: Empty list of potential labels to link. Possibly no mapping for {entity_type} is provided in OntologyParser._get_root_nodes_for_categories()")
-
         for _, item in category_label_mapping.items():
             label = item.label
             normalized_label = item.normalized_label
             iri = item.iri
-            current_label_similarity = self.text_processor.set_similarity(
-                set(text.split()), set(normalized_label.split())
-            )
+            current_label_similarity = self.similarity_calculator.calculate(
+                text, normalized_label)
 
             if (
                 current_label_similarity > self.min_acceptable_similarity
@@ -119,13 +121,44 @@ class EntityLinker:
             ):
                 max_similarity = current_label_similarity
                 best_item = LabelWithIRI(label, iri, normalized_label)
-                print(f"Found new best: {normalized_label} with similarity {current_label_similarity}")
+                print(
+                    f"Found new best: {normalized_label} with similarity {current_label_similarity}")
 
         return best_item
 
+    def generate_label_mapping(self, text_processor: TextProcessor) -> Dict[EntityType, Dict[str, LabelWithIRI]]:
+        """
+            From an ontology file, generate a map relating normalized labels of entities to their IRIs. Provide separate maps for each category.
+            Because the map generation process is time consuming, caching is introduced -- if cache is present ('./foodon_cache.pkl') the map is not
+            calculated. BEWARE: If normalization process changes, or ontology changes -- you have to remove the cache to recalculate the mapping.
 
-def main(ontology_path, annotations_path, output_file_path, ner_output, ignore_not_linkable):
-    el = EntityLinker(ontology_path, annotations_path, ner_output, ignore_not_linkable=ignore_not_linkable)
+            Args:
+                text_processor (TextProcessor): text processor used to normalize ontology labels
+            Returns:
+                Dict[EntityType, Dict[str, LabelWithIRI]]: For each allowed entity type (e.g., )
+        """
+        cache_path = './foodon_cache.pkl'
+
+        if os.path.exists(cache_path):
+            with open(cache_path, 'rb') as f:
+                return pickle.load(f)
+        else:
+            normalized_label_mapping = \
+                self.ontology_parser.get_IRI_labels_data_per_category(
+                    normalizer=text_processor
+                )
+            with open(cache_path, 'wb') as f:
+                pickle.dump(normalized_label_mapping, f,
+                            protocol=pickle.HIGHEST_PROTOCOL)
+            return normalized_label_mapping
+
+
+def main(ontology_path: str, annotations_path: str, output_file_path: str,
+         ner_output: str, ignore_not_linkable: bool, similarity_measure: SimilarityType):
+    """ Entry point """
+    el = EntityLinker(ontology_path, annotations_path, ner_output,
+                      ignore_not_linkable=ignore_not_linkable,
+                      similarity_measure=similarity_measure)
     el.link_all(output_file_path)
 
 
@@ -154,7 +187,11 @@ if __name__ == "__main__":
                         help='Do not serialize entities that cannot be linked',
                         type=bool,
                         default=False)
+    parser.add_argument('-s', '--similarity',
+                        help='Similarity measure: J: Jaccard, E: Everygrams, W: Wordnet',
+                        type=str,
+                        default='J')
 
     args = parser.parse_args()
     main(args.ontology_path, args.annotations_path, args.output_file_path,
-         args.ner_output, args.ignore_not_linkable)
+         args.ner_output, args.ignore_not_linkable, SimilarityCalculator.similarity_id_to_type(args.similarity))
