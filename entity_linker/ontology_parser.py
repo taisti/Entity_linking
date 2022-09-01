@@ -11,6 +11,7 @@ class OntologyParser:
     def __init__(self, ontology_path: str):
         self.ontology = owlready2.get_ontology(ontology_path).load()
         self.type_to_root_entity = self._get_root_nodes_for_categories()
+        self.enabled_warnings = False
 
     def get_possible_labels(self, obj: Any) -> List[str]:
         """
@@ -32,7 +33,7 @@ class OntologyParser:
         for prop_name in prop_names:
             prop = owlready2.IRIS[prop_name]
             if prop in obj.get_properties(obj):
-                synonyms += prop[obj]
+                synonyms += [str(s) for s in prop[obj]]
         return list(set(synonyms))
 
     def get_IRI_labels_data(
@@ -55,7 +56,7 @@ class OntologyParser:
         for c in root.descendants():
             for label in self.get_possible_labels(c):
                 normalized_label = normalizer.normalize_text(label)
-                if normalized_label in result:
+                if self.enabled_warnings and normalized_label in result:
                     print(f"WARNING: {normalized_label} already in mapping")
                 result[normalized_label] = \
                     LabelWithIRI(label, c.iri, normalized_label)

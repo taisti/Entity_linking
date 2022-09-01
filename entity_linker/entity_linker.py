@@ -1,6 +1,6 @@
 from typing import Dict, Optional
 from commons import (EntityType, LabelWithIRI, get_entity_type,
-                     read_brat_annotation_files,
+                     read_brat_all_annotation_files,
                      read_ner_annotation_file)
 from ontology_parser import OntologyParser
 from similarity_calculator import SimilarityCalculator, SimilarityType
@@ -37,7 +37,7 @@ class EntityLinker:
             self.annotated_docs = read_ner_annotation_file(ner_output_path)
         else:
             self.annotated_docs = \
-                read_brat_annotation_files(annotated_examples_base_path)
+                read_brat_all_annotation_files(annotated_examples_base_path)
 
         self.normalized_label_mapping = \
             self.generate_label_mapping(self.text_processor)
