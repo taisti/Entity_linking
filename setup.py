@@ -20,6 +20,5 @@ setup(
     },
     packages=find_packages(),
     license='MIT',
-    packages=['taisti_linker'],
     install_requires=required,
 )
