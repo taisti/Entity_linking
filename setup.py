@@ -18,7 +18,7 @@ setup(
     project_urls = {
         "Bug Tracker": "https://github.com/taisti/entity_linking/issues"
     },
-    packages=find_packages()
+    packages=find_packages(),
     license='MIT',
     packages=['taisti_linker'],
     install_requires=required,
