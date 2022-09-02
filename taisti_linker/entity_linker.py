@@ -1,10 +1,10 @@
 from typing import Dict, Optional
-from commons import (EntityType, LabelWithIRI, get_entity_type,
-                     read_brat_all_annotation_files,
-                     read_ner_annotation_file)
-from ontology_parser import OntologyParser
-from similarity_calculator import SimilarityCalculator, SimilarityType
-from text_processor import TextProcessor
+from .commons import (EntityType, LabelWithIRI, get_entity_type,
+                      read_brat_all_annotation_files,
+                      read_ner_annotation_file)
+from .ontology_parser import OntologyParser
+from .similarity_calculator import SimilarityCalculator, SimilarityType
+from .text_processor import TextProcessor
 
 import argparse
 import csv

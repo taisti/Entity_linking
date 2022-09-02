@@ -1,7 +1,7 @@
 from turtle import st
 import owlready2
-from commons import EntityType, LabelWithIRI
-from text_processor import TextProcessor
+from .commons import EntityType, LabelWithIRI
+from .text_processor import TextProcessor
 from typing import Any, Dict, List
 
 
