@@ -1,10 +1,10 @@
 from typing import Dict, Optional
-from .commons import (EntityType, LabelWithIRI, get_entity_type,
-                      read_brat_all_annotation_files,
-                      read_ner_annotation_file)
-from .ontology_parser import OntologyParser
-from .similarity_calculator import SimilarityCalculator, SimilarityType
-from .text_processor import TextProcessor
+from taisti_linker.commons import (EntityType, LabelWithIRI, get_entity_type,
+                                   read_brat_all_annotation_files,
+                                   read_ner_annotation_file)
+from taisti_linker.ontology_parser import OntologyParser
+from taisti_linker.similarity_calculator import SimilarityCalculator, SimilarityType
+from taisti_linker.text_processor import TextProcessor
 
 import argparse
 import csv
@@ -143,6 +143,7 @@ class EntityLinker:
             with open(cache_path, 'rb') as f:
                 return pickle.load(f)
         else:
+            print("Parsing ontology, it may take some time...")
             normalized_label_mapping = \
                 self.ontology_parser.get_IRI_labels_data_per_category(
                     normalizer=text_processor
