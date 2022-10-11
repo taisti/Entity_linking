@@ -25,7 +25,7 @@ class OntologyParser:
         prop_names = [
             "http://www.geneontology.org/formats/oboInOwl#hasSynonym",
             "http://www.geneontology.org/formats/oboInOwl#hasExactSynonym",
-            "http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym",
+            #"http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym",
             "http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym",
             "http://purl.obolibrary.org/obo/IAO_0000118",  # alternative term
         ]
@@ -51,15 +51,14 @@ class OntologyParser:
         """
         result: Dict[str, LabelWithIRI] = dict()
 
-        root = self.type_to_root_entity[category]
-
-        for c in root.descendants():
-            for label in self.get_possible_labels(c):
-                normalized_label = normalizer.normalize_text(label)
-                if self.enabled_warnings and normalized_label in result:
-                    print(f"WARNING: {normalized_label} already in mapping")
-                result[normalized_label] = \
-                    LabelWithIRI(label, c.iri, normalized_label, None)
+        for root in self.type_to_root_entity[category]:
+            for c in root.descendants():
+                for label in self.get_possible_labels(c):
+                    normalized_label = normalizer.normalize_text(label)
+                    if self.enabled_warnings and normalized_label in result:
+                        print(f"WARNING: {normalized_label} already in mapping")
+                    result[normalized_label] = \
+                        LabelWithIRI(label, c.iri, normalized_label, None)
         return result
 
     def get_IRI_labels_data_per_category(
@@ -112,10 +111,10 @@ class OntologyParser:
                                        of which entities are allowed to be linked to.
         """
         return {
-            EntityType.FOOD: owlready2.IRIS[
+            EntityType.FOOD: [owlready2.IRIS[
                 "http://purl.obolibrary.org/obo/FOODON_00001002"
-            ],
-            EntityType.PROCESS: owlready2.IRIS[
-                "http://purl.obolibrary.org/obo/FOODON_03530206"
-            ]
+            ]],
+            EntityType.PROCESS: [owlready2.IRIS[
+                "http://purl.obolibrary.org/obo/BFO_0000001"
+            ]]
         }

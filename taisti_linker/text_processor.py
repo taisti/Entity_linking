@@ -23,7 +23,7 @@ class TextProcessor:
         stopwords = ['the', 'a', 'an', 'at',
                      'by', 'for', 'in', 'into', 'on', 'to']
         # Hackish, in foodon default entities are annotated with (whole)
-        text = re.sub("(whole)", "", text)
+        text = re.sub(r"\(whole\)", "", text)
         text = re.sub(r"[^a-zA-Z]", " ", text)
         text = re.sub(r"\s+", " ", text)
         text = text.lower()
