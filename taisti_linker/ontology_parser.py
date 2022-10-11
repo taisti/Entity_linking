@@ -59,7 +59,7 @@ class OntologyParser:
                 if self.enabled_warnings and normalized_label in result:
                     print(f"WARNING: {normalized_label} already in mapping")
                 result[normalized_label] = \
-                    LabelWithIRI(label, c.iri, normalized_label)
+                    LabelWithIRI(label, c.iri, normalized_label, None)
         return result
 
     def get_IRI_labels_data_per_category(

@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 from enum import Enum
-from typing import List
+from typing import Any, List
 import json
 import os
 import re
@@ -53,6 +53,7 @@ class LabelWithIRI:
     label: str
     iri: str
     normalized_label: str
+    similarity_representation: Any
 
 
 def get_entity_type(category: str) -> EntityType:

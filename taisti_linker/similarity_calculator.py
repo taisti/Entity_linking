@@ -1,5 +1,5 @@
 from enum import Enum
-from typing import Callable, Optional
+from typing import Any, Callable, List, Optional, Set
 from nltk.util import everygrams
 from nltk import pos_tag, word_tokenize
 from nltk.corpus import wordnet as wn
@@ -18,24 +18,43 @@ class SimilarityCalculator:
         self.similarity_type = similarity_type
         self.normalizer = normalizer
 
-    def calculate(self, text_a: str, text_b: str) -> float:
+    def calculate(self, repr_a: Any, repr_b: Any) -> float:
         """
             Based on a similiraty measure id (either `j`, `e` or `w` for Jaccard, Everygram, Wordnet)
             calculate appropriate similarity measure.
 
             Args:
-                text_a (str): left-hand-side similarity argument
-                text_b (str): right-hand-side similarity argument
+                repr_a (Any): left-hand-side similarity argument
+                repr_b (Any): right-hand-side similarity argument
             Returns:
                 float: similarity score
         """
 
         if self.similarity_type == SimilarityType.JACCARD:
-            return self._jaccard(text_a, text_b)
+            return self._jaccard(repr_a, repr_b)
         elif self.similarity_type == SimilarityType.EVERYGRAM:
-            return self._jaccard(text_a, text_b)
+            return self._everygrams(repr_a, repr_b)
         elif self.similarity_type == SimilarityType.WORDNET:
-            return self._jaccard(text_a, text_b)
+            return self._wordnet(repr_a, repr_b)
+
+    def preprocess(self, text: str, normalize: bool = False) -> Any:
+        """
+            Based on a similiraty measure id (either `j`, `e` or `w` for Jaccard, Everygram, Wordnet)
+            prepare the required representation for similarity calculation.
+
+            Args:
+                text (str): text to preprocess
+                normalize (bool): whether to apply preprocesisng (False by default)
+            Returns:
+                Any: preprocessed representation
+        """
+
+        if self.similarity_type == SimilarityType.JACCARD:
+            return self._jaccard_preprocess(text, normalize)
+        elif self.similarity_type == SimilarityType.EVERYGRAM:
+            return self._everygrams_preprocess(text, normalize)
+        elif self.similarity_type == SimilarityType.WORDNET:
+            return self._wordnet_preprocess(text, normalize)
 
     @staticmethod
     def similarity_id_to_type(similarity_measure_id: str = 'j') -> SimilarityType:
@@ -56,69 +75,64 @@ class SimilarityCalculator:
         else:
             return SimilarityType.JACCARD
 
-    def _jaccard(self, text_a: str, text_b: str) -> float:
+    def _jaccard_preprocess(self, text: str, normalize: bool = False) -> Any:
+        if normalize:
+            text = self.normalizer(text)
+        return set(text.split())
+
+    def _everygrams_preprocess(self, text: str, normalize: bool = False) -> Any:
+        if normalize:
+            text = self.normalizer(text)
+        return set(everygrams(text.split()))
+
+    def _wordnet_preprocess(self, text: str, normalize: bool = False) -> Any:
+        text = pos_tag(word_tokenize(text))
+        synsets = [self._tagged_to_synset(
+            *tagged_word) for tagged_word in text]
+        return [ss for ss in synsets if ss]
+
+    def _jaccard(self, a: Set[str], b: Set[str]) -> float:
         """
             Jaccard based similarity between two texts represented as sets of unigrams.
 
             Args:
-                text_a (str): text to be transformed into the first set
-                text_b (str): text to be transformed into the second set
+                a (Set[str]): first argument
+                b (Set[str]): second argument
             Returns:
-                float: Jaccard similarity score over normalized unigrams
+                float: Jaccard similarity score over sets
         """
-        text_a = self.normalizer(text_a)
-        text_b = self.normalizer(text_b)  # decorator??
-        a = set(text_a.split())
-        b = set(text_b.split())
 
         if len(a) == 0 or len(b) == 0:
             return 0.0
         else:
             return 1.0 * len(a.intersection(b)) / len(a.union(b))
 
-    def _everygrams(self, text_a: str, text_b: str) -> float:
+    def _everygrams(self, a: Set[str], b: Set[str]) -> float:
         """
             Jaccard based similarity between two texts represented as everygrams.
 
             Args:
-                text_a (str): text to be transformed into the first set
-                text_b (str): text to be transformed into the second set
+                a (Set[str]): first argument
+                b (Set[str]): second argument
             Returns:
                 float: Jaccard similarity score between everygrams.
         """
-        text_a = self.normalizer(text_a)
-        text_b = self.normalizer(text_b)  # decorator??
-        a = set(everygrams(text_a.split()))
-        b = set(everygrams(text_b.split()))
 
         if len(a) == 0 or len(b) == 0:
             return 0.0
         else:
             return 1.0 * len(a.intersection(b)) / len(a.union(b))
 
-    def _wordnet(self, text_a: str, text_b: str) -> float:
+    def _wordnet(self, synsets1: List[Any], synsets2: List[Any]) -> float:
         """
             Wordnet based similarity between two texts.
 
             Args:
-                text_a (str): left-hand-side argument
-                text_b (str): right-hand-side argument
+                synsets1 (List[Any]): left-hand-side argument
+                synsets2 (List[Any]): right-hand-side argument
             Returns:
                 float: Wordnet (path_similarity) similarity score between texts.
         """
-        text_a = pos_tag(word_tokenize(text_a))
-        text_b = pos_tag(word_tokenize(text_b))
-
-        # Get the synsets for the tagged words
-        synsets1 = [self._tagged_to_synset(
-            *tagged_word) for tagged_word in text_a]
-        synsets2 = [self._tagged_to_synset(
-            *tagged_word) for tagged_word in text_b]
-
-        # Filter out the Nones
-        synsets1 = [ss for ss in synsets1 if ss]
-        synsets2 = [ss for ss in synsets2 if ss]
-
         score, count = 0.0, 0
 
         # For each word in the first sentence

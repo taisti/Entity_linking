@@ -108,22 +108,27 @@ class EntityLinker:
 
         category_label_mapping = self.normalized_label_mapping[entity_type]
 
+        text_preprocessed = self.similarity_calculator.preprocess(text)
+
         for _, item in category_label_mapping.items():
-            label = item.label
-            normalized_label = item.normalized_label
-            iri = item.iri
+            # preprocess and cache representation required by similarity calculator
+            if not item.similarity_representation:
+                item.similarity_representation = self.similarity_calculator.preprocess(item.normalized_label)
+
+            # preprocess current text
             current_label_similarity = self.similarity_calculator.calculate(
-                text, normalized_label)
+                text_preprocessed, item.similarity_representation)
 
             if (
                 current_label_similarity > self.min_acceptable_similarity
                 and current_label_similarity >= max_similarity
             ):
                 max_similarity = current_label_similarity
-                best_item = LabelWithIRI(label, iri, normalized_label)
+                best_item = item
                 print(
-                    f"Found new best: {normalized_label} with similarity {current_label_similarity}")
-
+                    f"Found new best: {item.normalized_label} with similarity {current_label_similarity}")
+            if current_label_similarity == 1.0:
+                break
         return best_item
 
     def generate_label_mapping(self, text_processor: TextProcessor) -> Dict[EntityType, Dict[str, LabelWithIRI]]:
