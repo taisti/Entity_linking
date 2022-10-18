@@ -10,36 +10,28 @@ from nltk.tokenize import word_tokenize
 ps = PorterStemmer()
 
 
-def read_entities():
-    entities_list, relations_list = [], []
+def read_data_as_prodigy_stream():
+    stream = []
     datapath = Path.cwd() / "data"
     for i in range(300):
-        entities, relations, _, _ = get_entities_relations_attributes_groups(datapath / "{0}.ann".format(i))
-        entities_list.append(entities)
-        relations_list.append(relations)
+        entities, _, _, _ = get_entities_relations_attributes_groups(datapath / "{0}.ann".format(i))
+        entities = sorted(entities.values(), key=lambda e: e.span[0][0])
 
-    return entities_list
+        with open(datapath / "{0}.txt".format(i)) as input:
+            text = input.read()
 
-
-def read_file_as_stream_elem(path):
-    with open(path, 'r') as input_data:
-        return [{"text": input_data.read()}]
-
-
-def make_single_labeled_stream(stream, annotated_entities):
-    stream_of_separate_annotations = []
-    for input_entry in stream:
-        for entity in annotated_entities:
-            if entity.text in input_entry['text']:
-                input_entry_tagged = input_entry.copy()
-                input_entry_tagged['spans'] = [
+        for entity in entities:
+            stream.append({
+                'text': text,
+                'spans': [
                     {'start': entity.span[0][0],
-                     'end': entity.span[0][1],
-                     'text': entity.text,
-                     'label': entity.type}
+                    'end': entity.span[0][1],
+                    'text': entity.text,
+                    'label': entity.type}
                 ]
-                stream_of_separate_annotations.append(input_entry_tagged)
-    return stream_of_separate_annotations
+            })
+        
+    return stream
 
 
 @prodigy.recipe(
@@ -57,7 +49,7 @@ def entity_linker_manual(dataset, source_dir, recipe_number, nlp_dir, kb_loc, en
     kb.from_disk(kb_loc)
     # model = EntityRecognizer(nlp)
 
-    entities_list = read_entities()
+    stream = read_data_as_prodigy_stream()
 
     id_dict = {}
     with entity_loc.open("r", encoding="utf8") as csvfile:
@@ -65,13 +57,7 @@ def entity_linker_manual(dataset, source_dir, recipe_number, nlp_dir, kb_loc, en
         for row in csvreader:
             id_dict[row[0]] = (row[1], row[2])
 
-    file_name = r"{0}.txt".format(recipe_number)
-    stream = read_file_as_stream_elem(Path(source_dir, file_name))
-
-    entities_sorted = sorted(entities_list[recipe_number].values(), key=lambda e: e.span[0][0])
-
-    stream_of_separate_annotations = make_single_labeled_stream(stream, entities_sorted)
-    stream = [prodigy.util.set_hashes(eg) for eg in stream_of_separate_annotations]
+    stream = [prodigy.util.set_hashes(eg) for eg in stream]
     stream = _add_option(stream, kb, id_dict, nlp)
 
     return {
@@ -108,7 +94,18 @@ def _add_option(stream, kb, id_dict, nlp):
                             candidates.append(alias)
 
             if candidates:
-                options = [{"id": c.entity_, "html": _print_url(c.entity_, id_dict)} for c in candidates]
+                added_ids = set()
+                options = []
+
+                for c in candidates:
+                    if c.entity_ in added_ids:
+                        continue
+                    added_ids.add(c.entity_)
+
+                    options.append({
+                        "id": c.entity_, "html": _print_url(c.entity_, id_dict)
+                    })
+
                 options = sorted(options, key=lambda r: r["id"])
                 options.append({"id": "NIL_otherLink", "text": "Link not in options"})
                 options.append({"id": "NIL_ambiguous", "text": "Need more context"})
