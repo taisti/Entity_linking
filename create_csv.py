@@ -44,10 +44,7 @@ textual_definition = IRIS["http://purl.obolibrary.org/obo/IAO_0000115"]
 for c in food_product.descendants():
     for label in get_possible_labels(c):
         if textual_definition in c.get_properties(c):
-            #print(textual_definition[c][-1])
             td = textual_definition[c][-1]
-            #print(c, label, td)
             writer.writerow([c, label, td])
         else:
-            #print(c, label, "There is no textual definition provided")
             writer.writerow([c, label, 'NONE'])

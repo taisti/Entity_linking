@@ -1,5 +1,7 @@
-# import owlready2
-import prodigy
+import re
+import itertools
+from itertools import chain, combinations
+import warnings
 import spacy
 import csv
 import os
@@ -7,9 +9,11 @@ import os
 from pathlib import Path
 from prodigy.models.ner import EntityRecognizer
 
+warnings. filterwarnings('ignore')
+
 
 def load_food_entities():
-    entities_loc = Path("food_product_entities.csv")
+    entities_loc = Path("food_product_entities_synonyms.csv")
 
     names = dict()
     descriptions = dict()
@@ -32,11 +36,7 @@ nlp = spacy.load("en_core_web_lg")
 name_dict, desc_dict = load_food_entities()
 kb = spacy.kb.KnowledgeBase(vocab=nlp.vocab, entity_vector_length=300)
 
-import re
-import itertools
-from itertools import chain, combinations
-import warnings
-warnings. filterwarnings('ignore')
+
 stopwords = nlp.Defaults.stop_words
 from nltk.stem import PorterStemmer
 from nltk.tokenize import word_tokenize
@@ -48,17 +48,19 @@ def powerset(iterable):
     s = list(iterable)
     return chain.from_iterable(combinations(s, r + 1) for r in range(len(s)))
 
+
 def generate_combinations(iterable):
     return list(powerset(iterable))
 
+
 def generate_permutations(iterable):
     return list(itertools.permutations(iterable))
+
 
 def generate_candidates(name, kb, qid):
     all_tokens = list(set(name.split(' ')))
     candidates = []
     if len(all_tokens) > 7:
-        # kb.add_alias(alias=name, entities=[qid], probabilities=[1.0])
         candidates = [name]
     else:
         for combination in generate_combinations(all_tokens):
@@ -67,8 +69,6 @@ def generate_candidates(name, kb, qid):
                 if len(allowed_alias) > 0:
                     candidates.append(allowed_alias)
     return candidates
-                    #probability = 1.0 * len(list(permutation)) / len(all_tokens)
-                    # kb.add_alias(alias=allowed_alias, entities=[qid], probabilities=[probability])
 
 def normalize_name(name):
     name = re.sub(r'[^a-zA-Z]', ' ', name)
