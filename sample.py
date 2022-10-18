@@ -37,13 +37,11 @@ def read_data_as_prodigy_stream():
 @prodigy.recipe(
     "entity_linker.manual",
     dataset=("The dataset to use", "positional", None, str),
-    source_dir=("The source dir", "positional", None, Path),
-    recipe_number=("The number of reading recipe using to file name and index of list", "positional", None, int),
     nlp_dir=("Path to the NLP model with a pretrained NER component", "positional", None, Path),
     kb_loc=("Path to the KB", "positional", None, Path),
     entity_loc=("Path to the file with additional information about he entities", "positional", None, Path),
 )
-def entity_linker_manual(dataset, source_dir, recipe_number, nlp_dir, kb_loc, entity_loc):
+def entity_linker_manual(dataset, nlp_dir, kb_loc, entity_loc):
     nlp = spacy.load(nlp_dir)
     kb = spacy.kb.KnowledgeBase(vocab=nlp.vocab, entity_vector_length=1)
     kb.from_disk(kb_loc)
