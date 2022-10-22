@@ -21,15 +21,16 @@ def read_data_as_prodigy_stream():
             text = input.read()
 
         for entity in entities:
-            stream.append({
-                'text': text,
-                'spans': [
-                    {'start': entity.span[0][0],
-                    'end': entity.span[0][1],
-                    'text': entity.text,
-                    'label': entity.type}
-                ]
-            })
+            if entity.type.lower().startswith('food'):
+                stream.append({
+                    'text': text,
+                    'spans': [
+                        {'start': entity.span[0][0],
+                        'end': entity.span[0][1],
+                        'text': entity.text,
+                        'label': entity.type}
+                    ]
+                })
         
     return stream
 
