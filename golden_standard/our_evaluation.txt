@@ -1,0 +1,160 @@
+9,T6,food_product_without_unit_countable,2,6,lime,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03305086,lime
+9,T7,food_product_without_unit_uncountable,33,44,kosher salt,AnnotationSource.BRAT,NONE,NONE
+9,T10,food_product_with_unit,71,87,grapefruit juice,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03306174,grapefruit juice
+9,T15,food_product_with_unit,113,123,lime juice,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03306160,lime juice
+9,T16,food_product_with_unit,140,154,orange liqueur,AnnotationSource.BRAT,NONE,NONE
+9,T20,food_product_with_unit,197,204,tequila,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03304704,tequila
+9,T22,food_product_with_unit,181,184,ice,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03301926,ice
+9,T25,food_product_without_unit_countable,127,132,limes,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03305086,lime
+22,T3,food_product_with_unit,148,167,apple cider vinegar,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03307916,cider vinegar
+22,T7,food_product_with_unit,114,123,dr pepper,AnnotationSource.BRAT,NONE,NONE
+22,T8,food_product_with_unit,128,132,Coke,AnnotationSource.BRAT,NONE,NONE
+22,T13,food_product_with_unit,74,79,sugar,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03420108,sugar
+22,T15,food_product_with_unit,100,107,mustard,AnnotationSource.BRAT,NONE,NONE
+22,T22,food_product_without_unit_countable,29,32,ham,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_00002502,ham
+22,T10,food_product_without_unit_uncountable,54,60,cloves,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_00001745,cloves
+7,T4,food_product_without_unit_uncountable,54,59,sugar,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03420108,sugar
+7,T6,food_product_without_unit_uncountable,32,39,carrots,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03301570,carrot
+7,T8,food_product_without_unit_uncountable,0,7,carrots,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03301570,carrot
+7,T9,food_product_without_unit_uncountable,8,20,canning salt,AnnotationSource.BRAT,NONE,NONE
+7,T10,food_product_with_unit,73,78,sugar,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03420108,sugar
+7,T12,food_product_with_unit,86,91,water,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_00002340,water
+7,T13,food_product_with_unit,98,110,orange juice,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03301103,orange juice
+17,T1,food_product_with_unit,120,124,milk,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03307455,milk
+17,T4,food_product_with_unit,105,111,butter,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03310351,butter
+17,T8,food_product_with_unit,76,82,cheese,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_00001013,cheese
+17,T12,food_product_with_unit,55,59,salt,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03460173,salted
+17,T15,food_product_with_unit,28,41,baking powder,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03301940,baking powder
+17,T18,food_product_with_unit,6,11,flour,AnnotationSource.BRAT,NONE,NONE
+8,T1,food_product_without_unit_countable,42,45,egg,AnnotationSource.BRAT,NONE,NONE
+8,T8,food_product_without_unit_uncountable,54,59,cream,AnnotationSource.BRAT,NONE,NONE
+8,T11,food_product_with_unit,71,86,vanilla extract,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03316764,vanilla bean extract
+8,T14,food_product_with_unit,6,21,chocolate chips,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03304096,chocolate chip
+8,T2,food_product_with_unit,28,39,heavy cream,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03310795,heavy cream
+25,T1,food_product_with_unit,14,21,oatmeal,AnnotationSource.BRAT,NONE,NONE
+25,T16,food_product_with_unit,49,58,blueberry,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03302045,blueberry
+25,T17,food_product_with_unit,81,87,almond,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_00003523,almond (whole)
+25,T18,food_product_with_unit,101,110,chia seed,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_00002961,chia seed
+25,T19,food_product_with_unit,122,134,vanilla bean,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_00003738,vanilla bean (whole)
+25,T20,food_product_with_unit,147,152,sugar,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03420108,sugar
+25,T21,food_product_with_unit,170,175,water,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_00002340,water
+25,T22,food_product_with_unit,180,184,milk,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03307455,milk
+5,T7,food_product_without_unit_countable,97,102,onion,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/NCBITaxon_4679,onion
+5,T11,food_product_with_unit,157,169,curry powder,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03301842,curry powder
+5,T18,food_product_with_unit,11,18,chicken,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_00002704,chicken (whole)
+5,T19,part,19,25,thighs,AnnotationSource.BRAT,NONE,NONE
+5,T24,food_product_with_unit,63,94,TACO BELL® Thick & Chunky Salsa,AnnotationSource.BRAT,NONE,NONE
+5,T15,food_product_with_unit,190,200,Sour Cream,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03302515,sour cream
+5,T27,food_product_with_unit,190,200,Sour Cream,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03302515,sour cream
+19,T2,food_product_without_unit_countable,38,43,lemon,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03301441,lemon
+19,T6,food_product_with_unit,17,26,chickpeas,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03306811,chickpea (whole)
+19,T10,food_product_with_unit,62,71,olive oil,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03301826,olive oil
+19,T14,food_product_with_unit,74,80,garlic,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_00003582,garlic
+19,T19,food_product_with_unit,112,125,pepper flakes,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03304289,sweet pepper (flakes)
+6,T6,food_product_with_unit,66,72,butter,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03310351,butter
+6,T9,food_product_with_unit,86,97,garlic salt,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03307739,garlic salt
+6,T12,food_product_with_unit,114,128,seasoning salt,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03306222,seasoning salt
+6,T15,food_product_with_unit,142,148,pepper,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_00003520,pepper (whole)
+6,T16,food_product_without_unit_uncountable,149,159,sour cream,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03302515,sour cream
+6,T18,food_product_without_unit_uncountable,183,189,chives,AnnotationSource.BRAT,http://purl.1
+6,T19,food_product_without_unit_countable,9,24,baking potatoes,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03302196,baked potato
+12,T1,food_product_with_unit,98,111,baking powder,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03301940,baking powder
+12,T4,food_product_with_unit,0,68,5 eggs,AnnotationSource.BRAT,NONE,NONE
+12,T10,food_product_with_unit,17,22,sugar,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03420108,sugar
+12,T15,food_product_without_unit_countable,2,6,eggs,AnnotationSource.BRAT,NONE,NONE
+12,T7,food_product_with_unit,51,68,all purpose flour,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03304534,wheat flour (all purpose)
+11,T1,food_product_without_unit_uncountable,61,66,cream,AnnotationSource.BRAT,NONE,NONE
+11,T3,food_product_with_unit,46,52,coffee,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03301036,coffee
+11,T7,food_product_with_unit,25,32,tequila,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03304704,tequila
+11,T10,food_product_with_unit,8,14,Kahlua,AnnotationSource.BRAT,NONE,NONE
+20,T1,food_product_without_unit_countable,2,7,bagel,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03309554,bagel
+20,T3,food_product_without_unit_countable,10,13,egg,AnnotationSource.BRAT,NONE,NONE
+20,T5,food_product_with_unit,22,36,cheddar cheese,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03302458,cheddar cheese
+20,T11,food_product_with_unit,88,96,deli ham,AnnotationSource.BRAT,NONE,NONE
+20,T15,food_product_with_unit,109,124,deli roast beef,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_00002734,roast beef
+20,T16,food_product_with_unit,126,140,any lunch meat,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03310675,lunch meat
+20,T17,possible_substitute,53,65,other cheese,AnnotationSource.BRAT,NONE,NONE
+2,T1,food_product_without_unit_countable,7,15,coconuts,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03303085,coconut
+2,T6,food_product_with_unit,22,37,evaporated milk,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03301505,evaporated milk
+2,T7,food_product_with_unit,44,47,gin,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03309491,gin
+2,T11,food_product_with_unit,62,67,sugar,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03420108,sugar
+2,T13,food_product_with_unit,97,105,cinnamon,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03301175,cinnamon
+2,T20,food_product_with_unit,134,140,nutmeg,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03301528,nutmeg
+15,T6,food_product_with_unit,93,107,cheddar cheese,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03302458,cheddar cheese
+15,T13,food_product_with_unit,46,65,horseradish mustard,AnnotationSource.BRAT,NONE,NONE
+15,T14,food_product_without_unit_countable,24,32,hot dogs,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03302012,hot dog
+15,T16,food_product_with_unit,16,21,beans,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_00002753,bean (whole)
+15,T5,food_product_with_unit,124,130,potato,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03301449,potato
+15,T21,food_product_without_unit_uncountable,131,141,tater tots,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03311863,tater tot
+0,T3,food_product_with_unit,9,12,rum,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03301614,rum
+0,T7,food_product_with_unit,42,51,Tia Maria,AnnotationSource.BRAT,NONE,NONE
+0,T8,food_product_with_unit,22,32,triple sec,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_00002551,triple sec
+0,T11,food_product_with_unit,62,74,orange juice,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03301103,orange juice
+10,T1,food_product_without_unit_uncountable,278,284,pepper,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_00003520,pepper (whole)
+10,T2,food_product_without_unit_uncountable,273,277,salt,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03460173,salted
+10,T4,food_product_with_unit,263,272,olive oil,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03301826,olive oil
+10,T7,food_product_with_unit,228,234,vinega,AnnotationSource.BRAT,NONE,NONE
+10,T11,food_product_without_unit_countable,193,198,onion,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/NCBITaxon_4679,onion
+10,T17,food_product_with_unit,149,157,tomatoes,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03309927,tomato
+10,T20,food_product_without_unit_countable,2,10,avocados,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03305236,avocado
+23,T1,food_product_without_unit_countable,124,136,marshmallows,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03305639,marshmallow
+23,T4,food_product_with_unit,110,116,Kahlua,AnnotationSource.BRAT,NONE,NONE
+23,T7,food_product_with_unit,88,101,vanilla vodka,AnnotationSource.BRAT,NONE,NONE
+23,T10,food_product_with_unit,54,68,creme de cacao,AnnotationSource.BRAT,NONE,NONE
+23,T14,food_product_with_unit,9,18,chocolate,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03307240,chocolate
+1,T3,food_product_with_unit,142,153,maple syrup,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03301848,maple syrup
+1,T6,food_product_with_unit,128,135,vanilla,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_00002328,vanilla
+1,T8,food_product_with_unit,107,115,cinnamon,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03301175,cinnamon
+1,T10,food_product_with_unit,90,94,milk,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03307455,milk
+1,T13,food_product_without_unit_countable,79,83,eggs,AnnotationSource.BRAT,NONE,NONE
+1,T17,food_product_with_unit,62,68,butter,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03310351,butter
+21,T1,food_product_with_unit,126,137,baking soda,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_00002385,baking soda product
+21,T4,food_product_with_unit,107,112,flour,AnnotationSource.BRAT,NONE,NONE
+21,T10,food_product_with_unit,76,83,vanilla,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_00002328,vanilla
+21,T11,food_product_with_unit,57,64,vinegar,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03301705,vinegar
+21,T16,food_product_with_unit,28,34,butter,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03310351,butter
+21,T18,food_product_with_unit,6,11,sugar,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03420108,sugar
+16,T1,food_product_with_unit,2,15,salmon steaks,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03308303,salmon steak (frozen)
+16,T5,food_product_with_unit,59,68,olive oil,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03301826,olive oil
+16,T8,food_product_with_unit,83,94,lemon juice,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03305428,lemon juice
+16,T11,food_product_without_unit_countable,97,109,spring onion,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_00003697,spring onions
+16,T14,food_product_with_unit,132,142,limoncello,AnnotationSource.BRAT,NONE,NONE
+16,T18,food_product_with_unit,154,161,oregano,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03301482,oregano
+16,T20,food_product_with_unit,183,190,parsley,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_00002942,parsley
+13,T1,food_product_with_unit,203,212,olive oil,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03301826,olive oil
+13,T5,food_product_with_unit,165,176,lemon juice,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03305428,lemon juice
+13,T8,food_product_with_unit,59,63,salt,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03460173,salted
+13,T12,food_product_with_unit,82,87,cumin,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03311872,cumin
+13,T16,food_product_with_unit,96,102,garlic,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_00003582,garlic
+13,T20,food_product_with_unit,129,135,pepper,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_00003520,pepper (whole)
+13,T29,food_product_with_unit,6,20,garbanzo beans,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03306811,garbanzo bean
+18,T1,food_product_with_unit,127,145,himalayan sea salt,AnnotationSource.BRAT,NONE,NONE
+18,T6,food_product_with_unit,87,95,jalapeño,AnnotationSource.BRAT,NONE,NONE
+18,T9,food_product_with_unit,59,72,coconut water,AnnotationSource.BRAT,NONE,NONE
+18,T14,food_product_without_unit_countable,26,34,cucumber,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03301545,cucumber
+18,T19,food_product_with_unit,9,15,celery,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03301727,celery
+14,T1,food_product_with_unit,160,165,water,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_00002340,water
+14,T4,food_product_with_unit,134,145,lemon juice,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03305428,lemon juice
+14,T7,food_product_with_unit,109,120,basil pesto,AnnotationSource.BRAT,NONE,NONE
+14,T10,food_product_with_unit,97,102,cumin,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03311872,cumin
+14,T14,food_product_with_unit,72,78,garlic,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_00003582,garlic
+14,T17,food_product_with_unit,59,63,salt,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03460173,salted
+14,T22,food_product_with_unit,6,20,garbanzo beans,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03306811,garbanzo bean
+24,T1,food_product_with_unit,32,39,saffron,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_00003043,saffron
+24,T4,food_product_with_unit,65,70,water,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_00002340,water
+24,T10,food_product_with_unit,16,28,greek yogurt,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_00003258,Greek yogurt
+24,T14,food_product_with_unit,86,91,sugar,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03420108,sugar
+24,T15,food_product_with_unit,110,118,cardamom,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_00003792,cardamom
+24,T20,food_product_without_unit_uncountable,127,132,cream,AnnotationSource.BRAT,NONE,NONE
+24,T23,food_product_without_unit_uncountable,165,168,nut,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03306632,nuts
+4,T1,food_product_with_unit,148,160,sesame seeds,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03310306,sesame seed (whole)
+4,T6,food_product_with_unit,97,109,swiss cheese,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03303659,swiss cheese
+4,T10,food_product_with_unit,119,133,cheddar cheese,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03302458,cheddar cheese
+4,T15,food_product_with_unit,44,52,deli ham,AnnotationSource.BRAT,NONE,NONE
+4,T20,food_product_with_unit,20,34,crescent rolls,AnnotationSource.BRAT,NONE,NONE
+4,T22,food_product_with_unit,74,81,mustard,AnnotationSource.BRAT,NONE,NONE
+3,T2,food_product_with_unit,8,22,graham cracker,AnnotationSource.BRAT,NONE,NONE
+3,T6,food_product_with_unit,49,74,milk chocolate candy bars,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_00003879,milk chocolate candy bar
+3,T8,food_product_without_unit_countable,77,89,marshmallows,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03305639,marshmallow
+3,T11,food_product_without_unit_countable,101,112,blueberries,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03302045,blueberry
+3,T14,food_product_without_unit_countable,121,138,strawberry slices,AnnotationSource.BRAT,http://purl.obolibrary.org/obo/FOODON_03304360,strawberry (sliced)
