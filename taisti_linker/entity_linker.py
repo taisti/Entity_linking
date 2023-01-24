@@ -1,7 +1,8 @@
 from typing import Dict, Optional
 from taisti_linker.commons import (EntityType, LabelWithIRI, get_entity_type,
                                    read_brat_all_annotation_files,
-                                   read_ner_annotation_file)
+                                   read_ner_annotation_file,
+                                   read_taisti_dataset_csv)
 from taisti_linker.ontology_parser import OntologyParser
 from taisti_linker.similarity_calculator import SimilarityCalculator, SimilarityType
 from taisti_linker.text_processor import TextProcessor
@@ -18,6 +19,7 @@ class EntityLinker:
         ontology_path: str,
         annotated_examples_base_path: str,
         ner_output_path: str,
+        taisti_csv_path: str,
         min_acceptable_similarity: float = 0.5,
         ignore_not_linkable: bool = False,
         similarity_measure: SimilarityType = SimilarityType.JACCARD
@@ -25,6 +27,7 @@ class EntityLinker:
         self.ontology_path = ontology_path
         self.annotated_examples_base_path = annotated_examples_base_path
         self.ner_output_path = ner_output_path
+        self.taisti_csv_path = taisti_csv_path
         self.min_acceptable_similarity = min_acceptable_similarity
         self.ignore_not_linkable = ignore_not_linkable
         self.similarity_measure = similarity_measure
@@ -32,12 +35,16 @@ class EntityLinker:
         self.text_processor = TextProcessor()
         self.similarity_calculator = SimilarityCalculator(
             similarity_measure, self.text_processor.normalize_text)
+        self.cache = {}
 
         if len(ner_output_path) > 0:
             self.annotated_docs = read_ner_annotation_file(ner_output_path)
-        else:
+        elif len(annotated_examples_base_path) > 0:
             self.annotated_docs = \
                 read_brat_all_annotation_files(annotated_examples_base_path)
+        elif len(taisti_csv_path) > 0:
+            self.annotated_docs = \
+                read_taisti_dataset_csv(taisti_csv_path)
 
         self.normalized_label_mapping = \
             self.generate_label_mapping(self.text_processor)
@@ -55,8 +62,10 @@ class EntityLinker:
         writer = csv.writer(f)
 
         for id, doc in enumerate(self.annotated_docs):
+            if id % 500 == 0:
+                print(f"Processing step: {id}")
             for annotation_id, annotation in enumerate(doc.annotations):
-                print(f"Processing step {id}/{annotation_id}")
+                # print(f"Processing step {id}/{annotation_id}")
                 entity_text = annotation.text
                 entity_type = get_entity_type(annotation.category)
                 normalized_entity_text = \
@@ -66,11 +75,15 @@ class EntityLinker:
                 if entity_type in self.normalized_label_mapping and normalized_entity_text in self.normalized_label_mapping[entity_type]:
                     linked_item = \
                         self.normalized_label_mapping[entity_type][normalized_entity_text]
-                    print(f"Direct match of {entity_text} to {linked_item}")
+                #    print(f"Direct match of {entity_text} to {linked_item}")
                 else:
-                    linked_item = self.link(
-                        normalized_entity_text, entity_type
-                    )
+                    if normalized_entity_text not in self.cache:
+                        linked_item = self.link(
+                            normalized_entity_text, entity_type
+                        )
+                        self.cache[normalized_entity_text] = linked_item
+                    else:
+                        linked_item = self.cache[normalized_entity_text]
 
                 annotation_data = [
                     annotation.file_id,
@@ -125,8 +138,8 @@ class EntityLinker:
             ):
                 max_similarity = current_label_similarity
                 best_item = item
-                print(
-                    f"Found new best: {item.normalized_label} with similarity {current_label_similarity}")
+                #print(
+                #    f"Found new best: {item.normalized_label} with similarity {current_label_similarity}")
             if current_label_similarity == 1.0:
                 break
         return best_item
@@ -160,9 +173,10 @@ class EntityLinker:
 
 
 def main(ontology_path: str, annotations_path: str, output_file_path: str,
-         ner_output: str, ignore_not_linkable: bool, similarity_measure: SimilarityType):
+         ner_output: str, taisti_csv_path: str, ignore_not_linkable: bool,
+         similarity_measure: SimilarityType):
     """ Entry point """
-    el = EntityLinker(ontology_path, annotations_path, ner_output,
+    el = EntityLinker(ontology_path, annotations_path, ner_output, taisti_csv_path,
                       ignore_not_linkable=ignore_not_linkable,
                       similarity_measure=similarity_measure)
     el.link_all(output_file_path)
@@ -178,13 +192,16 @@ if __name__ == "__main__":
     parser.add_argument('-ap', '--annotations_path',
                         help='Path to BRAT annotations folder',
                         type=str,
-                        default='../data/')
+                        default='')
 
     parser.add_argument('-ner', '--ner_output',
                         help='Use NER output stored in a given file to process',
                         type=str,
                         default='')
-
+    parser.add_argument('-taisti', '--taisti_csv',
+                        help='Use TAISTI CSV dataset sertialization',
+                        type=str,
+                        default='')
     parser.add_argument('-out', '--output_file_path',
                         help='Path to generated output file',
                         type=str,
@@ -200,4 +217,5 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
     main(args.ontology_path, args.annotations_path, args.output_file_path,
-         args.ner_output, args.ignore_not_linkable, SimilarityCalculator.similarity_id_to_type(args.similarity))
+         args.ner_output, args.taisti_csv, args.ignore_not_linkable,
+         SimilarityCalculator.similarity_id_to_type(args.similarity))

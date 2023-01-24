@@ -3,6 +3,7 @@ from enum import Enum
 from typing import Any, List
 import json
 import os
+import pandas as pd
 import re
 
 
@@ -24,6 +25,7 @@ class AnnotationSource(Enum):
     """ The source of annotations. Either coming from linguists (BRAT) or NER """
     BRAT = 1
     NER = 2
+    TAISTI_CSV  = 3
 
 
 @dataclass
@@ -53,7 +55,7 @@ class LabelWithIRI:
     label: str
     iri: str
     normalized_label: str
-    similarity_representation: Any
+    similarity_representation: Any = None
 
 
 def get_entity_type(category: str) -> EntityType:
@@ -175,6 +177,38 @@ def read_ner_annotation_file(file_path: str) -> list[AnnotatedDoc]:
             annotations.append(AnnotatedDoc(
                 id=i, path=file_path, text=doc['text'], annotations=ner_annotations
             ))
+    return annotations
+
+
+def read_taisti_dataset_csv(file_path: str) -> list[AnnotatedDoc]:
+    """
+        Iterate over all NER annotations in a file and parse them into a list of AnnotatedDocs
+
+        Args:
+            file_path (str): Path to a file with NER output
+        Returns:
+            list[AnnotatedDoc]: List of parsed annotations
+    """
+    annotations = []
+    idx = 0
+    for df in pd.read_csv(file_path,
+                 usecols=['ingredients_entities'], chunksize=1000):
+        print(f"Processing {idx}")
+        for _, row in df.iterrows():
+            entities = json.loads(row['ingredients_entities'])
+
+            ner_annotations = []
+            for j, entity in enumerate(entities):
+                if 'food' in entity['type'].lower():
+                    ner_annotations.append(Annotation(
+                        id=str(j), file_id=idx, start=entity['start'],
+                        end=entity['end'], category=entity['type'],
+                        text=entity['entity'], source=AnnotationSource.TAISTI_CSV))
+
+            annotations.append(AnnotatedDoc(
+                id=idx, path=file_path, text='', annotations=ner_annotations
+            ))
+            idx += 1
     return annotations
 
 
